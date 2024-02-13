@@ -1,1 +1,1 @@
-# Vexara ecommerce
+# Vexara e-commerce

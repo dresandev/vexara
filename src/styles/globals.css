@@ -6,8 +6,10 @@
   --promo-color: hsl(339, 100%, 43%);
   --bg-color: hsl(0 0% 100%);
   --content-color: hsl(0, 0%, 0%);
+
+  --header-block-size: 48px;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 1.227rem + 0.194vw, 1.6rem);
 }

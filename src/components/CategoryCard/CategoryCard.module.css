@@ -1,0 +1,23 @@
+.linkWrapper {
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: -1px;
+}
+
+.imageContainer {
+  display: block;
+  overflow: hidden;
+}
+
+.image {
+  inline-size: 100%;
+  block-size: auto;
+  transition: transform 800ms;
+}
+
+.image:hover {
+  transform: scale(1.08);
+}
+
+.caption {
+  padding-block: 8px;
+}

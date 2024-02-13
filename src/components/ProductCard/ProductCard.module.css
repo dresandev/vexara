@@ -1,0 +1,32 @@
+.card {
+  font-size: clamp(1.2rem, 1.151rem + 0.129vw, 1.4rem);
+}
+
+.linkWrapper {
+  outline-offset: -1px;
+}
+
+.name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.priceContainer {
+  padding: 12px 8px 0 12px;
+}
+
+.price {
+  font-weight: 500;
+}
+
+.discountPrice {
+  margin-inline-end: 4px;
+  color: var(--promo-color);
+  font-weight: 500;
+}
+
+.oldPrice {
+  font-weight: 300;
+}

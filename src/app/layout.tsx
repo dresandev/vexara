@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Header } from '~/components/Header'
 import '~/styles/reset.css'
 import '~/styles/globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500']
+})
 
 export const metadata: Metadata = {
   title: 'VEXARA: online fashion',
@@ -20,7 +24,10 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <body className={inter.className}>
-        {children}
+        <Header />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )

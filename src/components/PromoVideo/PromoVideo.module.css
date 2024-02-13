@@ -1,0 +1,5 @@
+.video {
+  block-size: calc(100dvh - var(--header-block-size));
+  inline-size: 100%;
+  object-fit: cover;
+}

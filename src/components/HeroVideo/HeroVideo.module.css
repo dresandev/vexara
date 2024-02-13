@@ -1,0 +1,13 @@
+.parallaxContainer {
+  position: relative;
+  block-size: 80dvh;
+  pointer-events: none;
+}
+
+.video {
+  position: fixed;
+  z-index: -1;
+  inline-size: 100%;
+  block-size: inherit;
+  object-fit: cover;
+}

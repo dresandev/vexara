@@ -1,4 +1,5 @@
 export * from './BuildingStoreIcon'
+export * from './ChevronArrow'
 export * from './ClockExclamationIcon'
 export * from './RulerMeasureIcon'
 export * from './ShoppingBagIcon'
