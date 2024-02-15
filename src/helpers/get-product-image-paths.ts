@@ -1,15 +1,13 @@
-type ProductType =
-  'shirts' |
-  'jackets-and-coats' |
-  'shoes' |
-  'sweatshirts-and-sweaters' |
-  'pants-and-jeans'
+import { CategorySlug } from '~/types'
 
-export const getProductImagePaths = (productType: ProductType, product: string) => {
-  const imagePath = `/images/products/${productType}/${product}`
+export const getProductImagePaths = (
+  productType: CategorySlug,
+  product: string
+) => {
+  const imageBasePath = `/images/products/${productType}/${product}`
   return [
-    `${imagePath}/front.webp`,
-    `${imagePath}/back.webp`,
-    `${imagePath}/full.webp`,
+    `${imageBasePath}/front.webp`,
+    `${imageBasePath}/back.webp`,
+    `${imageBasePath}/full.webp`,
   ]
 }

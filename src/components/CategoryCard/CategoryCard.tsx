@@ -17,7 +17,7 @@ export const CategoryCard = ({
   return (
     <Link
       className={styles.linkWrapper}
-      href={pagePath}
+      href={`/category/${pagePath}`}
     >
       <figure className={className}>
         <span className={styles.imageContainer}>

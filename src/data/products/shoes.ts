@@ -1,3 +1,4 @@
+import { Product } from '~/types'
 import { getProductImagePaths } from '~/helpers/get-product-image-paths'
 
 const getShoesImagePaths = (product: string) => (
@@ -7,8 +8,9 @@ const getShoesImagePaths = (product: string) => (
   )
 )
 
-export const shoes = [
+export const shoes: Product[] = [
   {
+    id: crypto.randomUUID(),
     name: 'Deportivas sin cordones combinadas con rejilla hombre',
     price: 299000,
     discount: 53,
@@ -47,6 +49,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Botines acordonados suela track hombre',
     price: 309000,
     discount: 54,
@@ -85,6 +88,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Deportivas tejido knit hombre',
     price: 229000,
     discount: 52,
@@ -123,6 +127,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas combinadas hombre',
     price: 109000,
     discount: 26,
@@ -161,6 +166,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas suela acabado sierra hombre',
     price: 129000,
     discount: 46,
@@ -199,6 +205,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Deportivas combinadas con piezas plateadas y rejilla hombre',
     price: 249000,
     discount: 43,
@@ -237,6 +244,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas abotinadas multicapas hombre',
     price: 249000,
     discount: 39,
@@ -275,6 +283,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas llavero hombre',
     price: 189000,
     discount: 63,
@@ -313,6 +322,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas combinadas hombre lr',
     price: 129000,
     discount: 46,
@@ -351,6 +361,7 @@ export const shoes = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Zapatillas multicapas hombre',
     price: 229000,
     discount: 52,

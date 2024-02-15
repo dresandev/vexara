@@ -3,9 +3,10 @@ const roundDownPrice = (value: number) => {
 }
 
 export const formatPrice = (value: number) => {
+  const currency = 'COP'
   const formattedPrice = roundDownPrice(value)
-    .toLocaleString('es-CO', { currency: 'COP' })
-    .concat(' COP')
+    .toLocaleString('es-CO', { currency })
+    .concat(` ${currency}`)
 
   return formattedPrice
 }

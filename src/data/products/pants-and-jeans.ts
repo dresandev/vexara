@@ -1,171 +1,19 @@
+import { Product } from '~/types'
 import { getProductImagePaths } from '~/helpers/get-product-image-paths'
 
-const getShirtImagePaths = (product: string) => (
+const getPantsAndJeansImagePaths = (product: string) => (
   getProductImagePaths(
-    'shirts',
+    'pants-and-jeans',
     product
   )
 )
 
-export const shirts = [
+export const pantsAndJeans: Product[] = [
   {
-    name: 'Camiseta manga corta muscle fit bandas',
-    price: 99900,
-    discount: 40,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 100,
-      },
-      {
-        size: 'XS',
-        amount: 0,
-      },
-      {
-        size: 'S',
-        amount: 32,
-      },
-      {
-        size: 'M',
-        amount: 32,
-      },
-      {
-        size: 'L',
-        amount: 43,
-      },
-      {
-        size: 'XL',
-        amount: 0,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-manga-corta-muscle-fit-bandas'
-    ),
-  },
-  {
-    name: 'Camiseta Dragon Ball manga corta boxy fit',
-    price: 129900,
-    discount: 53,
-    stock: [
-      {
-        size: 'S',
-        amount: 0,
-      },
-      {
-        size: 'M',
-        amount: 60,
-      },
-      {
-        size: 'L',
-        amount: 0,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-dragon-ball-manga-corta-boxy-fit'
-    ),
-  },
-  {
-    name: 'Camiseta manga corta regular fit',
-    price: 59900,
-    discount: 23,
-    stock: [
-      {
-        size: 'XS',
-        amount: 50,
-      },
-      {
-        size: 'S',
-        amount: 0,
-      },
-      {
-        size: 'M',
-        amount: 32,
-      },
-      {
-        size: 'L',
-        amount: 0,
-      },
-      {
-        size: 'XL',
-        amount: 32,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-manga-corta-regular-fit'
-    ),
-  },
-  {
-    name: 'Camiseta manga corta boxy fit print',
-    price: 99900,
-    discount: 40,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 80,
-      },
-      {
-        size: 'XS',
-        amount: 0,
-      },
-      {
-        size: 'S',
-        amount: 43,
-      },
-      {
-        size: 'M',
-        amount: 0,
-      },
-      {
-        size: 'L',
-        amount: 0,
-      },
-      {
-        size: 'XL',
-        amount: 12,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-manga-corta-boxy-fit-print'
-    ),
-  },
-  {
-    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print text',
-    price: 139900,
-    discount: 57,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 20,
-      },
-      {
-        size: 'XS',
-        amount: 60,
-      },
-      {
-        size: 'S',
-        amount: 0,
-      },
-      {
-        size: 'M',
-        amount: 32,
-      },
-      {
-        size: 'L',
-        amount: 12,
-      },
-      {
-        size: 'XL',
-        amount: 0,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-text'
-    ),
-  },
-  {
-    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print character',
-    price: 139900,
-    discount: 57,
+    id: crypto.randomUUID(),
+    name: 'Pantalón jogger cargo',
+    price: 179900,
+    discount: 44,
     stock: [
       {
         size: 'XXS',
@@ -181,11 +29,186 @@ export const shirts = [
       },
       {
         size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 32,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'pantalon-jogger-cargo'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Jeans super skinny',
+    price: 139900,
+    discount: 57,
+    stock: [
+      {
+        size: '34',
+        amount: 100,
+      },
+      {
+        size: '36',
+        amount: 60,
+      },
+      {
+        size: '38',
+        amount: 0,
+      },
+      {
+        size: '40',
+        amount: 0,
+      },
+      {
+        size: '42',
+        amount: 32,
+      },
+      {
+        size: '44',
+        amount: 32,
+      },
+      {
+        size: '46',
+        amount: 32,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'jeans-super-skinny'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Pantalón wide leg cargo felpa',
+    price: 159900,
+    discount: 37,
+    stock: [
+      {
+        size: 'XS',
+        amount: 0,
+      },
+      {
+        size: 'S',
+        amount: 0,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 32,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'pantalon-wide-leg-cargo-felpa'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Jeans skinny rotos',
+    price: 189900,
+    discount: 47,
+    stock: [
+      {
+        size: 'XXS',
         amount: 10,
       },
       {
+        size: 'XS',
+        amount: 60,
+      },
+      {
+        size: 'S',
+        amount: 32,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
         size: 'L',
+        amount: 32,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'jeans-skinny-rotos'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
+    price: 35000,
+    discount: 72,
+    stock: [
+      {
+        size: 'XXS',
         amount: 0,
+      },
+      {
+        size: 'XS',
+        amount: 60,
+      },
+      {
+        size: 'S',
+        amount: 32,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 12,
+      },
+      {
+        size: 'XL',
+        amount: 2,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'jeans-bershka-ft-bizzarap-wide-leg'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Pantalón jogger multicargo',
+    price: 249000,
+    discount: 59,
+    stock: [
+      {
+        size: 'XXS',
+        amount: 100,
+      },
+      {
+        size: 'XS',
+        amount: 60,
+      },
+      {
+        size: 'S',
+        amount: 32,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 32,
       },
       {
         size: 'XL',
@@ -196,14 +219,15 @@ export const shirts = [
         amount: 0,
       },
     ],
-    images: getShirtImagePaths(
-      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-character'
+    images: getPantsAndJeansImagePaths(
+      'pantalon-jogger-multicargo'
     ),
   },
   {
-    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print chtx',
-    price: 139900,
-    discount: 57,
+    id: crypto.randomUUID(),
+    name: 'Jeans carrot fit rotos',
+    price: 189900,
+    discount: 47,
     stock: [
       {
         size: 'XXS',
@@ -215,63 +239,65 @@ export const shirts = [
       },
       {
         size: 'S',
-        amount: 0,
-      },
-      {
-        size: 'M',
-        amount: 10,
-      },
-      {
-        size: 'L',
-        amount: 32,
-      },
-      {
-        size: 'XL',
-        amount: 0,
-      },
-    ],
-    images: getShirtImagePaths(
-      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-chtx'
-    ),
-  },
-  {
-    name: 'Camiseta manga corta boxy fit print lr',
-    price: 99900,
-    discount: 45,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 0,
-      },
-      {
-        size: 'XS',
-        amount: 60,
-      },
-      {
-        size: 'S',
         amount: 32,
       },
       {
         size: 'M',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        amount: 32,
       },
       {
         size: 'XL',
         amount: 2,
       },
     ],
-    images: getShirtImagePaths(
-      'camiseta-manga-corta-boxy-fit-print-lr'
+    images: getPantsAndJeansImagePaths(
+      'jeans-carrot-fit-rotos'
     ),
   },
   {
-    name: 'Camiseta The Notorious B.I.G. manga corta print',
-    price: 129900,
-    discount: 53,
+    id: crypto.randomUUID(),
+    name: 'Pantalón jogger felpa parche',
+    price: 159900,
+    discount: 37,
+    stock: [
+      {
+        size: 'XXS',
+        amount: 0,
+      },
+      {
+        size: 'XS',
+        amount: 60,
+      },
+      {
+        size: 'S',
+        amount: 32,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 0,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getPantsAndJeansImagePaths(
+      'pantalon-jogger-felpa-parche'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Jeans skinny',
+    price: 179900,
+    discount: 44,
     stock: [
       {
         size: 'XXS',
@@ -291,25 +317,26 @@ export const shirts = [
       },
       {
         size: 'L',
-        amount: 0,
+        amount: 32,
       },
       {
         size: 'XL',
-        amount: 10,
+        amount: 32,
       },
     ],
-    images: getShirtImagePaths(
-      'camiseta-the-notorious-big-manga-corta-print'
+    images: getPantsAndJeansImagePaths(
+      'jeans-skinny'
     ),
   },
   {
-    name: 'Camiseta manga corta boxy fit print xsr',
-    price: 119900,
-    discount: 50,
+    id: crypto.randomUUID(),
+    name: 'Jeans baggy',
+    price: 249000,
+    discount: 59,
     stock: [
       {
         size: 'XXS',
-        amount: 10,
+        amount: 0,
       },
       {
         size: 'XS',
@@ -332,8 +359,8 @@ export const shirts = [
         amount: 32,
       },
     ],
-    images: getShirtImagePaths(
-      'camiseta-manga-corta-boxy-fit-print-xsr'
+    images: getPantsAndJeansImagePaths(
+      'jeans-baggy'
     ),
   },
 ]

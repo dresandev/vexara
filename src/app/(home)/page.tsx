@@ -4,13 +4,15 @@ import { PromoVideo } from '~/components/PromoVideo'
 import { ProductRecommendation } from '~/components/ProductRecommendation'
 import styles from './page.module.css'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <HeroVideo />
-      <ClothingCategories />
-      <PromoVideo />
-      <ProductRecommendation />
+      <div className={styles.mainContent}>
+        <ClothingCategories />
+        <PromoVideo />
+        <ProductRecommendation />
+      </div>
     </>
   )
 }

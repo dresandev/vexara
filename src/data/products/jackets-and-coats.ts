@@ -1,3 +1,4 @@
+import { Product } from '~/types'
 import { getProductImagePaths } from '~/helpers/get-product-image-paths'
 
 const getJacketsOrCoatsImagePaths = (product: string) => (
@@ -7,8 +8,9 @@ const getJacketsOrCoatsImagePaths = (product: string) => (
   )
 )
 
-export const jacketsAndCoats = [
+export const jacketsAndCoats: Product[] = [
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora denim capucha rayas',
     price: 249000,
     discount: 55,
@@ -31,6 +33,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora efecto piel bandas laterales',
     price: 329000,
     discount: 66,
@@ -53,6 +56,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora bomber con nylon efecto lavado',
     price: 359000,
     discount: 69,
@@ -75,6 +79,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora biker oversize efecto piel desgastada',
     price: 459000,
     discount: 76,
@@ -97,6 +102,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora denim biker',
     price: 329000,
     discount: 66,
@@ -119,6 +125,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora capucha oversize con nylon',
     price: 299000,
     discount: 63,
@@ -141,6 +148,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora capucha ligera nylon bolsillos',
     price: 299000,
     discount: 63,
@@ -163,6 +171,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora capucha ligera nylon',
     price: 199900,
     discount: 60,
@@ -185,6 +194,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Cazadora reflectante capucha',
     price: 149900,
     discount: 46,
@@ -207,6 +217,7 @@ export const jacketsAndCoats = [
     ),
   },
   {
+    id: crypto.randomUUID(),
     name: 'Chaleco utility',
     price: 249000,
     discount: 55,

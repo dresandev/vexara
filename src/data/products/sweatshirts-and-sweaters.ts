@@ -1,17 +1,19 @@
+import { Product } from '~/types'
 import { getProductImagePaths } from '~/helpers/get-product-image-paths'
 
-const getPantsAndJeansImagePaths = (product: string) => (
+const getSweatshirtsAndSweatersImagePaths = (product: string) => (
   getProductImagePaths(
-    'pants-and-jeans',
+    'sweatshirts-and-sweaters',
     product
   )
 )
 
-export const pantsAndJeans = [
+export const sweatshirtsAndSweaters: Product[] = [
   {
-    name: 'Pantalón jogger cargo',
+    id: crypto.randomUUID(),
+    name: 'Sudadera cremallera capucha',
     price: 179900,
-    discount: 44,
+    discount: 55,
     stock: [
       {
         size: 'XXS',
@@ -38,52 +40,38 @@ export const pantsAndJeans = [
         amount: 32,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'pantalon-jogger-cargo'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-cremallera-capucha'
     ),
   },
   {
-    name: 'Jeans super skinny',
-    price: 139900,
-    discount: 57,
+    id: crypto.randomUUID(),
+    name: 'Sudadera capucha denim boxy fit efecto lavado',
+    price: 249000,
+    discount: 67,
     stock: [
       {
-        size: '34',
+        size: 'S',
         amount: 100,
       },
       {
-        size: '36',
+        size: 'M',
         amount: 60,
       },
       {
-        size: '38',
+        size: 'L',
         amount: 0,
-      },
-      {
-        size: '40',
-        amount: 0,
-      },
-      {
-        size: '42',
-        amount: 32,
-      },
-      {
-        size: '44',
-        amount: 32,
-      },
-      {
-        size: '46',
-        amount: 32,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-super-skinny'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-capucha-denim-boxy-fit-efecto-lavado'
     ),
   },
   {
-    name: 'Pantalón wide leg cargo felpa',
-    price: 159900,
-    discount: 37,
+    id: crypto.randomUUID(),
+    name: 'Sudadera BERSHKA ft. BIZARRAP capucha detalle',
+    price: 359000,
+    discount: 72,
     stock: [
       {
         size: 'XS',
@@ -106,14 +94,15 @@ export const pantsAndJeans = [
         amount: 32,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'pantalon-wide-leg-cargo-felpa'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-bershka-ft-bizzarap-capucha-detalle'
     ),
   },
   {
-    name: 'Jeans skinny rotos',
-    price: 189900,
-    discount: 47,
+    id: crypto.randomUUID(),
+    name: 'Jersey cuello alto cremallera',
+    price: 199900,
+    discount: 60,
     stock: [
       {
         size: 'XXS',
@@ -121,33 +110,34 @@ export const pantsAndJeans = [
       },
       {
         size: 'XS',
-        amount: 60,
+        amount: 0,
       },
       {
         size: 'S',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'M',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'XL',
-        amount: 32,
+        amount: 0,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-skinny-rotos'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'jersey-cuello-alto-cremallera'
     ),
   },
   {
-    name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
-    price: 35000,
-    discount: 72,
+    id: crypto.randomUUID(),
+    name: 'Sudadera capucha racing',
+    price: 179900,
+    discount: 55,
     stock: [
       {
         size: 'XXS',
@@ -159,7 +149,7 @@ export const pantsAndJeans = [
       },
       {
         size: 'S',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'M',
@@ -174,14 +164,15 @@ export const pantsAndJeans = [
         amount: 2,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-bershka-ft-bizzarap-wide-leg'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-capucha-racing'
     ),
   },
   {
-    name: 'Pantalón jogger multicargo',
-    price: 249000,
-    discount: 59,
+    id: crypto.randomUUID(),
+    name: 'Sudadera capucha print',
+    price: 179900,
+    discount: 55,
     stock: [
       {
         size: 'XXS',
@@ -197,11 +188,11 @@ export const pantsAndJeans = [
       },
       {
         size: 'M',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'XL',
@@ -212,14 +203,15 @@ export const pantsAndJeans = [
         amount: 0,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'pantalon-jogger-multicargo'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-capucha-print'
     ),
   },
   {
-    name: 'Jeans carrot fit rotos',
+    id: crypto.randomUUID(),
+    name: 'Sudadera capucha cremallera print',
     price: 189900,
-    discount: 47,
+    discount: 57,
     stock: [
       {
         size: 'XXS',
@@ -231,7 +223,7 @@ export const pantsAndJeans = [
       },
       {
         size: 'S',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'M',
@@ -243,51 +235,53 @@ export const pantsAndJeans = [
       },
       {
         size: 'XL',
-        amount: 2,
+        amount: 0,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-carrot-fit-rotos'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-capucha-cremallera-print'
     ),
   },
   {
-    name: 'Pantalón jogger felpa parche',
-    price: 159900,
-    discount: 37,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 0,
-      },
-      {
-        size: 'XS',
-        amount: 60,
-      },
-      {
-        size: 'S',
-        amount: 32,
-      },
-      {
-        size: 'M',
-        amount: 32,
-      },
-      {
-        size: 'L',
-        amount: 0,
-      },
-      {
-        size: 'XL',
-        amount: 32,
-      },
-    ],
-    images: getPantsAndJeansImagePaths(
-      'pantalon-jogger-felpa-parche'
-    ),
-  },
-  {
-    name: 'Jeans skinny',
+    id: crypto.randomUUID(),
+    name: 'Sudadera capucha print lr',
     price: 179900,
-    discount: 44,
+    discount: 55,
+    stock: [
+      {
+        size: 'XXS',
+        amount: 0,
+      },
+      {
+        size: 'XS',
+        amount: 60,
+      },
+      {
+        size: 'S',
+        amount: 32,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 0,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-capucha-print-lr'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Sudadera cremallera capucha lr',
+    price: 179900,
+    discount: 55,
     stock: [
       {
         size: 'XXS',
@@ -311,17 +305,18 @@ export const pantsAndJeans = [
       },
       {
         size: 'XL',
-        amount: 32,
+        amount: 0,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-skinny'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-cremallera-capucha-lr'
     ),
   },
   {
-    name: 'Jeans baggy',
-    price: 249000,
-    discount: 59,
+    id: crypto.randomUUID(),
+    name: 'Sudadera cremallera capucha sv',
+    price: 179900,
+    discount: 55,
     stock: [
       {
         size: 'XXS',
@@ -348,8 +343,8 @@ export const pantsAndJeans = [
         amount: 32,
       },
     ],
-    images: getPantsAndJeansImagePaths(
-      'jeans-baggy'
+    images: getSweatshirtsAndSweatersImagePaths(
+      'sudadera-cremallera-capucha-sv'
     ),
   },
 ]

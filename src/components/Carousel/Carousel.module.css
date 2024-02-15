@@ -19,5 +19,6 @@
 
   .fadeItem {
     opacity: 0.3;
+    pointer-events: none;
   }
 }

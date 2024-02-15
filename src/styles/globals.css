@@ -1,11 +1,13 @@
 :root {
-  --promo-color: 339 100% 43%;
-  --bg-color: 0 0% 100%;
-  --content-color: 0 0% 0%;
+  --promo-color-hsl: 339 100% 43%;
+  --bg-color-hsl: 0 0% 100%;
+  --content-color-hsl: 0 0% 0%;
+  --border-color-hsl: 0 0% 90%;
 
   --promo-color: hsl(339, 100%, 43%);
   --bg-color: hsl(0 0% 100%);
   --content-color: hsl(0, 0%, 0%);
+  --border-color: hsl(0, 0%, 90%);
 
   --header-block-size: 48px;
 }

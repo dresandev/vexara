@@ -1,17 +1,19 @@
+import { Product } from '~/types'
 import { getProductImagePaths } from '~/helpers/get-product-image-paths'
 
-const getSweatshirtsAndSweatersImagePaths = (product: string) => (
+const getShirtImagePaths = (product: string) => (
   getProductImagePaths(
-    'sweatshirts-and-sweaters',
+    'shirts',
     product
   )
 )
 
-export const sweatshirtsAndSweaters = [
+export const shirts: Product[] = [
   {
-    name: 'Sudadera cremallera capucha',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta manga corta muscle fit bandas',
+    price: 99900,
+    discount: 40,
     stock: [
       {
         size: 'XXS',
@@ -19,7 +21,7 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'XS',
-        amount: 60,
+        amount: 0,
       },
       {
         size: 'S',
@@ -31,25 +33,26 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'L',
-        amount: 32,
+        amount: 43,
       },
       {
         size: 'XL',
-        amount: 32,
+        amount: 0,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-cremallera-capucha'
+    images: getShirtImagePaths(
+      'camiseta-manga-corta-muscle-fit-bandas'
     ),
   },
   {
-    name: 'Sudadera capucha denim boxy fit efecto lavado',
-    price: 249000,
-    discount: 67,
+    id: crypto.randomUUID(),
+    name: 'Camiseta Dragon Ball manga corta boxy fit',
+    price: 129900,
+    discount: 53,
     stock: [
       {
         size: 'S',
-        amount: 100,
+        amount: 0,
       },
       {
         size: 'M',
@@ -60,56 +63,58 @@ export const sweatshirtsAndSweaters = [
         amount: 0,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-capucha-denim-boxy-fit-efecto-lavado'
+    images: getShirtImagePaths(
+      'camiseta-dragon-ball-manga-corta-boxy-fit'
     ),
   },
   {
-    name: 'Sudadera BERSHKA ft. BIZARRAP capucha detalle',
-    price: 359000,
-    discount: 72,
+    id: crypto.randomUUID(),
+    name: 'Camiseta manga corta regular fit',
+    price: 59900,
+    discount: 23,
     stock: [
+      {
+        size: 'XS',
+        amount: 50,
+      },
+      {
+        size: 'S',
+        amount: 0,
+      },
+      {
+        size: 'M',
+        amount: 32,
+      },
+      {
+        size: 'L',
+        amount: 0,
+      },
+      {
+        size: 'XL',
+        amount: 32,
+      },
+    ],
+    images: getShirtImagePaths(
+      'camiseta-manga-corta-regular-fit'
+    ),
+  },
+  {
+    id: crypto.randomUUID(),
+    name: 'Camiseta manga corta boxy fit print',
+    price: 99900,
+    discount: 40,
+    stock: [
+      {
+        size: 'XXS',
+        amount: 80,
+      },
       {
         size: 'XS',
         amount: 0,
       },
       {
         size: 'S',
-        amount: 0,
-      },
-      {
-        size: 'M',
-        amount: 32,
-      },
-      {
-        size: 'L',
-        amount: 32,
-      },
-      {
-        size: 'XL',
-        amount: 32,
-      },
-    ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-bershka-ft-bizzarap-capucha-detalle'
-    ),
-  },
-  {
-    name: 'Jersey cuello alto cremallera',
-    price: 199900,
-    discount: 60,
-    stock: [
-      {
-        size: 'XXS',
-        amount: 10,
-      },
-      {
-        size: 'XS',
-        amount: 0,
-      },
-      {
-        size: 'S',
-        amount: 0,
+        amount: 43,
       },
       {
         size: 'M',
@@ -121,21 +126,22 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'XL',
-        amount: 0,
+        amount: 12,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'jersey-cuello-alto-cremallera'
+    images: getShirtImagePaths(
+      'camiseta-manga-corta-boxy-fit-print'
     ),
   },
   {
-    name: 'Sudadera capucha racing',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print text',
+    price: 139900,
+    discount: 57,
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        amount: 20,
       },
       {
         size: 'XS',
@@ -155,17 +161,18 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'XL',
-        amount: 2,
+        amount: 0,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-capucha-racing'
+    images: getShirtImagePaths(
+      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-text'
     ),
   },
   {
-    name: 'Sudadera capucha print',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print character',
+    price: 139900,
+    discount: 57,
     stock: [
       {
         size: 'XXS',
@@ -181,7 +188,7 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'M',
-        amount: 0,
+        amount: 10,
       },
       {
         size: 'L',
@@ -196,13 +203,14 @@ export const sweatshirtsAndSweaters = [
         amount: 0,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-capucha-print'
+    images: getShirtImagePaths(
+      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-character'
     ),
   },
   {
-    name: 'Sudadera capucha cremallera print',
-    price: 189900,
+    id: crypto.randomUUID(),
+    name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print chtx',
+    price: 139900,
     discount: 57,
     stock: [
       {
@@ -219,7 +227,7 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'M',
-        amount: 0,
+        amount: 10,
       },
       {
         size: 'L',
@@ -230,14 +238,15 @@ export const sweatshirtsAndSweaters = [
         amount: 0,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-capucha-cremallera-print'
+    images: getShirtImagePaths(
+      'camiseta-bershka-ft.-bizarrap-boxy-fit-print-chtx'
     ),
   },
   {
-    name: 'Sudadera capucha print lr',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta manga corta boxy fit print lr',
+    price: 99900,
+    discount: 45,
     stock: [
       {
         size: 'XXS',
@@ -261,17 +270,18 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'XL',
-        amount: 32,
+        amount: 2,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-capucha-print-lr'
+    images: getShirtImagePaths(
+      'camiseta-manga-corta-boxy-fit-print-lr'
     ),
   },
   {
-    name: 'Sudadera cremallera capucha lr',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta The Notorious B.I.G. manga corta print',
+    price: 129900,
+    discount: 53,
     stock: [
       {
         size: 'XXS',
@@ -291,25 +301,26 @@ export const sweatshirtsAndSweaters = [
       },
       {
         size: 'L',
-        amount: 32,
+        amount: 0,
       },
       {
         size: 'XL',
-        amount: 0,
+        amount: 10,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-cremallera-capucha-lr'
+    images: getShirtImagePaths(
+      'camiseta-the-notorious-big-manga-corta-print'
     ),
   },
   {
-    name: 'Sudadera cremallera capucha sv',
-    price: 179900,
-    discount: 55,
+    id: crypto.randomUUID(),
+    name: 'Camiseta manga corta boxy fit print xsr',
+    price: 119900,
+    discount: 50,
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        amount: 10,
       },
       {
         size: 'XS',
@@ -332,8 +343,8 @@ export const sweatshirtsAndSweaters = [
         amount: 32,
       },
     ],
-    images: getSweatshirtsAndSweatersImagePaths(
-      'sudadera-cremallera-capucha-sv'
+    images: getShirtImagePaths(
+      'camiseta-manga-corta-boxy-fit-print-xsr'
     ),
   },
 ]

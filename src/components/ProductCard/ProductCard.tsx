@@ -1,37 +1,43 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import { simpleSlugify } from '~/utils/simple-slugify'
 import { formatPrice } from '~/helpers/format-price'
 import { ProductImage } from './ProductImage'
 import styles from './ProductCard.module.css'
 
 interface ProductCardProps {
   className?: string
+  id: string,
   imagePath: string
   hoverImagePath: string
   name: string
-  slug: string
   price: number
   discount: number | null
 }
 
 export const ProductCard = ({
   className,
+  id,
   imagePath,
   hoverImagePath,
   name,
-  slug,
   price,
   discount,
 }: ProductCardProps) => {
   const formattedPriceWithDiscount = discount && (
     formatPrice(price - (price * discount / 100))
   )
-
   const formattedPrice = formatPrice(price)
 
   return (
-    <Link className={styles.linkWrapper} href={`/product/${slug}`}>
-      <figure className={clsx(styles.card, className)}>
+    <Link
+      className={styles.linkWrapper}
+      href={`/product/${simpleSlugify(name)}CT${id}`}
+    >
+      <figure className={clsx(
+        styles.card,
+        className
+      )}>
         <ProductImage
           src={imagePath}
           hoverSrc={hoverImagePath}

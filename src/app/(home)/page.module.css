@@ -1,0 +1,4 @@
+.mainContent {
+  isolation: isolate;
+  background-color: var(--bg-color);
+}

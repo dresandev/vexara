@@ -1,4 +1,4 @@
-import { topCategories } from '~/data/product/categories'
+import { topCategories } from '~/data/products/top-categories'
 import { CategoryCard } from '~/components/CategoryCard'
 import styles from './ClothingCategories.module.css'
 
