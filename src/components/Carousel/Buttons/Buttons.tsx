@@ -9,12 +9,12 @@ interface ButtonsProps {
   showNextButton: boolean
 }
 
-export const Buttons = ({
+export const Buttons: React.FC<ButtonsProps> = ({
   onClickPrev,
   onClickNext,
   showPrevButton,
   showNextButton,
-}: ButtonsProps) => {
+}) => {
   return (
     <>
       <button

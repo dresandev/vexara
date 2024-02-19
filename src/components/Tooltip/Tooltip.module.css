@@ -1,0 +1,26 @@
+.tooltip {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 4.8rem;
+  display: none;
+  inline-size: max-content;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%);
+}
+
+.tooltip::before {
+  content: '▲';
+  position: absolute;
+  inset-block-start: -16px;
+  inset-inline: 0;
+  inline-size: fit-content;
+  margin-inline: auto;
+  font-size: 16px;
+  color: var(--content-color-invert);
+  text-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+}

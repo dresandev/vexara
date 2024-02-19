@@ -8,11 +8,11 @@ interface ProductImageProps {
   name: string
 }
 
-export const ProductImage = ({
+export const ProductImage: React.FC<ProductImageProps> = ({
   src,
   hoverSrc,
   name,
-}: ProductImageProps) => {
+}) => {
   const [imageSrc, setImageSrc] = useState(src)
 
   return (

@@ -1,16 +1,17 @@
 import { notFound } from 'next/navigation'
-import { isValidCategorySlug } from '~/helpers/is-valid-category-slug'
+import { getProductsByCategory } from '~/helpers/get-products'
+import { ProductCategory } from '~/types'
 
 interface CategoryPageProps {
-  params: {
-    slug: string
-  }
+  params: { slug: string }
 }
 
 export default function CategoryPage({
   params
 }: CategoryPageProps) {
-  if (!isValidCategorySlug(params.slug)) notFound()
+  const products = getProductsByCategory(params.slug as ProductCategory)
+
+  if (!products) notFound()
 
   return (
     <>

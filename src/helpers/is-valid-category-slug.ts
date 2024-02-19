@@ -1,4 +1,4 @@
-import { CategorySlug } from '~/types'
+import { ProductCategory as CategorySlug } from '~/types'
 
 export const isValidCategorySlug = (value: string): value is CategorySlug => {
   return (value === 'shoes') ||

@@ -25,6 +25,7 @@ export const VideoControls = ({
 
   const soundButtonAriaLabel = activateSound ? 'Activar sonido' : 'Desactivar sonido'
   const soundButtonIcon = activateSound ? <VolumeOffIcon /> : <VolumeOnIcon />
+
   return (
     <div
       style={{ color }}

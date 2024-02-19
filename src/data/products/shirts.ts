@@ -10,10 +10,10 @@ const getShirtImagePaths = (product: string) => (
 
 export const shirts: Product[] = [
   {
-    id: crypto.randomUUID(),
+    id: 's1',
     name: 'Camiseta manga corta muscle fit bandas',
     price: 99900,
-    discount: 40,
+    discount: null,
     stock: [
       {
         size: 'XXS',
@@ -43,9 +43,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-manga-corta-muscle-fit-bandas'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's2',
     name: 'Camiseta Dragon Ball manga corta boxy fit',
     price: 129900,
     discount: 53,
@@ -66,9 +67,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-dragon-ball-manga-corta-boxy-fit'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's3',
     name: 'Camiseta manga corta regular fit',
     price: 59900,
     discount: 23,
@@ -97,9 +99,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-manga-corta-regular-fit'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's4',
     name: 'Camiseta manga corta boxy fit print',
     price: 99900,
     discount: 40,
@@ -132,9 +135,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's5',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print text',
     price: 139900,
     discount: 57,
@@ -167,9 +171,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-text'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's6',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print character',
     price: 139900,
     discount: 57,
@@ -206,9 +211,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-character'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's7',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print chtx',
     price: 139900,
     discount: 57,
@@ -241,9 +247,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-chtx'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's8',
     name: 'Camiseta manga corta boxy fit print lr',
     price: 99900,
     discount: 45,
@@ -276,9 +283,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print-lr'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's9',
     name: 'Camiseta The Notorious B.I.G. manga corta print',
     price: 129900,
     discount: 53,
@@ -311,9 +319,10 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-the-notorious-big-manga-corta-print'
     ),
+    category: 'shirts',
   },
   {
-    id: crypto.randomUUID(),
+    id: 's10',
     name: 'Camiseta manga corta boxy fit print xsr',
     price: 119900,
     discount: 50,
@@ -346,5 +355,6 @@ export const shirts: Product[] = [
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print-xsr'
     ),
+    category: 'shirts',
   },
 ]

@@ -1,4 +1,4 @@
-import { CategorySlug } from '~/types'
+import { ProductCategory as CategorySlug } from '~/types'
 
 interface TopCategory {
   category: string

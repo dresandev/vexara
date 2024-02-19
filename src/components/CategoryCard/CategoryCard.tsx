@@ -8,12 +8,12 @@ interface CategoryCardProps {
   pagePath: string
 }
 
-export const CategoryCard = ({
+export const CategoryCard: React.FC<CategoryCardProps> = ({
   className,
   category,
   imagePath,
   pagePath,
-}: CategoryCardProps) => {
+}) => {
   return (
     <Link
       className={styles.linkWrapper}

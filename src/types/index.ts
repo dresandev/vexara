@@ -1,11 +1,12 @@
-export type CategorySlug =
+export type ProductCategory =
+  'all' |
   'shirts' |
   'jackets-and-coats' |
   'shoes' |
   'sweatshirts-and-sweaters' |
   'pants-and-jeans'
 
-interface ProductSizeAmount {
+export interface Stock {
   size: string
   amount: number
 }
@@ -15,6 +16,7 @@ export interface Product {
   name: string
   price: number
   discount: number | null
-  stock: ProductSizeAmount[]
+  stock: Stock[]
   images: string[]
+  category: ProductCategory
 }

@@ -1,10 +1,19 @@
+import { ProductCategory } from '~/types'
 import { getRecommendations } from '~/helpers/get-recommendations'
 import { Carousel } from '~/components/Carousel'
 import { ProductCard } from '~/components/ProductCard'
 import styles from './ProductRecommendation.module.css'
 
-export const ProductRecommendation = () => {
-  const recommendations = getRecommendations()
+interface ProductRecommendationProps {
+  amount?: number
+  category?: ProductCategory
+}
+
+export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({
+  amount = 8,
+  category = 'all'
+}) => {
+  const recommendations = getRecommendations({ amount, category })
 
   return (
     <section className={styles.recommendationsSection}>
@@ -12,16 +21,22 @@ export const ProductRecommendation = () => {
 
       <Carousel>
         {
-          recommendations.map((product) => (
+          recommendations.map(({
+            id,
+            images: [image, hoverImage],
+            name,
+            price,
+            discount,
+          }) => (
             <ProductCard
-              key={product.id}
-              id={product.id}
+              key={id}
+              id={id}
               className={styles.productCard}
-              imagePath={product.images[0]}
-              hoverImagePath={product.images[1]}
-              name={product.name}
-              price={product.price}
-              discount={product.discount}
+              imagePath={image}
+              hoverImagePath={hoverImage}
+              name={name}
+              price={price}
+              discount={discount}
             />
           ))
         }

@@ -7,7 +7,7 @@ import '~/styles/globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500']
+  weight: ['300', '400', '500', '700']
 })
 
 export const metadata: Metadata = {

@@ -1,0 +1,18 @@
+.price {
+  font-weight: 500;
+}
+
+.priceWithDiscount {
+  margin-inline-end: 4px;
+  color: var(--promo-color);
+  font-weight: 500;
+}
+
+.discount {
+  font-size: 1.3rem;
+  color: var(--promo-color);
+}
+
+.oldPrice {
+  font-weight: 300;
+}

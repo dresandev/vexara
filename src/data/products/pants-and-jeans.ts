@@ -10,7 +10,7 @@ const getPantsAndJeansImagePaths = (product: string) => (
 
 export const pantsAndJeans: Product[] = [
   {
-    id: crypto.randomUUID(),
+    id: 'paj1',
     name: 'Pantalón jogger cargo',
     price: 179900,
     discount: 44,
@@ -43,12 +43,13 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'pantalon-jogger-cargo'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj2',
     name: 'Jeans super skinny',
     price: 139900,
-    discount: 57,
+    discount: null,
     stock: [
       {
         size: '34',
@@ -82,9 +83,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-super-skinny'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj3',
     name: 'Pantalón wide leg cargo felpa',
     price: 159900,
     discount: 37,
@@ -113,9 +115,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'pantalon-wide-leg-cargo-felpa'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj4',
     name: 'Jeans skinny rotos',
     price: 189900,
     discount: 47,
@@ -148,9 +151,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-skinny-rotos'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj5',
     name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
     price: 35000,
     discount: 72,
@@ -183,9 +187,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-bershka-ft-bizzarap-wide-leg'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj6',
     name: 'Pantalón jogger multicargo',
     price: 249000,
     discount: 59,
@@ -222,9 +227,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'pantalon-jogger-multicargo'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj7',
     name: 'Jeans carrot fit rotos',
     price: 189900,
     discount: 47,
@@ -257,9 +263,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-carrot-fit-rotos'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj8',
     name: 'Pantalón jogger felpa parche',
     price: 159900,
     discount: 37,
@@ -292,9 +299,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'pantalon-jogger-felpa-parche'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj9',
     name: 'Jeans skinny',
     price: 179900,
     discount: 44,
@@ -327,9 +335,10 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-skinny'
     ),
+    category: 'pants-and-jeans',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'paj10',
     name: 'Jeans baggy',
     price: 249000,
     discount: 59,
@@ -362,5 +371,6 @@ export const pantsAndJeans: Product[] = [
     images: getPantsAndJeansImagePaths(
       'jeans-baggy'
     ),
+    category: 'pants-and-jeans',
   },
 ]

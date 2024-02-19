@@ -10,7 +10,7 @@ const getShoesImagePaths = (product: string) => (
 
 export const shoes: Product[] = [
   {
-    id: crypto.randomUUID(),
+    id: 'sh1',
     name: 'Deportivas sin cordones combinadas con rejilla hombre',
     price: 299000,
     discount: 53,
@@ -47,9 +47,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'deportivas-sin-cordones-combinadas-con-rejilla-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh2',
     name: 'Botines acordonados suela track hombre',
     price: 309000,
     discount: 54,
@@ -86,12 +87,13 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'botines-acordonados-suela-track-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh3',
     name: 'Deportivas tejido knit hombre',
     price: 229000,
-    discount: 52,
+    discount: null,
     stock: [
       {
         size: '39',
@@ -125,9 +127,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'deportivas-tejido-knit-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh4',
     name: 'Zapatillas combinadas hombre',
     price: 109000,
     discount: 26,
@@ -164,12 +167,13 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-combinadas-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh5',
     name: 'Zapatillas suela acabado sierra hombre',
     price: 129000,
-    discount: 46,
+    discount: null,
     stock: [
       {
         size: '39',
@@ -203,9 +207,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-suela-acabado-sierra-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh6',
     name: 'Deportivas combinadas con piezas plateadas y rejilla hombre',
     price: 249000,
     discount: 43,
@@ -242,9 +247,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'deportivas-combinadas-con-piezas-plateadas-y-rejilla-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh7',
     name: 'Zapatillas abotinadas multicapas hombre',
     price: 249000,
     discount: 39,
@@ -281,9 +287,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-abotinadas-multicapas-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh8',
     name: 'Zapatillas llavero hombre',
     price: 189000,
     discount: 63,
@@ -320,9 +327,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-llavero-hombre'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh9',
     name: 'Zapatillas combinadas hombre lr',
     price: 129000,
     discount: 46,
@@ -359,9 +367,10 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-combinadas-hombre-lr'
     ),
+    category: 'shoes',
   },
   {
-    id: crypto.randomUUID(),
+    id: 'sh10',
     name: 'Zapatillas multicapas hombre',
     price: 229000,
     discount: 52,
@@ -398,5 +407,6 @@ export const shoes: Product[] = [
     images: getShoesImagePaths(
       'zapatillas-multicapas-hombre'
     ),
+    category: 'shoes',
   },
 ]

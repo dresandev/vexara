@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className={styles.mainContent}>
         <ClothingCategories />
         <PromoVideo />
-        <ProductRecommendation />
+        <ProductRecommendation amount={12} />
       </div>
     </>
   )

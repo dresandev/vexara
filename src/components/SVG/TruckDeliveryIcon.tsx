@@ -14,15 +14,9 @@ export const TruckDeliveryIcon = (props: SVGProps<SVGSVGElement>) => (
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={1.5}
-      clipPath='url(#a)'
     >
       <path d='M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z' />
       <path d='M5 17H3v-4M2 5h11v12m-4 0h6m4 0h2v-6m0 0h-8m8 0-3-5h-5M3 9h4' />
     </g>
-    <defs>
-      <clipPath id='a'>
-        <path fill='#fff' d='M0 0h24v24H0z' />
-      </clipPath>
-    </defs>
   </svg>
 )

@@ -1,6 +1,6 @@
 import { SVGProps } from 'react'
 
-export const ClockExclamationIcon = (props: SVGProps<SVGSVGElement>) => (
+export const HeartIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={24}
@@ -9,14 +9,12 @@ export const ClockExclamationIcon = (props: SVGProps<SVGSVGElement>) => (
     fill='none'
     {...props}
   >
-    <g
+    <path
       stroke='currentColor'
       strokeLinecap='round'
       strokeLinejoin='round'
-      strokeWidth={2}
-    >
-      <path d='M20.986 12.502a9 9 0 1 0-5.973 7.98' />
-      <path d='M12 7v5l3 3M19 16v3M19 22v.01' />
-    </g>
+      strokeWidth={1.5}
+      d='M19.5 12.572 12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572'
+    />
   </svg>
 )

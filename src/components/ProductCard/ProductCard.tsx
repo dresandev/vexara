@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 import { simpleSlugify } from '~/utils/simple-slugify'
-import { formatPrice } from '~/helpers/format-price'
+import { Price } from '~/components/Price'
 import { ProductImage } from './ProductImage'
 import styles from './ProductCard.module.css'
 
@@ -15,7 +15,7 @@ interface ProductCardProps {
   discount: number | null
 }
 
-export const ProductCard = ({
+export const ProductCard: React.FC<ProductCardProps> = ({
   className,
   id,
   imagePath,
@@ -23,12 +23,7 @@ export const ProductCard = ({
   name,
   price,
   discount,
-}: ProductCardProps) => {
-  const formattedPriceWithDiscount = discount && (
-    formatPrice(price - (price * discount / 100))
-  )
-  const formattedPrice = formatPrice(price)
-
+}) => {
   return (
     <Link
       className={styles.linkWrapper}
@@ -43,26 +38,14 @@ export const ProductCard = ({
           hoverSrc={hoverImagePath}
           name={name}
         />
-        <div className={styles.priceContainer}>
+        <div className={styles.details}>
           <figcaption className={styles.name}>
             {name}
           </figcaption>
-          {
-            formattedPriceWithDiscount ? (
-              <>
-                <span className={styles.discountPrice}>
-                  {formattedPriceWithDiscount}
-                </span>
-                <del className={styles.oldPrice}>
-                  {formattedPrice}
-                </del>
-              </>
-            ) : (
-              <span className={styles.price}>
-                {formattedPrice}
-              </span>
-            )
-          }
+          <Price
+            discount={discount}
+            price={price}
+          />
         </div>
       </figure >
     </Link>

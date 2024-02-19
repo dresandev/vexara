@@ -10,7 +10,7 @@ interface CarouselProps {
   itemsGap?: string
 }
 
-export const Carousel = ({
+export const Carousel: React.FC<CarouselProps> = ({
   children,
   itemsGap = '4px',
 }: CarouselProps) => {
@@ -38,17 +38,20 @@ export const Carousel = ({
         tabIndex={-1}
       >
         {
-          children.map((child, i) => (
-            <li
-              key={i}
-              className={clsx(
-                styles.item,
-                { [styles.fadeItem]: !pages.at(activePageIndex)?.includes(i) }
-              )}
-            >
-              {child}
-            </li>
-          ))
+          children.map((child, i) => {
+            const isInCurrentPage = pages.at(activePageIndex)?.includes(i)
+            return (
+              <li
+                key={i}
+                className={clsx(
+                  styles.item,
+                  { [styles.fadeItem]: !isInCurrentPage }
+                )}
+              >
+                {child}
+              </li>
+            )
+          })
         }
       </ul>
     </div>
