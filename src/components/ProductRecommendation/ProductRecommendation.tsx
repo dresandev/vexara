@@ -1,7 +1,7 @@
 import { ProductCategory } from '~/types'
 import { getRecommendations } from '~/helpers/get-recommendations'
 import { Carousel } from '~/components/Carousel'
-import { ProductCard } from '~/components/ProductCard'
+import { RecommendationProductCard } from '~/components/RecommendationProductCard'
 import styles from './ProductRecommendation.module.css'
 
 interface ProductRecommendationProps {
@@ -28,7 +28,7 @@ export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({
             price,
             discount,
           }) => (
-            <ProductCard
+            <RecommendationProductCard
               key={id}
               id={id}
               className={styles.productCard}

@@ -1,6 +1,7 @@
 .sizeList {
   display: flex;
-  column-gap: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
   padding-inline-start: 0;
   padding-block: 28px;
 }
@@ -18,6 +19,7 @@
   min-inline-size: var(--size);
   min-block-size: var(--size);
   padding-inline: 10px;
+  font-size: 1.4rem;
   border: 1px solid hsl(0, 0%, 71%);
   border-radius: 2rem;
 }

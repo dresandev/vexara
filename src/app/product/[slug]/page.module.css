@@ -1,29 +1,35 @@
-.container {
-  display: flex;
-}
-
-.images,
-.details {
-  flex: 1 1 50%;
-}
-
 .images {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
+  block-size: inherit;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
 }
 
 .image {
   inline-size: 100%;
+  block-size: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  object-fit: cover;
 }
 
 .details {
-  position: sticky;
-  inset-block-start: var(--header-block-size);
-  display: flex;
-  flex-direction: column;
-  block-size: calc(100vh - var(--header-block-size));
-  padding: 28px 32px 32px 80px;
+  position: relative;
+  padding: 32px 16px;
+  background-color: var(--bg-color);
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 16px;
+  margin-inline: auto;
+  display: block;
+  inline-size: 32px;
+  block-size: 4px;
+  background: hsl(0, 0%, 83%);
+  border-radius: 25px;
 }
 
 .title {
@@ -46,8 +52,8 @@
 .productLinks {
   display: flex;
   column-gap: 1px;
-  inline-size: max-content;
-  margin-block-start: auto;
+  inline-size: fit-content;
+  margin-block-start: 62px;
   font-size: 1.2rem;
   font-weight: 500;
   background-color: var(--border-color);
@@ -55,5 +61,56 @@
 
 .productLink {
   padding-inline: 16px;
+  text-align: start;
   background-color: var(--bg-color);
+}
+
+.productLink:is(:first-child) {
+  padding-inline-start: 0;
+}
+
+.productLink:is(:last-child) {
+  padding-inline-end: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: flex;
+  }
+
+  .parallaxContainer,
+  .details {
+    flex: 0 0 50%;
+  }
+
+  .parallaxContainer {
+    block-size: auto;
+  }
+
+  .parallaxContainer > div {
+    position: static;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  .productLinks {
+    margin-block-start: auto;
+  }
+
+  .details {
+    position: sticky;
+    inset-block-start: var(--header-block-size);
+    display: flex;
+    flex-direction: column;
+    block-size: calc(100vh - var(--header-block-size));
+    padding: 28px 32px 32px clamp(4.8rem, -11.2rem + 10vw, 8rem);
+  }
+
+  .details::before {
+    content: none;
+  }
 }

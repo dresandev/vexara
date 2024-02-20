@@ -1,15 +1,5 @@
-.container {
-  --block-size: 80dvh;
-  block-size: var(--block-size);
-}
-
-.videoWrapper {
-  position: fixed;
-  inset-inline: 0;
-}
-
 .video {
   inline-size: 100%;
-  block-size: var(--block-size);
+  block-size: inherit;
   object-fit: cover;
 }

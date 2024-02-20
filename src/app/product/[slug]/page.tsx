@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
+import { getProductById } from '~/helpers/get-products'
+import { ParallaxContainer } from '~/components/ParallaxContainer'
 import { Price } from '~/components/Price'
 import { SizeSelector } from '~/components/SizeSelector'
 import { AddToCartButton } from '~/components/AddToCartButton'
@@ -8,7 +10,6 @@ import { ProductInfoCard } from '~/components/ProductInfoCard'
 import { ProductRecommendation } from '~/components/ProductRecommendation'
 import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/SVG'
 import styles from './page.module.css'
-import { getProductById } from '~/helpers/get-products'
 
 interface ProductPageProps {
   params: { slug: string }
@@ -28,18 +29,24 @@ export default function ProductPage({
   return (
     <>
       <div className={styles.container}>
-        <section className={styles.images}>
-          {
-            images.map(image => (
-              <img
-                key={image}
-                className={styles.image}
-                src={image}
-                alt={name}
-              />
-            ))
-          }
-        </section>
+        <ParallaxContainer
+          className={styles.parallaxContainer}
+          blockSize='calc(85dvh - var(--header-block-size))'
+        >
+          <section className={styles.images}>
+            {
+              images.map(image => (
+                <img
+                  key={image}
+                  className={styles.image}
+                  src={image}
+                  alt={name}
+                />
+              ))
+            }
+          </section>
+        </ParallaxContainer>
+
         <section className={styles.details}>
           <h1 className={styles.title}>
             {name}

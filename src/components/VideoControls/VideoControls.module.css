@@ -1,5 +1,6 @@
 .controlsWrapper {
   position: relative;
+  block-size: inherit;
 }
 
 .soundButton {
