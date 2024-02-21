@@ -1,11 +1,19 @@
-import { HeartIcon } from '~/components/SVG/HeartIcon'
-import styles from './AddToFavoritesButton.module.css'
+'use client'
 
-export const AddToFavoritesButton = () => {
+import { HeartIcon } from '~/components/SVG/HeartIcon'
+
+interface AddToFavoritesButtonProps {
+  className?: string
+}
+
+export const AddToFavoritesButton: React.FC<AddToFavoritesButtonProps> = ({
+  className
+}) => {
   return (
     <button
-      className={styles.button}
+      className={className}
       aria-label='Añadir a la lista de deseos'
+      type='button'
     >
       <HeartIcon />
     </button>

@@ -5,7 +5,7 @@ import { shirts } from './shirts'
 import { shoes } from './shoes'
 import { sweatshirtsAndSweaters } from './sweatshirts-and-sweaters'
 
-export const products: { [key in ProductCategory]: Product[] } = {
+export const products: { [key in ProductCategory | 'all']: Product[] } = {
   'all': [
     ...jacketsAndCoats,
     ...pantsAndJeans,

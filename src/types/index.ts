@@ -1,5 +1,4 @@
 export type ProductCategory =
-  'all' |
   'shirts' |
   'jackets-and-coats' |
   'shoes' |

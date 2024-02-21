@@ -1,10 +1,10 @@
-import { CategorySlug } from '~/types'
+import { ProductCategory as CategorySlug } from '~/types'
 
 export const getProductImagePaths = (
-  productType: CategorySlug,
-  product: string
+  productCategorySlug: CategorySlug,
+  productName: string
 ) => {
-  const imageBasePath = `/images/products/${productType}/${product}`
+  const imageBasePath = `/images/products/${productCategorySlug}/${productName}`
   return [
     `${imageBasePath}/front.webp`,
     `${imageBasePath}/back.webp`,

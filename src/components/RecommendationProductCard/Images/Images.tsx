@@ -2,23 +2,23 @@
 
 import { useState } from 'react'
 
-interface ProductImageProps {
+interface ImagesProps {
   src: string
   hoverSrc: string
-  name: string
+  alt: string
 }
 
-export const ProductImage: React.FC<ProductImageProps> = ({
+export const Images: React.FC<ImagesProps> = ({
   src,
   hoverSrc,
-  name,
+  alt,
 }) => {
   const [imageSrc, setImageSrc] = useState(src)
 
   return (
     <img
       src={imageSrc}
-      alt={name}
+      alt={alt}
       onMouseOver={() => setImageSrc(hoverSrc)}
       onMouseLeave={() => setImageSrc(src)}
     />

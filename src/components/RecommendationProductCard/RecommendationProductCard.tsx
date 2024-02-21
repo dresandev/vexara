@@ -2,7 +2,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { simpleSlugify } from '~/utils/simple-slugify'
 import { Price } from '~/components/Price'
-import { ProductImage } from './ProductImage'
+import { Images } from './Images'
 import styles from './RecommendationProductCard.module.css'
 
 interface RecommendationProductCardProps {
@@ -33,10 +33,10 @@ export const RecommendationProductCard: React.FC<RecommendationProductCardProps>
         styles.card,
         className
       )}>
-        <ProductImage
+        <Images
           src={imagePath}
           hoverSrc={hoverImagePath}
-          name={name}
+          alt={name}
         />
         <div className={styles.details}>
           <figcaption className={styles.name}>

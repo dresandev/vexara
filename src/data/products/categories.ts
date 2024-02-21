@@ -1,9 +1,9 @@
-import { ProductCategory as CategorySlug } from '~/types'
+import { ProductCategory as ProductSlug } from '~/types'
 
 interface TopCategory {
   category: string
   imagePath: string
-  pagePath: CategorySlug
+  pagePath: ProductSlug
 }
 
 const BASE_IMAGE_URL = '/images/products/categories/man'
@@ -35,3 +35,11 @@ export const topCategories: TopCategory[] = [
     pagePath: 'shoes',
   },
 ]
+
+export const productCategoryTitles: { [key in ProductSlug]: string } = {
+  'shirts': 'Camisas',
+  'jackets-and-coats': 'Cazadoras y abrigos',
+  'shoes': 'Zapatos',
+  'sweatshirts-and-sweaters': 'Sudaderas y jerséis',
+  'pants-and-jeans': 'Pantalones y jeans'
+}
