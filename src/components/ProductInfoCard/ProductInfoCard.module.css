@@ -11,7 +11,7 @@
 }
 
 .freeText {
-  color: hsl(162, 100%, 40%);
+  color: var(--success-color);
   font-weight: 700;
 }
 

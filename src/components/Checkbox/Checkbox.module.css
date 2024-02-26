@@ -1,0 +1,53 @@
+.label {
+  display: flex;
+  align-items: center;
+  inline-size: fit-content;
+  font-size: 1.2rem;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  cursor: pointer;
+}
+
+.label:hover > .holder,
+.input:focus-visible ~ .holder {
+  border-color: var(--border-color-high);
+}
+
+.input {
+  opacity: 0;
+  inline-size: 0;
+  block-size: 0;
+}
+
+.holder {
+  --size: 2.2rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  block-size: var(--size);
+  inline-size: var(--size);
+  border: 1px solid var(--inactive-color);
+  border-radius: 50%;
+}
+
+.checkIcon {
+  --size: 16px;
+  display: none;
+  block-size: var(--size);
+  inline-size: var(--size);
+}
+
+.labelText {
+  padding-inline-start: 8px;
+}
+
+.input:checked ~ .holder {
+  background-color: var(--success-color);
+  color: var(--content-color-invert);
+  border: none;
+}
+
+.input:checked ~ .holder > .checkIcon {
+  display: block;
+}

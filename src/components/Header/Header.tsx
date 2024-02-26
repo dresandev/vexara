@@ -6,31 +6,37 @@ export const Header = () => {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
+        <nav>
+          <Link
+            className={styles.link}
+            href='/'
+          >
+            Hombre
+          </Link>
+        </nav>
+
         <Link
-          className={styles.link}
-          href='/'
-        >
-          Hombre
-        </Link>
-        <Link
-          className={styles.homeLink}
           aria-label='Volver a la página de inicio'
+          className={styles.homeLink}
           href='/'
         >
           <VexaraLogo />
         </Link>
-        <button
+
+        <Link
           aria-label='Acceder o crear cuenta'
-          type='button'
+          href='/auth'
+          scroll={false}
         >
           <UserIcon />
-        </button>
-        <button
+        </Link>
+        <Link
           aria-label='Ver cesta'
-          type='button'
+          href='/shop-cart'
+          scroll={false}
         >
           <ShoppingBagIcon />
-        </button>
+        </Link>
       </header>
     </div>
   )

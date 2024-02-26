@@ -6,7 +6,7 @@ import styles from './ProductRecommendation.module.css'
 
 interface ProductRecommendationProps {
   amount?: number
-  category?: ProductCategory
+  category?: ProductCategory | 'all'
 }
 
 export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({

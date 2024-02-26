@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <HeroVideo />
-      <div className={styles.mainContent}>
+      <div className={styles.contentWrapper}>
         <ClothingCategories />
         <PromoVideo />
         <ProductRecommendation amount={12} />

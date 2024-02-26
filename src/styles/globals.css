@@ -7,6 +7,8 @@
   --content-color-invert-hsl: 0 0% 0%;
   --border-color-hsl: 0 0% 90%;
   --border-color-high-hsl: 0, 0%, 0%;
+  --inactive-color-hsl: 0 0% 71%;
+  --success-color-hsl: 162 100% 40%;
 
   --promo-color: hsl(339 100% 43%);
   --bg-color: hsl(0 0% 100%);
@@ -16,6 +18,8 @@
   --content-color-invert: hsl(0 0% 100%);
   --border-color: hsl(0 0% 90%);
   --border-color-high: hsl(0 0% 0%);
+  --inactive-color: hsl(0 0% 71%);
+  --success-color: hsl(162 100% 40%);
 
   --header-block-size: 48px;
   --border-radius: 4px;
@@ -23,4 +27,12 @@
 
 body {
   font-size: clamp(1.3rem, 1.227rem + 0.194vw, 1.6rem);
+}
+
+.hideOverflow {
+  overflow-y: hidden;
+}
+
+.__next {
+  isolation: isolate;
 }

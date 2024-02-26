@@ -4,7 +4,7 @@ import { getProductsByCategory } from '~/helpers/get-products'
 
 interface getRecommendationProps {
   amount: number
-  category: ProductCategory
+  category: ProductCategory | 'all'
 }
 
 export const getRecommendations = ({

@@ -1,4 +1,4 @@
-.mainContent {
+.contentWrapper {
   isolation: isolate;
   background-color: var(--bg-color);
 }

@@ -1,0 +1,32 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  animation: showBackdrop 300ms forwards;
+}
+
+.modal {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  max-inline-size: 384px;
+  background-color: var(--bg-color);
+  outline: none;
+  overflow-y: auto;
+  animation: enterModal 300ms;
+}
+
+@keyframes showBackdrop {
+  to {
+    background-color: hsla(0, 0%, 0%, 0.35);
+  }
+}
+
+@keyframes enterModal {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

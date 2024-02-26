@@ -16,20 +16,28 @@ export const metadata: Metadata = {
 }
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
+  modal: React.ReactNode
 }
 
 export default function RootLayout({
   children,
+  modal,
 }: RootLayoutProps) {
   return (
     <html lang='es'>
       <body className={inter.className}>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <div className='__next'>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </div>
+
+        <div id='modal-container'>
+          {modal}
+        </div>
       </body>
     </html>
   )

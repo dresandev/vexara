@@ -12,5 +12,5 @@
 }
 
 .button:hover {
-  background-color: hsl(162, 100%, 40%);
+  background-color: var(--success-color);
 }
