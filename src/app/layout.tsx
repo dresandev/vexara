@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Header } from '~/components/Header'
 import { Footer } from '~/components/Footer'
+import { LoginModal } from '~/components/LoginModal'
+import { RegisterModal } from '~/components/RegisterModal'
+import { ShopCartModal } from '~/components/ShopCartModal'
 import '~/styles/reset.css'
 import '~/styles/globals.css'
 
@@ -17,12 +20,10 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode
-  modal: React.ReactNode
 }
 
 export default function RootLayout({
   children,
-  modal,
 }: RootLayoutProps) {
   return (
     <html lang='es'>
@@ -36,7 +37,9 @@ export default function RootLayout({
         </div>
 
         <div id='modal-container'>
-          {modal}
+          <LoginModal />
+          <RegisterModal />
+          <ShopCartModal />
         </div>
       </body>
     </html>

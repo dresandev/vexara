@@ -1,14 +1,14 @@
 import styles from './TextField.module.css'
 
 type TextFieldProps = {
-  label?: string;
-  multiline?: boolean;
-} & React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>
+  label?: string
+  hint?: string
+} & React.InputHTMLAttributes<HTMLInputElement>
 
 export const TextField: React.FC<TextFieldProps> = ({
   id,
   label,
-  multiline = false,
+  hint,
   ...props
 }) => {
   return (
@@ -19,21 +19,15 @@ export const TextField: React.FC<TextFieldProps> = ({
       >
         {label}
       </label>
+      <input
+        id={id}
+        className={styles.input}
+        placeholder=''
+        {...props}
+      />
       {
-        multiline ? (
-          <textarea
-            id={id}
-            className={styles.textarea}
-            placeholder=''
-            {...props}
-          />
-        ) : (
-          <input
-            id={id}
-            className={styles.input}
-            placeholder=''
-            {...props}
-          />
+        hint && (
+          <p className={styles.hint}>{hint}</p>
         )
       }
     </div>

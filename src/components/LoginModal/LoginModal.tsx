@@ -1,21 +1,19 @@
 import Link from 'next/link'
+import clsx from 'clsx'
 import { TextField } from '~/components/TextField'
 import { Checkbox } from '~/components/Checkbox'
 import { SideModal } from '~/components/SideModal'
-import { CloseModalButton } from '~/components/CloseModalButton'
-import { CloseIcon } from '~/components/SVG'
-import styles from './AuthModal.module.css'
+import utilStyles from '~/styles/utils.module.css'
+import styles from './LoginModal.module.css'
 
-export const AuthModal = () => {
+export const LoginModal = () => {
   return (
-    <SideModal className={styles.modal}>
-      <CloseModalButton className={styles.closeModalButton}>
-        <CloseIcon />
-      </CloseModalButton>
-
+    <SideModal
+      className={styles.modal}
+      fragment='#auth'
+    >
       <div className={styles.content}>
         <img
-          className={styles.imgDecoration}
           src='/images/decoration/monster.webp'
           alt=''
           width={150}
@@ -24,11 +22,11 @@ export const AuthModal = () => {
         <h1 className={styles.title}>
           Inicia sesión o crea tu cuenta
         </h1>
-        <p className={styles.legal}>
+        <p className={styles.legalText}>
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
           <Link
             className={styles.legalLink}
-            href='#'>
+            href='#auth'>
             Política de Privacidad
           </Link>
         </p>
@@ -39,14 +37,14 @@ export const AuthModal = () => {
 
         <form className={styles.form}>
           <TextField
-            id='login_email'
+            id='login-email'
             label='E-mail'
             autoComplete='off'
             type='email'
             required
           />
           <TextField
-            id='login_password'
+            id='login-password'
             label='Contraseña'
             type='password'
             required
@@ -57,22 +55,27 @@ export const AuthModal = () => {
 
             <Link
               className={styles.forgotPasswordLink}
-              href='#'
+              href='#auth'
             >
               ¿Has olvidado tu contraseña?
             </Link>
           </div>
 
-          <button className={styles.submitButton}>
+          <button className={clsx(
+            utilStyles.button,
+            styles.loginButton,
+          )}>
             Iniciar Sesión
           </button>
 
           <Link
             className={styles.registerLink}
-            href='#'
+            href='#register'
           >
-            ¿No tienes cuenta?
-            <span className={styles.registerLinkText}> Regístrate</span>
+            ¿No tienes cuenta?{' '}
+            <span className={styles.registerLinkText}>
+              Regístrate
+            </span>
           </Link>
         </form>
       </div>

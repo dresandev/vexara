@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { simpleSlugify } from '~/utils/simple-slugify'
+import { getProductPathName } from '~/helpers/get-product-pathname'
 import { Price } from '~/components/Price'
 import { AddToFavoritesButton } from '~/components/AddToFavoritesButton'
 import { ImageCarousel } from './ImageCarousel'
@@ -28,8 +28,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       />
       <Link
         className={styles.linkWrapper}
-        href={`/product/${simpleSlugify(name)}CT${id}`}
-      >{name}</Link>
+        href={getProductPathName(id, name)}
+      >
+        {name}
+      </Link>
       <div className={styles.details}>
         <figcaption className={styles.name}>
           {name}

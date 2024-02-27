@@ -31,6 +31,20 @@
   border-radius: 50%;
 }
 
+.input:checked ~ .holder {
+  background-color: var(--success-color);
+  color: var(--content-color-invert);
+  border: none;
+}
+
+.input:user-invalid ~ .holder {
+  border-color: var(--error-color);
+}
+
+.input:checked ~ .holder > .checkIcon {
+  display: block;
+}
+
 .checkIcon {
   --size: 16px;
   display: none;
@@ -39,15 +53,5 @@
 }
 
 .labelText {
-  padding-inline-start: 8px;
-}
-
-.input:checked ~ .holder {
-  background-color: var(--success-color);
-  color: var(--content-color-invert);
-  border: none;
-}
-
-.input:checked ~ .holder > .checkIcon {
-  display: block;
+  padding-inline-start: 12px;
 }

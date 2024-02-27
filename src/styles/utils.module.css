@@ -1,0 +1,18 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 48px;
+  padding-inline: 16px;
+  color: var(--content-color-invert);
+  background-color: var(--bg-color-high);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-transform: uppercase;
+  outline-offset: 2px;
+  user-select: none;
+}
+
+.button:hover {
+  opacity: 0.75;
+}

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import { simpleSlugify } from '~/utils/simple-slugify'
+import { getProductPathName } from '~/helpers/get-product-pathname'
 import { Price } from '~/components/Price'
 import { Images } from './Images'
 import styles from './RecommendationProductCard.module.css'
@@ -27,7 +27,7 @@ export const RecommendationProductCard: React.FC<RecommendationProductCardProps>
   return (
     <Link
       className={styles.linkWrapper}
-      href={`/product/${simpleSlugify(name)}CT${id}`}
+      href={getProductPathName(id, name)}
     >
       <figure className={clsx(
         styles.card,

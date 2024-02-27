@@ -1,46 +1,30 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { useRouter } from 'next/navigation'
-import clsx from 'clsx'
-import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
-import { useOnClickOutside } from '~/hooks/use-on-click-outside'
-import styles from './SideModal.module.css'
+import { useParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { SideModalCC } from './SideModalCC'
 
 interface SideModalProps {
   children: React.ReactNode
   className?: string
+  fragment: string
 }
 
 export const SideModal: React.FC<SideModalProps> = ({
   children,
   className,
+  fragment,
 }) => {
-  const router = useRouter()
-  const modalRef = useRef<HTMLDivElement>(null)
-  useToggleBodyOverflow(true)
-  useOnClickOutside(modalRef, router.back)
+  const params = useParams()
+  const [mount, setMount] = useState(false)
 
   useEffect(() => {
-    modalRef.current?.focus()
-  }, [])
+    setMount(window.location.hash === fragment)
+  }, [fragment, params])
 
-  return (
-    <>
-      <div
-        aria-hidden
-        className={styles.backdrop}
-      />
-      <div
-        ref={modalRef}
-        tabIndex={0}
-        className={clsx(
-          styles.modal,
-          className,
-        )}
-      >
-        {children}
-      </div>
-    </>
+  return mount && (
+    <SideModalCC className={className}>
+      {children}
+    </SideModalCC>
   )
 }

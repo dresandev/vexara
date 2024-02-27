@@ -25,14 +25,14 @@ export const Header = () => {
 
         <Link
           aria-label='Acceder o crear cuenta'
-          href='/auth'
+          href='#auth'
           scroll={false}
         >
           <UserIcon />
         </Link>
         <Link
           aria-label='Ver cesta'
-          href='/shop-cart'
+          href='#shopping-cart'
           scroll={false}
         >
           <ShoppingBagIcon />

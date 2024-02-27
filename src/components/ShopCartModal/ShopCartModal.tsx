@@ -1,17 +1,19 @@
 import Link from 'next/link'
+import { products } from '~/data/products'
 import { SideModal } from '~/components/SideModal'
-import { CloseModalButton } from '~/components/CloseModalButton'
-import { HeartIcon } from '~/components/SVG/HeartIcon'
-import { CloseIcon } from '~/components/SVG'
+import { HeartIcon } from '~/components/SVG'
+import { ProductsInCart } from '~/components/ProductsInCart'
+import { NoProductsInCart } from '~/components/NoProductsInCart'
 import styles from './ShopCartModal.module.css'
 
 export const ShopCartModal = () => {
-  return (
-    <SideModal className={styles.modal}>
-      <CloseModalButton className={styles.closeModalButton}>
-        <CloseIcon />
-      </CloseModalButton>
+  const productsInCart = products['jackets-and-coats']
 
+  return (
+    <SideModal
+      className={styles.modal}
+      fragment='#shopping-cart'
+    >
       <div className={styles.header}>
         <span className={styles.title}>
           Cesta
@@ -28,23 +30,13 @@ export const ShopCartModal = () => {
         </Link>
       </div>
 
-      <div className={styles.content}>
-        <img
-          src='/images/decoration/bag.webp'
-          alt=''
-        />
-
-        <span className={styles.emptyText}>
-          Cesta vacía
-        </span>
-        <p className={styles.descriptionText}>
-          Aún no tienes ningún artículo en la cesta, descubre todo lo que tenemos para ti
-        </p>
-
-        <CloseModalButton className={styles.starShoppingButton}>
-          Comenzar a comprar
-        </CloseModalButton>
-      </div>
+      {
+        productsInCart.length > 0 ? (
+          <ProductsInCart products={productsInCart} />
+        ) : (
+          <NoProductsInCart />
+        )
+      }
     </SideModal>
   )
 }

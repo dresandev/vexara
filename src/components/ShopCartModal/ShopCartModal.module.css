@@ -1,13 +1,3 @@
-.modal {
-  display: flex;
-  flex-direction: column;
-  padding: 16px clamp(20px, 17.09px + 0.777vw, 32px);
-}
-
-.closeModalButton {
-  margin-inline-start: auto;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -28,35 +18,4 @@
   font-size: 1.3rem;
   border: 1px solid var(--border-color-high);
   border-radius: 20px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-block: auto;
-  padding-block: 20px;
-}
-
-.emptyText {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-block: 16px 8px;
-}
-
-.descriptionText {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-.starShoppingButton {
-  block-size: 48px;
-  padding-inline: 16px;
-  margin-block-start: 40px;
-  color: var(--content-color-invert);
-  background-color: var(--bg-color-high);
-  border-radius: var(--border-radius);
-  font-weight: 700;
-  text-transform: uppercase;
-  outline-offset: 2px;
 }

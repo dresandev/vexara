@@ -1,15 +1,4 @@
 :root {
-  --promo-color-hsl: 339 100% 43%;
-  --bg-color-hsl: 0 0% 100%;
-  --bg-color-high: 0 0% 0%;
-  --bg-color-low: 0 0% 96%;
-  --content-color-hsl: 0 0% 0%;
-  --content-color-invert-hsl: 0 0% 0%;
-  --border-color-hsl: 0 0% 90%;
-  --border-color-high-hsl: 0, 0%, 0%;
-  --inactive-color-hsl: 0 0% 71%;
-  --success-color-hsl: 162 100% 40%;
-
   --promo-color: hsl(339 100% 43%);
   --bg-color: hsl(0 0% 100%);
   --bg-color-high: hsl(0 0% 0%);
@@ -19,7 +8,8 @@
   --border-color: hsl(0 0% 90%);
   --border-color-high: hsl(0 0% 0%);
   --inactive-color: hsl(0 0% 71%);
-  --success-color: hsl(162 100% 40%);
+  --success-color: hsl(162 100% 35%);
+  --error-color: hsl(352 86% 62%);
 
   --header-block-size: 48px;
   --border-radius: 4px;
