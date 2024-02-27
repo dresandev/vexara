@@ -1,16 +1,23 @@
 import Link from 'next/link'
 import { SideModal } from '~/components/SideModal'
-import { CloseModalButton } from '~/components/CloseModalButton'
 import { HeartIcon } from '~/components/SVG/HeartIcon'
 import { CloseIcon } from '~/components/SVG'
 import styles from './ShopCartModal.module.css'
 
 export const ShopCartModal = () => {
   return (
-    <SideModal className={styles.modal}>
-      <CloseModalButton className={styles.closeModalButton}>
+    <SideModal
+      className={styles.modal}
+      fragment='#shopping-cart'
+    >
+      <Link
+        aria-label='Cerrar'
+        className={styles.closeModalLink}
+        href=''
+        scroll={false}
+      >
         <CloseIcon />
-      </CloseModalButton>
+      </Link>
 
       <div className={styles.header}>
         <span className={styles.title}>
@@ -32,6 +39,8 @@ export const ShopCartModal = () => {
         <img
           src='/images/decoration/bag.webp'
           alt=''
+          width={200}
+          height={200}
         />
 
         <span className={styles.emptyText}>
@@ -41,9 +50,13 @@ export const ShopCartModal = () => {
           Aún no tienes ningún artículo en la cesta, descubre todo lo que tenemos para ti
         </p>
 
-        <CloseModalButton className={styles.starShoppingButton}>
-          Comenzar a comprar
-        </CloseModalButton>
+        <Link
+          className='button'
+          href='/'
+          scroll={false}
+        >
+          Descrubir
+        </Link>
       </div>
     </SideModal>
   )

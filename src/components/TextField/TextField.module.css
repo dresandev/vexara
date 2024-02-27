@@ -21,8 +21,7 @@
   transform: translate(10px, -0.5lh) scale(0.9);
 }
 
-.input,
-.textarea {
+.input {
   padding: 10px 16px;
   inline-size: 100%;
   font-weight: 500;
@@ -32,17 +31,20 @@
   transition: border-color 200ms ease;
 }
 
-.textarea {
-  resize: none;
-  block-size: 20rem;
-}
-
-.input:focus,
-.textarea:focus {
+.input:focus {
   border-color: var(--border-color-high);
 }
 
-.input:user-invalid,
-.textarea:user-invalid {
-  border-color: hsl(352, 86%, 62%);
+.input:user-invalid {
+  border-color: var(--error-color);
+}
+
+.hint {
+  font-size: 1rem;
+  padding-block-start: 8px;
+  color: var(--inactive-color);
+}
+
+.input:user-invalid ~ .hint {
+  color: var(--error-color);
 }

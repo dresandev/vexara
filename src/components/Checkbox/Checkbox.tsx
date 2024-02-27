@@ -1,16 +1,22 @@
 import { CheckIcon } from '~/components/SVG'
 import styles from './Checkbox.module.css'
 
-interface CheckboxProps {
+type CheckboxProps = {
   label?: string
-}
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>
 
 export const Checkbox: React.FC<CheckboxProps> = ({
-  label
+  className,
+  label,
+  ...props
 }) => {
   return (
     <label className={styles.label}>
-      <input className={styles.input} type='checkbox' />
+      <input
+        {...props}
+        className={styles.input}
+        type='checkbox'
+      />
       <div className={styles.holder}>
         <CheckIcon className={styles.checkIcon} />
       </div>

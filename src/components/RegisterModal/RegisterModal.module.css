@@ -1,0 +1,39 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 16px clamp(20px, 17.09px + 0.777vw, 32px);
+}
+
+.closeModalLink {
+  margin-inline-start: auto;
+}
+
+.title {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-block: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.legalCheckbox {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.legalLink {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.formFooter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}

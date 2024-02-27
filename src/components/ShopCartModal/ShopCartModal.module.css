@@ -4,7 +4,7 @@
   padding: 16px clamp(20px, 17.09px + 0.777vw, 32px);
 }
 
-.closeModalButton {
+.closeModalLink {
   margin-inline-start: auto;
 }
 
@@ -47,16 +47,4 @@
 .descriptionText {
   text-align: center;
   font-size: 1.4rem;
-}
-
-.starShoppingButton {
-  block-size: 48px;
-  padding-inline: 16px;
-  margin-block-start: 40px;
-  color: var(--content-color-invert);
-  background-color: var(--bg-color-high);
-  border-radius: var(--border-radius);
-  font-weight: 700;
-  text-transform: uppercase;
-  outline-offset: 2px;
 }

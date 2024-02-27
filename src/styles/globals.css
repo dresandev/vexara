@@ -9,6 +9,7 @@
   --border-color-high-hsl: 0, 0%, 0%;
   --inactive-color-hsl: 0 0% 71%;
   --success-color-hsl: 162 100% 40%;
+  --error-color-hsl: 352 86% 62%;
 
   --promo-color: hsl(339 100% 43%);
   --bg-color: hsl(0 0% 100%);
@@ -20,6 +21,7 @@
   --border-color-high: hsl(0 0% 0%);
   --inactive-color: hsl(0 0% 71%);
   --success-color: hsl(162 100% 40%);
+  --error-color: hsl(352 86% 62%);
 
   --header-block-size: 48px;
   --border-radius: 4px;
@@ -35,4 +37,23 @@ body {
 
 .__next {
   isolation: isolate;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 48px;
+  padding-inline: 16px;
+  margin-block-start: 40px;
+  color: var(--content-color-invert);
+  background-color: var(--bg-color-high);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-transform: uppercase;
+  outline-offset: 2px;
+}
+
+.button:hover {
+  opacity: 0.75;
 }
