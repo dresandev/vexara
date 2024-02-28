@@ -22,7 +22,6 @@
   position: relative;
   block-size: 1px;
   inline-size: 100%;
-  inline-size: 100%;
   margin-block: 32px;
   background-color: hsl(0, 0%, 91%);
 }
@@ -42,7 +41,6 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  inline-size: 100%;
   inline-size: 100%;
 }
 
