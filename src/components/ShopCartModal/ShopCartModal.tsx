@@ -10,10 +10,7 @@ export const ShopCartModal = () => {
   const productsInCart = products['jackets-and-coats']
 
   return (
-    <SideModal
-      className={styles.modal}
-      fragment='#shopping-cart'
-    >
+    <SideModal fragment='#shopping-cart'>
       <div className={styles.header}>
         <span className={styles.title}>
           Cesta
