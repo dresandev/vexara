@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { SideModal } from '~/components/SideModal'
 import { TextField } from '~/components/TextField'
 import { Checkbox } from '~/components/Checkbox'
-import utilStyles from '~/styles/utils.module.css'
+import componentStyles from '~/styles/components.module.css'
 import styles from './RegisterModal.module.css'
 
 export const RegisterModal = () => {
@@ -47,7 +47,7 @@ export const RegisterModal = () => {
         </div>
 
         <button className={clsx(
-          utilStyles.button,
+          componentStyles.button,
           styles.registerButton,
         )}>
           Crear Cuenta

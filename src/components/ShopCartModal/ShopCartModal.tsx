@@ -1,14 +1,10 @@
 import Link from 'next/link'
-import { products } from '~/data/products'
 import { SideModal } from '~/components/SideModal'
 import { HeartIcon } from '~/components/SVG'
 import { ProductsInCart } from '~/components/ProductsInCart'
-import { NoProductsInCart } from '~/components/NoProductsInCart'
 import styles from './ShopCartModal.module.css'
 
 export const ShopCartModal = () => {
-  const productsInCart = products['jackets-and-coats']
-
   return (
     <SideModal fragment='#shopping-cart'>
       <div className={styles.header}>
@@ -27,13 +23,7 @@ export const ShopCartModal = () => {
         </Link>
       </div>
 
-      {
-        productsInCart.length > 0 ? (
-          <ProductsInCart products={productsInCart} />
-        ) : (
-          <NoProductsInCart />
-        )
-      }
+      <ProductsInCart />
     </SideModal>
   )
 }

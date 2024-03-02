@@ -17,15 +17,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'M',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -41,15 +41,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 123,
+        quantity: 123,
       },
       {
         size: 'L',
-        amount: 2,
+        quantity: 2,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -65,15 +65,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 50,
+        quantity: 50,
       },
       {
         size: 'M',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -89,15 +89,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 80,
+        quantity: 80,
       },
       {
         size: 'M',
-        amount: 70,
+        quantity: 70,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -113,15 +113,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 70,
+        quantity: 70,
       },
       {
         size: 'M',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'L',
-        amount: 39,
+        quantity: 39,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -137,15 +137,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 160,
+        quantity: 160,
       },
       {
         size: 'L',
-        amount: 52,
+        quantity: 52,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -161,15 +161,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 78,
+        quantity: 78,
       },
       {
         size: 'M',
-        amount: 6,
+        quantity: 6,
       },
       {
         size: 'L',
-        amount: 2,
+        quantity: 2,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -185,15 +185,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 9,
+        quantity: 9,
       },
       {
         size: 'M',
-        amount: 50,
+        quantity: 50,
       },
       {
         size: 'L',
-        amount: 12,
+        quantity: 12,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -209,15 +209,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'M',
-        amount: 20,
+        quantity: 20,
       },
       {
         size: 'L',
-        amount: 52,
+        quantity: 52,
       },
     ],
     images: getJacketsOrCoatsImagePaths(
@@ -233,15 +233,15 @@ export const jacketsAndCoats: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 90,
+        quantity: 90,
       },
       {
         size: 'M',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: 'L',
-        amount: 52,
+        quantity: 52,
       },
     ],
     images: getJacketsOrCoatsImagePaths(

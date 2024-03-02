@@ -7,7 +7,7 @@ export type ProductCategory =
 
 export interface Stock {
   size: string
-  amount: number
+  quantity: number
 }
 
 export interface Product {
@@ -18,4 +18,13 @@ export interface Product {
   stock: Stock[]
   images: string[]
   category: ProductCategory
+}
+
+export interface ProductToCart {
+  id: string
+  name: string
+  price: number
+  discount: number | null
+  stock: Stock
+  image: string
 }

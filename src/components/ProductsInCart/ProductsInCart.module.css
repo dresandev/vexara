@@ -1,4 +1,4 @@
-.productContainer {
+.container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -8,29 +8,4 @@
   margin-inline: calc(clamp(20px, 17.09px + 0.777vw, 32px) * -1);
   scrollbar-width: thin;
   overflow-y: auto;
-}
-
-.summary {
-  padding-block: 16px;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-}
-
-.legalText {
-  font-size: 1.2rem;
-  padding-inline-start: 8px;
-}
-
-.price,
-.totalText {
-  font-weight: 700;
-}
-
-.processOrderButton {
-  inline-size: 100%;
-  margin-block-start: 16px;
-  background-color: var(--success-color);
 }

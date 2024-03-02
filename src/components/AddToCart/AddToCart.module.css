@@ -1,0 +1,10 @@
+.actions {
+  display: flex;
+  column-gap: 24px;
+}
+
+.sizeRequiredMessage {
+  padding-block-end: 20px;
+  color: var(--error-color);
+  font-size: 1.4rem;
+}

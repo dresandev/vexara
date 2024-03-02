@@ -3,12 +3,10 @@ import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
 import { getProductById } from '~/helpers/get-products'
 import { ParallaxContainer } from '~/components/ParallaxContainer'
 import { Price } from '~/components/Price'
-import { SizeSelector } from '~/components/SizeSelector'
-import { AddToCartButton } from '~/components/AddToCartButton'
-import { AddToFavoritesButton } from '~/components/AddToFavoritesButton'
 import { ProductInfoCard } from '~/components/ProductInfoCard'
 import { ProductRecommendation } from '~/components/ProductRecommendation'
 import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/SVG'
+import { AddToCart } from '~/components/AddToCart'
 import styles from './page.module.css'
 
 interface ProductPageProps {
@@ -24,7 +22,7 @@ export default function ProductPage({
   const product = getProductById(productId)
   if (!product) notFound()
 
-  const { images, name, price, discount, stock, category } = product
+  const { images, name, price, discount, category } = product
 
   return (
     <>
@@ -57,11 +55,7 @@ export default function ProductPage({
             displayDiscount
           />
 
-          <SizeSelector stock={stock} />
-          <div className={styles.actions}>
-            <AddToCartButton />
-            <AddToFavoritesButton />
-          </div>
+          <AddToCart product={product} />
 
           <div className={styles.productInfo}>
             <ProductInfoCard
@@ -89,7 +83,7 @@ export default function ProductPage({
         </section>
       </div>
       <ProductRecommendation
-        amount={8}
+        quantity={8}
         category={category}
       />
     </>

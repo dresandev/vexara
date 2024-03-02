@@ -17,27 +17,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShirtImagePaths(
@@ -53,15 +53,15 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShirtImagePaths(
@@ -77,23 +77,23 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XS',
-        amount: 50,
+        quantity: 50,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getShirtImagePaths(
@@ -109,27 +109,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 80,
+        quantity: 80,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 12,
+        quantity: 12,
       },
     ],
     images: getShirtImagePaths(
@@ -145,27 +145,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 20,
+        quantity: 20,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 12,
+        quantity: 12,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShirtImagePaths(
@@ -181,31 +181,31 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XXL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShirtImagePaths(
@@ -221,27 +221,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShirtImagePaths(
@@ -257,27 +257,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 2,
+        quantity: 2,
       },
     ],
     images: getShirtImagePaths(
@@ -293,27 +293,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 10,
+        quantity: 10,
       },
     ],
     images: getShirtImagePaths(
@@ -329,27 +329,27 @@ export const shirts: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getShirtImagePaths(

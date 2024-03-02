@@ -3,19 +3,19 @@ import { getRandomNumbers } from '~/helpers/get-random-numbers'
 import { getProductsByCategory } from '~/helpers/get-products'
 
 interface getRecommendationProps {
-  amount: number
+  quantity: number
   category: ProductCategory | 'all'
 }
 
 export const getRecommendations = ({
-  amount,
+  quantity,
   category,
 }: getRecommendationProps) => {
   const products = getProductsByCategory(category)
-  const numbersAmount = (amount > products.length)
+  const numbersLength = (quantity > products.length)
     ? products.length
-    : amount
-  const randomIndexes = getRandomNumbers(numbersAmount, products.length - 1)
+    : quantity
+  const randomIndexes = getRandomNumbers(numbersLength, products.length - 1)
   const recommendations = randomIndexes.map(index => products.at(index)!)
 
   return recommendations

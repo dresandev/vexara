@@ -17,27 +17,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -53,15 +53,15 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'S',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'M',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -77,23 +77,23 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -109,27 +109,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -145,27 +145,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 12,
+        quantity: 12,
       },
       {
         size: 'XL',
-        amount: 2,
+        quantity: 2,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -181,31 +181,31 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XXL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -221,27 +221,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -257,27 +257,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -293,27 +293,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 60,
+        quantity: 60,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(
@@ -329,27 +329,27 @@ export const sweatshirtsAndSweaters: Product[] = [
     stock: [
       {
         size: 'XXS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'XS',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'S',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'M',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'XL',
-        amount: 32,
+        quantity: 32,
       },
     ],
     images: getSweatshirtsAndSweatersImagePaths(

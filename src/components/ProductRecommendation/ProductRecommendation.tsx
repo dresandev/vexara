@@ -5,15 +5,15 @@ import { RecommendationProductCard } from '~/components/RecommendationProductCar
 import styles from './ProductRecommendation.module.css'
 
 interface ProductRecommendationProps {
-  amount?: number
+  quantity?: number
   category?: ProductCategory | 'all'
 }
 
 export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({
-  amount = 8,
+  quantity = 8,
   category = 'all'
 }) => {
-  const recommendations = getRecommendations({ amount, category })
+  const recommendations = getRecommendations({ quantity, category })
 
   return (
     <section className={styles.recommendationsSection}>

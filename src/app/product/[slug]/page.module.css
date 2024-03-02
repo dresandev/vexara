@@ -37,11 +37,6 @@
   padding-block-end: 12px;
 }
 
-.actions {
-  display: flex;
-  column-gap: 24px;
-}
-
 .productInfo {
   max-inline-size: 472px;
   margin-block-start: 24px;

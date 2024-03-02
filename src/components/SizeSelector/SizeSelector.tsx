@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import clsx from 'clsx'
 import { Stock } from '~/types'
 import { ClockExclamationIcon } from '~/components/SVG'
@@ -9,20 +8,22 @@ import styles from './SizeSelector.module.css'
 
 interface SizeSelectorProps {
   stock: Stock[]
+  selectedSize: string | null
+  onChange: (size: string) => void
 }
 
 export const SizeSelector: React.FC<SizeSelectorProps> = ({
-  stock
+  stock,
+  selectedSize,
+  onChange,
 }) => {
-  const [selectedSize, setSelectedSize] = useState('')
-
   return (
     <ul className={styles.sizeList}>
       {
-        stock.map(({ size, amount }) => {
+        stock.map(({ size, quantity }) => {
           const isSelectedSize = size === selectedSize
-          const hasStock = amount > 0
-          const hasLowStock = amount > 0 && amount < 10
+          const hasStock = quantity > 0
+          const hasLowStock = quantity > 0 && quantity < 10
           const displayTooltip = hasLowStock || !hasStock
 
           return (
@@ -41,7 +42,7 @@ export const SizeSelector: React.FC<SizeSelectorProps> = ({
                   styles.sizeButton,
                   { [styles.isSelected]: isSelectedSize }
                 )}
-                onClick={() => setSelectedSize(size)}
+                onClick={() => onChange(size)}
                 disabled={!hasStock}
               >
                 {

@@ -1,61 +1,43 @@
-import clsx from 'clsx'
-import { Product } from '~/types'
+'use client'
+
+import { useCartStore } from '~/store/use-cart-store'
 import { CartProductCard } from '~/components/CartProductCard'
-import utilStyles from '~/styles/utils.module.css'
+import { Summary } from '~/components/Summary'
+import { NoProductsInCart } from '~/components/NoProductsInCart'
 import styles from './ProductsInCart.module.css'
 
-interface ProductsInCartProps {
-  products: Product[]
-}
+export const ProductsInCart = () => {
+  const cart = useCartStore(state => state.cart)
 
-export const ProductsInCart: React.FC<ProductsInCartProps> = ({
-  products
-}) => {
+  if (cart.length <= 0) return (
+    <NoProductsInCart />
+  )
+
   return (
     <>
-      <div className={styles.productContainer}>
+      <div className={styles.container}>
         {
-          products.map(({
+          cart.map(({
             id,
-            images,
+            image,
             price,
+            discount,
             name,
             stock,
           }) => (
             <CartProductCard
               key={id}
               id={id}
-              image={images[2]}
+              image={image}
               price={price}
+              discount={discount}
               name={name}
-              size={stock[0].size}
+              stock={stock}
             />
           ))
         }
       </div>
-
-      <div className={styles.summary}>
-        <div className={styles.total}>
-          <div>
-            <span className={styles.totalText}>
-              Total
-            </span>
-            <span className={styles.legalText}>
-              (IVA Incluido)
-            </span>
-          </div>
-
-          <span className={styles.price}>
-            1,304,800 COP
-          </span>
-        </div>
-        <button className={clsx(
-          utilStyles.button,
-          styles.processOrderButton
-        )}>
-          Tramitar pedido
-        </button>
-      </div>
+      <Summary />
     </>
   )
 }

@@ -22,7 +22,7 @@
 
 .details {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr auto;
   padding-inline: 6px;
   padding-block-start: 12px;
@@ -30,6 +30,4 @@
 
 .addToFavorites {
   position: relative;
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
 }

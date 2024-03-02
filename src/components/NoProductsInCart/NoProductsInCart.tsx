@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import utilStyles from '~/styles/utils.module.css'
+import componentStyles from '~/styles/components.module.css'
 import styles from './NoProductsInCart.module.css'
 
 export const NoProductsInCart = () => {
@@ -22,7 +22,7 @@ export const NoProductsInCart = () => {
 
       <Link
         className={clsx(
-          utilStyles.button,
+          componentStyles.button,
           styles.exploreButton,
         )}
         href='/'

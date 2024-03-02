@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className={styles.contentWrapper}>
         <ClothingCategories />
         <PromoVideo />
-        <ProductRecommendation amount={12} />
+        <ProductRecommendation quantity={12} />
       </div>
     </>
   )

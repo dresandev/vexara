@@ -1,8 +1,17 @@
 import styles from './AddToCartButton.module.css'
 
-export const AddToCartButton = () => {
+interface AddToCartButtonProps {
+  onClick?: () => void
+}
+
+export const AddToCartButton: React.FC<AddToCartButtonProps> = ({
+  onClick
+}) => {
   return (
-    <button className={styles.button}>
+    <button
+      className={styles.button}
+      onClick={onClick}
+    >
       Añadir a la cesta
     </button>
   )

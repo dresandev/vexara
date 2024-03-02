@@ -1,5 +1,6 @@
 .card {
   display: flex;
+  justify-content: space-between;
   column-gap: 16px;
   font-size: 1.4rem;
 }
@@ -20,6 +21,8 @@
 .topArea {
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  column-gap: 30px;
 }
 
 .price {
@@ -29,42 +32,14 @@
 .middleArea {
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
-  padding-block-start: 8px;
+  gap: 4px;
+  padding-block-start: 4px;
   font-size: 1.2rem;
 }
 
 .orderInfo {
   display: flex;
   column-gap: 8px;
+  flex-wrap: wrap;
   color: hsl(0, 0%, 39%);
-}
-
-.selectAmount {
-  display: grid;
-  grid-template-columns: repeat(3, 35px);
-  grid-template-rows: 35px;
-  inline-size: max-content;
-  margin-block-start: auto;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-}
-
-.button {
-  font-size: 2rem;
-}
-
-.input {
-  padding: 0;
-  font-weight: 700;
-  text-align: center;
-  appearance: textfield;
-  outline: none;
-  border: none;
-}
-
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }

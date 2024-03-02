@@ -36,13 +36,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <figcaption className={styles.name}>
           {name}
         </figcaption>
+        <AddToFavoritesButton
+          className={styles.addToFavorites}
+        />
         <Price
           discount={discount}
           price={price}
           displayDiscount
-        />
-        <AddToFavoritesButton
-          className={styles.addToFavorites}
         />
       </div>
     </figure>

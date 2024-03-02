@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { formatPrice } from '~/helpers/format-price'
 import styles from './Price.module.css'
 
@@ -13,46 +14,37 @@ export const Price: React.FC<PriceProps> = ({
   displayDiscount = false,
 }) => {
   const formattedPrice = formatPrice(price)
-  const formattedPriceWithDiscount = discount && (
-    formatPrice(price - (price * discount / 100))
-  )
 
-  const priceWithDiscountElement = (
-    <span className={styles.priceWithDiscount}>
-      {formattedPriceWithDiscount}
+  if (!discount) return (
+    <span className={styles.price}>
+      {formattedPrice}
     </span>
   )
-  const oldPriceElement = (
-    <del className={styles.oldPrice}>
-      {formattedPrice}
-    </del>
+
+  const formattedDiscountedPrice = formatPrice(
+    price - (price * discount / 100)
   )
 
-  const priceAndOrDiscountElements = displayDiscount
-    ? (
+  return (
+    <div className={clsx(
+      styles.wrapper,
+      { [styles.flexDirectionColumn]: displayDiscount }
+    )}>
       <>
-        <div>
-          {priceWithDiscountElement}
-          <span className={styles.discount}>
-            {`-${discount}%`}
-          </span>
+        <div className={styles.priceWithDiscount}>
+          {formattedDiscountedPrice}
+          {
+            displayDiscount && (
+              <span className={styles.discount}>
+                {`-${discount}%`}
+              </span>
+            )
+          }
         </div>
-        {oldPriceElement}
+        <del className={styles.oldPrice}>
+          {formattedPrice}
+        </del>
       </>
-    ) : (
-      <>
-        {priceWithDiscountElement}
-        {oldPriceElement}
-      </>
-    )
-
-  const result = formattedPriceWithDiscount
-    ? priceAndOrDiscountElements
-    : (
-      <span className={styles.price}>
-        {formattedPrice}
-      </span>
-    )
-
-  return result
+    </div>
+  )
 }

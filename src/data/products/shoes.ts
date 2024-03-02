@@ -17,31 +17,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -57,31 +57,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -97,31 +97,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -137,31 +137,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 10,
+        quantity: 10,
       },
     ],
     images: getShoesImagePaths(
@@ -177,31 +177,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 10,
+        quantity: 10,
       },
     ],
     images: getShoesImagePaths(
@@ -217,31 +217,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -257,31 +257,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 10,
+        quantity: 10,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -297,31 +297,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -337,31 +337,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: '42',
-        amount: 32,
+        quantity: 32,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(
@@ -377,31 +377,31 @@ export const shoes: Product[] = [
     stock: [
       {
         size: '39',
-        amount: 100,
+        quantity: 100,
       },
       {
         size: '40',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '41',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '42',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: 'L',
-        amount: 43,
+        quantity: 43,
       },
       {
         size: '44',
-        amount: 0,
+        quantity: 0,
       },
       {
         size: '45',
-        amount: 0,
+        quantity: 0,
       },
     ],
     images: getShoesImagePaths(

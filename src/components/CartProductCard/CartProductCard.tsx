@@ -1,24 +1,30 @@
 import Link from 'next/link'
+import { Stock } from '~/types'
 import { getProductPathName } from '~/helpers/get-product-pathname'
-import { TrashIcon } from '~/components/SVG'
+import { Price } from '~/components/Price'
+import { RemoveProductButton } from './RemoveProductButton'
+import { ChangeQuantity } from './ChangeQuantity'
 import styles from './CartProductCard.module.css'
 
 interface CartProductCardProps {
   id: string
   image: string
   price: number
+  discount: number | null
   name: string
-  size: string
+  stock: Stock
 }
 
 export const CartProductCard: React.FC<CartProductCardProps> = ({
   id,
   image,
   price,
+  discount,
   name,
-  size,
+  stock,
 }) => {
   const productPathname = getProductPathName(id, name)
+  const totalPrice = price * stock.quantity
 
   return (
     <div className={styles.card}>
@@ -37,15 +43,20 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
 
       <div className={styles.info}>
         <div className={styles.topArea}>
-          <span className={styles.price}>
-            79,900 COP
-          </span>
-          <button aria-label='Remover producto de la cesta'>
-            <TrashIcon
-              width={20}
-              height={20}
-            />
-          </button>
+          <Price
+            price={totalPrice}
+            discount={discount}
+          />
+          <RemoveProductButton
+            product={{
+              id,
+              image,
+              price,
+              discount,
+              name,
+              stock,
+            }}
+          />
         </div>
 
         <div className={styles.middleArea}>
@@ -53,23 +64,31 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
             {name}
           </Link>
           <div className={styles.orderInfo}>
-            <span>
-              {size}
-            </span>
-            <span>
-              8x
-            </span>
-            <span>
-              79,900 COP
-            </span>
+            <span>{stock.size}</span>
+            {
+              stock.quantity > 1 && (
+                <>
+                  <span>{stock.quantity}x</span>
+                  <Price
+                    price={price}
+                    discount={discount}
+                  />
+                </>
+              )
+            }
           </div>
         </div>
 
-        <div className={styles.selectAmount}>
-          <button className={styles.button}>-</button>
-          <input className={styles.input} type='number' />
-          <button className={styles.button}>+</button>
-        </div>
+        <ChangeQuantity
+          product={{
+            id,
+            image,
+            price,
+            discount,
+            name,
+            stock,
+          }}
+        />
       </div>
     </div >
   )
