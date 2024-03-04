@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import { ChevronArrow } from '~/components/SVG'
-import styles from './Buttons.module.css'
+import { ChevronArrow } from '~/components/svg'
+import styles from './buttons.module.css'
 
 interface ButtonsProps {
   onClickPrev: () => void

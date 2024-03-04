@@ -1,5 +1,5 @@
 .images {
-  block-size: inherit;
+  block-size: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
@@ -8,9 +8,9 @@
 .image {
   inline-size: 100%;
   block-size: 100%;
+  object-fit: cover;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  object-fit: cover;
 }
 
 .details {
@@ -60,11 +60,11 @@
   background-color: var(--bg-color);
 }
 
-.productLink:is(:first-child) {
+.productLink:first-child {
   padding-inline-start: 0;
 }
 
-.productLink:is(:last-child) {
+.productLink:last-child {
   padding-inline-end: 0;
 }
 
@@ -75,11 +75,11 @@
 
   .parallaxContainer,
   .details {
-    flex: 0 0 50%;
+    inline-size: 50%;
   }
 
   .parallaxContainer {
-    block-size: auto;
+    block-size: 100% !important;
   }
 
   .parallaxContainer > div {

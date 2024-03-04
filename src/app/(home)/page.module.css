@@ -2,3 +2,7 @@
   isolation: isolate;
   background-color: var(--bg-color);
 }
+
+.button {
+  background-color: red;
+}

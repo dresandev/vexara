@@ -2,8 +2,8 @@
 
 import clsx from 'clsx'
 import { useSnapCarousel } from 'react-snap-carousel'
-import { Buttons } from './Buttons'
-import styles from './Carousel.module.css'
+import { Buttons } from './buttons'
+import styles from './carousel.module.css'
 
 interface CarouselProps {
   children: React.ReactNode[]

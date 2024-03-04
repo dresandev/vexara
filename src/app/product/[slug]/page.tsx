@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation'
 import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
 import { getProductById } from '~/helpers/get-products'
-import { ParallaxContainer } from '~/components/ParallaxContainer'
-import { Price } from '~/components/Price'
-import { ProductInfoCard } from '~/components/ProductInfoCard'
-import { ProductRecommendation } from '~/components/ProductRecommendation'
-import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/SVG'
-import { AddToCart } from '~/components/AddToCart'
+import { ParallaxContainer } from '~/components/parallax-container'
+import { Price } from '~/components/price'
+import { ProductRecommendation } from '~/components/product-recommendation'
+import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/svg'
+import { ProductInfoCard } from './_components/product-info-card'
+import { AddToCart } from './_components/add-to-cart'
 import styles from './page.module.css'
+import Link from 'next/link'
 
 interface ProductPageProps {
   params: { slug: string }
@@ -29,7 +30,7 @@ export default function ProductPage({
       <div className={styles.container}>
         <ParallaxContainer
           className={styles.parallaxContainer}
-          blockSize='calc(85dvh - var(--header-block-size))'
+          blockSize='75dvh'
         >
           <section className={styles.images}>
             {
@@ -70,18 +71,19 @@ export default function ProductPage({
           </div>
 
           <div className={styles.productLinks}>
-            <button className={styles.productLink}>
+            <Link href='#' className={styles.productLink}>
               Composición, cuidados y origen
-            </button>
-            <button className={styles.productLink}>
+            </Link>
+            <Link href='#' className={styles.productLink}>
               Envíos y devoluciones
-            </button>
-            <button className={styles.productLink}>
+            </Link>
+            <Link href='#' className={styles.productLink}>
               Disponibilidad en tienda
-            </button>
+            </Link>
           </div>
         </section>
       </div>
+
       <ProductRecommendation
         quantity={8}
         category={category}

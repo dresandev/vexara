@@ -1,30 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Header } from '~/components/Header'
-import { Footer } from '~/components/Footer'
-import { LoginModal } from '~/components/LoginModal'
-import { RegisterModal } from '~/components/RegisterModal'
-import { ShopCartModal } from '~/components/ShopCartModal'
+import { inter } from '~/config/fonts'
+import { Header } from '~/components/header'
+import { Footer } from '~/components/footer'
+import { ModalsProvider } from '~/providers/modals-provider'
 import '~/styles/reset.css'
 import '~/styles/globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700']
-})
 
 export const metadata: Metadata = {
   title: 'VEXARA: online fashion',
   description: 'Descubre la ropa de hombre en Vexara. Pantalones, camisas, camisetas, chaquetas.',
 }
 
-interface RootLayoutProps {
-  children: React.ReactNode
-}
-
 export default function RootLayout({
   children,
-}: RootLayoutProps) {
+}: { children: React.ReactNode }) {
   return (
     <html lang='es'>
       <body className={inter.className}>
@@ -35,12 +24,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-
-        <div id='modal-container'>
-          <LoginModal />
-          <RegisterModal />
-          <ShopCartModal />
-        </div>
+        <ModalsProvider />
       </body>
     </html>
   )

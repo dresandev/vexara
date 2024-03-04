@@ -1,0 +1,11 @@
+.controlsWrapper {
+  position: relative;
+  block-size: inherit;
+}
+
+.soundButton {
+  position: absolute;
+  inset-block-end: 52px;
+  inset-inline-end: 32px;
+  color: currentColor;
+}

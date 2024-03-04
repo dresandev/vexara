@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { formatPrice } from '~/helpers/format-price'
-import styles from './Price.module.css'
+import styles from './price.module.css'
 
 interface PriceProps {
   price: number

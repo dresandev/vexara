@@ -1,1 +1,1 @@
-export * from './Price'
+export * from './price'

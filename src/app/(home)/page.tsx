@@ -1,7 +1,7 @@
-import { HeroVideo } from '~/components/HeroVideo'
-import { ClothingCategories } from '~/components/ClothingCategories'
-import { PromoVideo } from '~/components/PromoVideo'
-import { ProductRecommendation } from '~/components/ProductRecommendation'
+import { HeroVideo } from '~/app/(home)/_components/hero-video'
+import { ProductCategories } from '~/components/product-categories'
+import { PromoVideo } from '~/app/(home)/_components/promo-video'
+import { ProductRecommendation } from '~/components/product-recommendation'
 import styles from './page.module.css'
 
 export default function HomePage() {
@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <HeroVideo />
       <div className={styles.contentWrapper}>
-        <ClothingCategories />
+        <ProductCategories />
         <PromoVideo />
         <ProductRecommendation quantity={12} />
       </div>

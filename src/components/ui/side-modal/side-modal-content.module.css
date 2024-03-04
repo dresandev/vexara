@@ -1,0 +1,41 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  animation: showBackdrop 300ms forwards;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 16px clamp(20px, 17.09px + 0.777vw, 32px);
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  max-inline-size: 384px;
+  inline-size: 100%;
+  background-color: var(--bg-color);
+  outline: none;
+  scrollbar-width: thin;
+  overflow-y: auto;
+  animation: enterModal 300ms;
+}
+
+.closeModalLink {
+  margin-inline-start: auto;
+}
+
+@keyframes showBackdrop {
+  to {
+    background-color: hsla(0, 0%, 0%, 0.35);
+  }
+}
+
+@keyframes enterModal {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

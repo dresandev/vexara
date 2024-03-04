@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { ProductCategory } from '~/types'
 import { productCategoryTitles } from '~/data/products/categories'
 import { getProductsByCategory } from '~/helpers/get-products'
-import { ProductCard } from '~/components/ProductCard'
+import { ProductCard } from '~/components/cards/product-card'
 import styles from './page.module.css'
 
 interface CategoryPageProps {

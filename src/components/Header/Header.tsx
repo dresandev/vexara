@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { ShoppingBagIcon, UserIcon, VexaraLogo } from '~/components/SVG'
-import styles from './Header.module.css'
+import { ShoppingBagIcon, UserIcon, VexaraLogo } from '~/components/svg'
+import styles from './header.module.css'
 
 export const Header = () => {
   return (
@@ -24,8 +24,8 @@ export const Header = () => {
         </Link>
 
         <Link
-          aria-label='Acceder o crear cuenta'
-          href='#auth'
+          aria-label='Acceder a tu cuenta'
+          href='#login'
           scroll={false}
         >
           <UserIcon />
