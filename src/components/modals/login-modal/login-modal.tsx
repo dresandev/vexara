@@ -23,7 +23,7 @@ export const LoginModal = () => {
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
           <Link
             className={styles.legalLink}
-            href='#auth'>
+            href='#'>
             Política de Privacidad
           </Link>
         </p>
@@ -52,7 +52,8 @@ export const LoginModal = () => {
 
             <Link
               className={styles.forgotPasswordLink}
-              href='#auth'
+              href='#'
+              scroll={false}
             >
               ¿Has olvidado tu contraseña?
             </Link>
@@ -68,6 +69,7 @@ export const LoginModal = () => {
           <Link
             className={styles.registerLink}
             href='#register'
+            scroll={false}
           >
             ¿No tienes cuenta?{' '}
             <span className={styles.registerLinkText}>

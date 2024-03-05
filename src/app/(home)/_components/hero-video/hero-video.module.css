@@ -1,6 +1,6 @@
 .fixedContainer {
   position: sticky;
-  top: var(--header-block-size);
+  inset-block-start: var(--header-block-size);
   block-size: 80dvh;
 }
 

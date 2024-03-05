@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { inter } from '~/config/fonts'
 import { Header } from '~/components/ui/header'
 import { Footer } from '~/components/ui/footer'
+import { Toast } from '~/components/ui/toast'
 import { ModalsProvider } from '~/providers/modals-provider'
 import '~/styles/reset.css'
 import '~/styles/globals.css'
@@ -23,6 +24,9 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+        </div>
+        <div id='toast-container'>
+          <Toast />
         </div>
         <ModalsProvider />
       </body>

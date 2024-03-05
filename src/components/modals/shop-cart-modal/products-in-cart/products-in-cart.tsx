@@ -26,7 +26,7 @@ export const ProductsInCart = () => {
             stock,
           }) => (
             <CartProductCard
-              key={id}
+              key={`${id}-${stock.size}`}
               id={id}
               image={image}
               price={price}

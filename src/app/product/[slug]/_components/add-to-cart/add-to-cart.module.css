@@ -8,3 +8,9 @@
   color: var(--error-color);
   font-size: 1.4rem;
 }
+
+.goToCartLink {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}

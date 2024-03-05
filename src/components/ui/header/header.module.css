@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   inset-block-start: 4px;
-  inset-inline-end: 2px;
+  inset-inline-end: 3px;
   display: grid;
   place-items: center;
   font-size: 1.1rem;
