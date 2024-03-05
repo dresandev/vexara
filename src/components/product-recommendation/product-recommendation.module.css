@@ -1,6 +1,4 @@
 .section {
-  isolation: isolate;
-  background-color: var(--bg-color);
   padding-block: 24px;
 }
 

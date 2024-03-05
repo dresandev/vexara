@@ -1,5 +1,4 @@
 .footer {
-  isolation: isolate;
   padding: 64px 40px;
   background-color: var(--bg-color);
   border-block-start: 1px solid var(--border-color);

@@ -1,14 +1,13 @@
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
 import { getProductById } from '~/helpers/get-products'
-import { ParallaxContainer } from '~/components/parallax-container'
 import { ProductPrice } from '~/components/product-price'
 import { ProductRecommendation } from '~/components/product-recommendation'
 import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/svg'
 import { ProductInfoCard } from './_components/product-info-card'
 import { AddToCart } from './_components/add-to-cart'
 import styles from './page.module.css'
-import Link from 'next/link'
 
 interface ProductPageProps {
   params: { slug: string }
@@ -28,10 +27,7 @@ export default function ProductPage({
   return (
     <>
       <div className={styles.container}>
-        <ParallaxContainer
-          className={styles.parallaxContainer}
-          blockSize='75dvh'
-        >
+        <div className={styles.fixedContainer}>
           <section className={styles.images}>
             {
               images.map(image => (
@@ -44,7 +40,7 @@ export default function ProductPage({
               ))
             }
           </section>
-        </ParallaxContainer>
+        </div>
 
         <section className={styles.details}>
           <h1 className={styles.title}>
