@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Stock } from '~/types'
 import { getProductPathName } from '~/helpers/get-product-pathname'
-import { Price } from '~/components/price'
+import { ProductPrice } from '~/components/product-price'
 import { RemoveProductButton } from './remove-product-button'
 import { ChangeQuantity } from './change-quantity'
 import styles from './cart-product-card.module.css'
@@ -43,7 +43,7 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
 
       <div className={styles.info}>
         <div className={styles.topArea}>
-          <Price
+          <ProductPrice
             price={totalPrice}
             discount={discount}
           />
@@ -67,7 +67,7 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
             <span>{stock.size}</span>
             {
               stock.quantity > 1 && (
-                <Price
+                <ProductPrice
                   price={price}
                   discount={discount}
                 />

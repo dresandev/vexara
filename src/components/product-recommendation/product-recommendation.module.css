@@ -1,4 +1,4 @@
-.recommendationsSection {
+.section {
   isolation: isolate;
   background-color: var(--bg-color);
   padding-block: 24px;
@@ -11,11 +11,11 @@
 }
 
 .productCard {
-  inline-size: clamp(22rem, 17.631rem + 11.65vw, 40rem);
+  inline-size: clamp(220px, 176.31px + 11.65vw, 400px);
 }
 
 @media screen and (min-width: 768px) {
-  .recommendationsSection {
+  .section {
     padding-block: 80px;
   }
   .title {

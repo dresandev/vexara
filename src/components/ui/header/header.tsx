@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { ShoppingBagIcon, UserIcon, VexaraLogo } from '~/components/svg'
+import { ShoppingBagIcon } from '~/components/svg'
+import { ProductsQuantity } from '~/components/products-quantity'
+import { UserIcon, VexaraLogo } from '~/components/svg'
 import styles from './header.module.css'
 
 export const Header = () => {
@@ -31,11 +33,15 @@ export const Header = () => {
           <UserIcon />
         </Link>
         <Link
+          className={styles.shopCartLink}
           aria-label='Ver cesta'
-          href='#shopping-cart'
+          href='#shop-cart'
           scroll={false}
         >
           <ShoppingBagIcon />
+          <ProductsQuantity
+            className={styles.productsQuantity}
+          />
         </Link>
       </header>
     </div>

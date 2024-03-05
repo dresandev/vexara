@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { formatPrice } from '~/helpers/format-price'
-import styles from './price.module.css'
+import styles from './product-price.module.css'
 
 interface PriceProps {
   price: number
@@ -8,7 +8,7 @@ interface PriceProps {
   displayDiscount?: boolean
 }
 
-export const Price: React.FC<PriceProps> = ({
+export const ProductPrice: React.FC<PriceProps> = ({
   discount,
   price,
   displayDiscount = false,

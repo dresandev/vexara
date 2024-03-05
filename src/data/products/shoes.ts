@@ -32,7 +32,7 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -72,7 +72,7 @@ export const shoes: Product[] = [
         quantity: 0,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 0,
       },
       {
@@ -112,7 +112,7 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -152,7 +152,7 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 0,
       },
       {
@@ -192,7 +192,7 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -232,8 +232,8 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
-        quantity: 43,
+        size: '43',
+        quantity: 13,
       },
       {
         size: '44',
@@ -272,7 +272,7 @@ export const shoes: Product[] = [
         quantity: 0,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -312,7 +312,7 @@ export const shoes: Product[] = [
         quantity: 0,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -352,7 +352,7 @@ export const shoes: Product[] = [
         quantity: 32,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {
@@ -392,7 +392,7 @@ export const shoes: Product[] = [
         quantity: 0,
       },
       {
-        size: 'L',
+        size: '43',
         quantity: 43,
       },
       {

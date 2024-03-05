@@ -18,6 +18,21 @@
   font-size: 1.4rem;
 }
 
+.shopCartLink {
+  position: relative;
+}
+
+.productsQuantity {
+  position: absolute;
+  inset: 0;
+  inset-block-start: 4px;
+  inset-inline-end: 2px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
 @media (hover: hover) {
   .link::before {
     content: '';

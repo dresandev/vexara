@@ -10,6 +10,17 @@
   font-weight: 700;
 }
 
+.productsQuantity {
+  font-size: 1.6rem;
+  margin-inline-start: 4px;
+}
+.productsQuantity::before {
+  content: '(';
+}
+.productsQuantity::after {
+  content: ')';
+}
+
 .favoritesLink {
   display: inline-flex;
   align-items: center;

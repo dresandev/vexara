@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { persist } from "zustand/middleware"
+import { persist } from 'zustand/middleware'
 import { ProductToCart } from '~/types'
 
 interface CartState {
@@ -8,6 +8,7 @@ interface CartState {
   removeProduct: (product: ProductToCart) => void
   getSummaryInformation: () => { total: number }
   updateProductQuantity: (product: ProductToCart, quantity: number) => void
+  getTotalProducts: () => number
 }
 
 export const useCartStore = create<CartState>()(
@@ -77,6 +78,10 @@ export const useCartStore = create<CartState>()(
       )
 
       set({ cart: updatedCartProducts })
-    }
+    },
+    getTotalProducts: () => {
+      const { cart } = get()
+      return cart.reduce((total, item) => total + item.stock.quantity, 0)
+    },
   }), { name: 'cart' })
 )

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getProductPathName } from '~/helpers/get-product-pathname'
-import { Price } from '~/components/price'
+import { ProductPrice } from '~/components/product-price'
 import { AddToFavoritesButton } from '~/app/product/[slug]/_components/add-to-favorites-button'
 import { CarouselImage } from './carousel-image'
 import styles from './product-card.module.css'
@@ -39,7 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <AddToFavoritesButton
           className={styles.addToFavorites}
         />
-        <Price
+        <ProductPrice
           discount={discount}
           price={price}
           displayDiscount

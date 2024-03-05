@@ -1,4 +1,7 @@
+'use client'
+
 import { ProductCategory } from '~/types'
+import { useHasMounted } from '~/hooks/use-has-mounted'
 import { getRecommendations } from '~/helpers/get-recommendations'
 import { Carousel } from '~/components/carousel'
 import { RecommendationProductCard } from '~/components/cards/recommendation-product-card'
@@ -13,10 +16,14 @@ export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({
   quantity = 8,
   category = 'all'
 }) => {
+  const hasMounted = useHasMounted()
+
+  if (!hasMounted) return
+
   const recommendations = getRecommendations({ quantity, category })
 
   return (
-    <section className={styles.recommendationsSection}>
+    <section className={styles.section}>
       <h2 className={styles.title}>Te puede interesar</h2>
 
       <Carousel>

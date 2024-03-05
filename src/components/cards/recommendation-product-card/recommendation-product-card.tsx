@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 import { getProductPathName } from '~/helpers/get-product-pathname'
-import { Price } from '~/components/price'
+import { ProductPrice } from '~/components/product-price'
 import { HoverImages } from './hover-images'
 import styles from './recommendation-product-card.module.css'
 
@@ -42,7 +42,7 @@ export const RecommendationProductCard: React.FC<RecommendationProductCardProps>
           <figcaption className={styles.name}>
             {name}
           </figcaption>
-          <Price
+          <ProductPrice
             discount={discount}
             price={price}
           />

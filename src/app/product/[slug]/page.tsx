@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
 import { getProductById } from '~/helpers/get-products'
 import { ParallaxContainer } from '~/components/parallax-container'
-import { Price } from '~/components/price'
+import { ProductPrice } from '~/components/product-price'
 import { ProductRecommendation } from '~/components/product-recommendation'
 import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/svg'
 import { ProductInfoCard } from './_components/product-info-card'
@@ -50,7 +50,7 @@ export default function ProductPage({
           <h1 className={styles.title}>
             {name}
           </h1>
-          <Price
+          <ProductPrice
             price={price}
             discount={discount}
             displayDiscount
