@@ -1,9 +1,6 @@
 import Link from 'next/link'
-import clsx from 'clsx'
-import { TextField } from '~/components/ui/text-field'
-import { Checkbox } from '~/components/ui/checkbox'
 import { SideModal } from '~/components/ui/side-modal'
-import componentStyles from '~/styles/components.module.css'
+import { LoginForm } from './login-form'
 import styles from './login-modal.module.css'
 
 export const LoginModal = () => {
@@ -19,11 +16,13 @@ export const LoginModal = () => {
         <h1 className={styles.title}>
           Inicia sesión o crea tu cuenta
         </h1>
+
         <p className={styles.legalText}>
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
           <Link
             className={styles.legalLink}
-            href='#'>
+            href='#'
+          >
             Política de Privacidad
           </Link>
         </p>
@@ -32,52 +31,19 @@ export const LoginModal = () => {
           <span className={styles.separatorText}>o</span>
         </div>
 
-        <form className={styles.form}>
-          <TextField
-            id='login-email'
-            label='E-mail'
-            autoComplete='off'
-            type='email'
-            required
-          />
-          <TextField
-            id='login-password'
-            label='Contraseña'
-            type='password'
-            required
-          />
+        <LoginForm />
 
-          <div className={styles.options}>
-            <Checkbox label='Mantener sesión' />
-
-            <Link
-              className={styles.forgotPasswordLink}
-              href='#'
-              scroll={false}
-            >
-              ¿Has olvidado tu contraseña?
-            </Link>
-          </div>
-
-          <button className={clsx(
-            componentStyles.button,
-            styles.loginButton,
-          )}>
-            Iniciar Sesión
-          </button>
-
-          <Link
-            className={styles.registerLink}
-            href='#register'
-            scroll={false}
-          >
-            ¿No tienes cuenta?{' '}
-            <span className={styles.registerLinkText}>
-              Regístrate
-            </span>
-          </Link>
-        </form>
+        <Link
+          className={styles.registerLink}
+          href='#register'
+          scroll={false}
+        >
+          ¿No tienes cuenta?{' '}
+          <span className={styles.registerLinkText}>
+            Regístrate
+          </span>
+        </Link>
       </div>
-    </SideModal>
+    </SideModal >
   )
 }

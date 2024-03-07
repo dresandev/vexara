@@ -65,14 +65,12 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
           </Link>
           <div className={styles.orderInfo}>
             <span>{stock.size}</span>
-            {
-              stock.quantity > 1 && (
-                <ProductPrice
-                  price={price}
-                  discount={discount}
-                />
-              )
-            }
+            {stock.quantity > 1 && (
+              <ProductPrice
+                price={price}
+                discount={discount}
+              />
+            )}
           </div>
         </div>
 

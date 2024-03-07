@@ -13,6 +13,7 @@
 
   --header-block-size: 48px;
   --border-radius: 4px;
+  --modal-inline-space: clamp(20px, 17.09px + 0.777vw, 32px);
 }
 
 body {

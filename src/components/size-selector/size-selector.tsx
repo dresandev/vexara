@@ -24,14 +24,14 @@ export const SizeSelector: React.FC<SizeSelectorProps> = ({
           const isSelectedSize = size === selectedSize
           const hasStock = quantity > 0
           const hasLowStock = quantity > 0 && quantity < 10
-          const displayTooltip = hasLowStock || !hasStock
+          const showTooltip = hasLowStock || !hasStock
 
           return (
             <li
               key={size}
               className={clsx(
                 styles.listItem,
-                { [styles.withTooltip]: displayTooltip }
+                { [styles.withTooltip]: showTooltip }
               )}
             >
               <button
@@ -45,26 +45,22 @@ export const SizeSelector: React.FC<SizeSelectorProps> = ({
                 onClick={() => onChange(size)}
                 disabled={!hasStock}
               >
-                {
-                  hasLowStock && (
-                    <ClockExclamationIcon
-                      className={styles.lowStockIcon}
-                    />
-                  )
-                }
+                {hasLowStock && (
+                  <ClockExclamationIcon
+                    className={styles.lowStockIcon}
+                  />
+                )}
                 {size}
               </button>
-              {
-                displayTooltip && (
-                  <Tooltip
-                    className={clsx(
-                      styles.tooltip,
-                      { [styles.tooltipAlert]: hasLowStock }
-                    )}
-                    title={hasLowStock ? '¡Quedan pocos!' : 'Agotado'}
-                  />
-                )
-              }
+              {showTooltip && (
+                <Tooltip
+                  className={clsx(
+                    styles.tooltip,
+                    { [styles.alert]: hasLowStock }
+                  )}
+                  title={hasLowStock ? '¡Quedan pocos!' : 'Agotado'}
+                />
+              )}
             </li>
           )
         })

@@ -42,7 +42,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <ProductPrice
           discount={discount}
           price={price}
-          displayDiscount
+          showDiscount
         />
       </div>
     </figure>

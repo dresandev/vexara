@@ -12,7 +12,6 @@
 
 .productsQuantity {
   font-size: 1.6rem;
-  margin-inline-start: 4px;
 }
 .productsQuantity::before {
   content: '(';

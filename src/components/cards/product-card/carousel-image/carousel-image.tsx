@@ -37,13 +37,13 @@ export const CarouselImage: React.FC<CarouselImageProps> = ({
         className={styles.nextPrevButton}
         onClick={handlePrevButtonClick}
       >
-        <ChevronArrow direction='LEFT' />
+        <ChevronArrow direction='left' />
       </button>
       <button
         className={styles.nextPrevButton}
         onClick={handleNextButtonClick}
       >
-        <ChevronArrow direction='RIGHT' />
+        <ChevronArrow direction='right' />
       </button>
     </div>
   )

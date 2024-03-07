@@ -27,7 +27,7 @@ export const Buttons: React.FC<ButtonsProps> = ({
       >
         <ChevronArrow
           className={styles.btnArrowIcon}
-          direction='LEFT'
+          direction='left'
         />
       </button>
       <button
@@ -40,7 +40,7 @@ export const Buttons: React.FC<ButtonsProps> = ({
       >
         <ChevronArrow
           className={styles.btnArrowIcon}
-          direction='RIGHT'
+          direction='right'
         />
       </button>
     </>

@@ -30,12 +30,12 @@ export default function ProductPage({
         <div className={styles.fixedContainer}>
           <section className={styles.images}>
             {
-              images.map(image => (
+              images.map((image, i) => (
                 <img
                   key={image}
                   className={styles.image}
                   src={image}
-                  alt={name}
+                  alt={`${name}-${i}`}
                 />
               ))
             }
@@ -49,7 +49,7 @@ export default function ProductPage({
           <ProductPrice
             price={price}
             discount={discount}
-            displayDiscount
+            showDiscount
           />
 
           <AddToCart product={product} />

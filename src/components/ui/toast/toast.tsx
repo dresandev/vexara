@@ -5,15 +5,18 @@ import clsx from 'clsx'
 import { useToastStore } from '~/store/use-toast-store'
 import styles from './toast.module.css'
 
-const HIDE_TOAST_TIME = 5000
+const ANIMATION_TOTAL_TIME = 300
+const HIDE_TOAST_TIME = ANIMATION_TOTAL_TIME + 5000
 const UNMOUNT_TOAST_TIME = HIDE_TOAST_TIME + 1000
 
 export const Toast = () => {
   const {
-    leadingIcon,
-    title,
-    description,
-    action,
+    content: {
+      leadingIcon,
+      title,
+      description,
+      action,
+    },
     mount,
     hide,
     unmountToast,
@@ -21,11 +24,11 @@ export const Toast = () => {
   } = useToastStore()
 
   useEffect(() => {
-    let hideToastTimeoutId: NodeJS.Timeout
+    let hideTimeoutId: NodeJS.Timeout
     let unmountTimeoutId: NodeJS.Timeout
 
     if (mount) {
-      hideToastTimeoutId = setTimeout(
+      hideTimeoutId = setTimeout(
         () => setHideToast(true),
         HIDE_TOAST_TIME
       )
@@ -39,7 +42,7 @@ export const Toast = () => {
     }
 
     return () => {
-      clearTimeout(hideToastTimeoutId)
+      clearTimeout(hideTimeoutId)
       clearTimeout(unmountTimeoutId)
     }
   }, [mount, setHideToast, unmountToast])
@@ -51,15 +54,15 @@ export const Toast = () => {
       styles.toast,
       { [styles.hide]: hide }
     )}>
-      {leadingIcon}
+      <span className={styles.leadingIcon}>
+        {leadingIcon}
+      </span>
 
       <div>
         <div className={styles.title}>
           {title}
         </div>
-        <p className={styles.description}>
-          {description}
-        </p>
+        <p>{description}</p>
       </div>
 
       {action}

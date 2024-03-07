@@ -1,19 +1,19 @@
 import { SVGProps } from 'react'
 
-type Direction = 'RIGHT' | 'LEFT' | 'DOWN'
+type Direction = 'right' | 'left' | 'down'
 
 interface ChevronArrowProps extends SVGProps<SVGSVGElement> {
   direction?: Direction
 }
 
 const directionsPaths: { [key in Direction]: string } = {
-  RIGHT: 'm9 18 6-6-6-6',
-  LEFT: 'm15 6-6 6 6 6',
-  DOWN: 'm6 9 6 6 6-6',
+  right: 'm9 18 6-6-6-6',
+  left: 'm15 6-6 6 6 6',
+  down: 'm6 9 6 6 6-6',
 }
 
 export const ChevronArrow = ({
-  direction = 'DOWN',
+  direction = 'down',
   ...props
 }: ChevronArrowProps) => (
   <svg

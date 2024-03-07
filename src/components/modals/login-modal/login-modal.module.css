@@ -37,43 +37,18 @@
   background-color: var(--bg-color);
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  inline-size: 100%;
-}
-
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 8px;
-}
-
-.forgotPasswordLink {
-  text-align: end;
-}
-
-.loginButton {
-  margin-block-start: 40px;
-}
-
 .registerLink {
-  text-align: center;
+  margin-block-start: 24px;
 }
 
 .title,
 .legalText,
-.forgotPasswordLink,
 .registerLink {
   font-size: 1.2rem;
 }
 
 .title,
-.forgotPasswordLink,
-.submitButton,
-.registerLinkText,
+  .registerLinkText,
 .legalLink {
   font-weight: 700;
 }

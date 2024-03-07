@@ -5,13 +5,13 @@ import styles from './product-price.module.css'
 interface PriceProps {
   price: number
   discount: number | null
-  displayDiscount?: boolean
+  showDiscount?: boolean
 }
 
 export const ProductPrice: React.FC<PriceProps> = ({
   discount,
   price,
-  displayDiscount = false,
+  showDiscount = false,
 }) => {
   const formattedPrice = formatPrice(price)
 
@@ -28,18 +28,16 @@ export const ProductPrice: React.FC<PriceProps> = ({
   return (
     <div className={clsx(
       styles.wrapper,
-      { [styles.flexDirectionColumn]: displayDiscount }
+      { [styles.flexDirectionColumn]: showDiscount }
     )}>
       <>
         <div className={styles.priceWithDiscount}>
           {formattedDiscountedPrice}
-          {
-            displayDiscount && (
-              <span className={styles.discount}>
-                {`-${discount}%`}
-              </span>
-            )
-          }
+          {showDiscount && (
+            <span className={styles.discount}>
+              {`-${discount}%`}
+            </span>
+          )}
         </div>
         <del className={styles.oldPrice}>
           {formattedPrice}

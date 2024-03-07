@@ -7,14 +7,13 @@
     --size: 40px;
     position: absolute;
     inset-block: 0;
-    margin-inline: 10px;
-    margin-block: auto;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     inline-size: var(--size);
     block-size: var(--size);
+    margin: auto 10px;
     background-color: var(--bg-color);
     border-radius: 50%;
   }

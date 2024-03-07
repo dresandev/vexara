@@ -15,7 +15,7 @@
 }
 
 .container:focus-within > .label,
-.container:not(:has(.input:placeholder-shown)) > .label {
+.container:not(:has(:placeholder-shown)) > .label {
   color: currentColor;
   background-color: var(--bg-color);
   transform: translate(10px, -0.5lh) scale(0.9);
@@ -31,20 +31,25 @@
   transition: border-color 200ms ease;
 }
 
-.input:focus {
+.input:not(.errorInput):focus {
   border-color: var(--border-color-high);
 }
 
-.input:user-invalid {
+.errorInput {
   border-color: var(--error-color);
 }
 
-.hint {
-  font-size: 1rem;
+.hint,
+.error {
+  font-size: 1.1rem;
   padding-block-start: 8px;
+}
+
+.hint {
   color: var(--inactive-color);
 }
 
-.input:user-invalid ~ .hint {
+.hint.error,
+.error {
   color: var(--error-color);
 }

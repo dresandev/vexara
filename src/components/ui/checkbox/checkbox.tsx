@@ -1,23 +1,31 @@
+import { forwardRef } from 'react'
+import clsx from 'clsx'
 import { CheckIcon } from '~/components/svg'
 import styles from './checkbox.module.css'
 
-type CheckboxProps = {
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string
-} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>
+  error?: boolean
+  value?: any
+}
 
-export const Checkbox: React.FC<CheckboxProps> = ({
-  className,
+export const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxProps>(({
   label,
+  error,
   ...props
-}) => {
+}, ref) => {
   return (
     <label className={styles.label}>
       <input
+        ref={ref}
         {...props}
-        className={styles.input}
         type='checkbox'
+        className={styles.input}
       />
-      <div className={styles.holder}>
+      <div className={clsx(
+        styles.holder,
+        { [styles.error]: error }
+      )}>
         <CheckIcon className={styles.checkIcon} />
       </div>
       {label && (
@@ -27,4 +35,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
       )}
     </label>
   )
-}
+})
+
+Checkbox.displayName = 'Checkbox'

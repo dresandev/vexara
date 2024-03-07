@@ -10,7 +10,13 @@
 }
 
 .goToCartLink {
-  padding: 8px 12px;
+  padding: 6px 10px;
+  margin-inline-start: auto;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
+  text-wrap: nowrap;
+}
+
+.goToCartLink:hover {
+  background-color: hsla(240 4.8% 95.9%);
 }

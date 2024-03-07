@@ -23,21 +23,6 @@ export const AddToCart: React.FC<AddToCartProps> = ({
   const addProductToCart = useCartStore(state => state.addProductToCart)
   const { id, name, price, discount, stock, images } = product
 
-  const toastLeadingIcon = (
-    <CircleCheckIcon
-      color='var(--success-color)'
-    />
-  )
-  const toastAction = (
-    <Link
-      className={styles.goToCartLink}
-      href='#shop-cart'
-      scroll={false}
-    >
-      Ir a la cesta
-    </Link>
-  )
-
   const handleAddToCart = () => {
     if (!selectedSize) return setSelectedSize(null)
 
@@ -54,10 +39,21 @@ export const AddToCart: React.FC<AddToCartProps> = ({
     })
 
     setSelectedSize('')
+
     notifyToast({
-      leadingIcon: toastLeadingIcon,
+      leadingIcon: <CircleCheckIcon
+        color='var(--success-color)'
+      />,
       title: 'Producto añadido a la cesta',
-      action: toastAction,
+      action: (
+        <Link
+          className={styles.goToCartLink}
+          href='#shop-cart'
+          scroll={false}
+        >
+          Ir a la cesta {'>'}
+        </Link>
+      ),
     })
   }
 
@@ -68,13 +64,11 @@ export const AddToCart: React.FC<AddToCartProps> = ({
         selectedSize={selectedSize}
         onChange={setSelectedSize}
       />
-      {
-        selectedSize === null && (
-          <p className={styles.sizeRequiredMessage}>
-            Debes seleccionar una talla
-          </p>
-        )
-      }
+      {selectedSize === null && (
+        <p className={styles.sizeRequiredMessage}>
+          Debes seleccionar una talla
+        </p>
+      )}
       <div className={styles.actions}>
         <AddToCartButton
           className={styles.addToCartButton}

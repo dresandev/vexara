@@ -16,13 +16,11 @@ export const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
       {leadingIcon}
       <div>
         <div>{mainText}</div>
-        {
-          secondaryText && (
-            <div className={styles.secondaryText}>
-              {secondaryText}
-            </div>
-          )
-        }
+        {secondaryText && (
+          <div className={styles.secondaryText}>
+            {secondaryText}
+          </div>
+        )}
       </div>
       <span className={styles.freeText}>
         Gratis

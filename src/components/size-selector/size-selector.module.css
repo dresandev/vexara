@@ -59,7 +59,7 @@
   display: none;
 }
 
-.tooltipAlert {
+.tooltip.alert {
   color: hsl(37, 91%, 55%);
 }
 
