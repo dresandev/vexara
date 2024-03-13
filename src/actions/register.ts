@@ -2,17 +2,17 @@
 
 import bcrypt from 'bcryptjs'
 import { db } from '~/lib/db'
-import { getUserByEmail } from '~/data/user'
 import { RegisterSchema, type RegisterSchemaTypes } from '~/schemas'
+import { getUserByEmail } from '~/data/user'
 
 export const register = async (values: RegisterSchemaTypes) => {
-  const validatedField = RegisterSchema.safeParse(values)
+  const validatedFields = RegisterSchema.safeParse(values)
 
-  if (!validatedField.success) {
+  if (!validatedFields.success) {
     return { error: 'Campos inválidos' }
   }
 
-  const { email, password } = validatedField.data
+  const { email, password } = validatedFields.data
   const hashedPassword = await bcrypt.hash(password, 10)
   const existingUser = await getUserByEmail(email)
 
@@ -26,6 +26,4 @@ export const register = async (values: RegisterSchemaTypes) => {
       password: hashedPassword,
     }
   })
-
-  return { success: true }
 }

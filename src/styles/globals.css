@@ -12,8 +12,12 @@
   --error-color: hsl(352 86% 62%);
 
   --header-block-size: 48px;
+  --footer-block-size: 153px;
   --border-radius: 4px;
-  --modal-inline-space: clamp(20px, 17.09px + 0.777vw, 32px);
+  --modal-space-inline: clamp(20px, 17.09px + 0.777vw, 32px);
+  --content-block-size: calc(
+    100dvh - var(--footer-block-size) - var(--header-block-size)
+  );
 }
 
 body {

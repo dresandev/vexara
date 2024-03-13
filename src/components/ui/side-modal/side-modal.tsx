@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 import clsx from 'clsx'
+import { authRoutes } from '~/routes'
 import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
 import { CloseIcon } from '~/components/svg'
 import styles from './side-modal.module.css'
@@ -19,15 +21,21 @@ export const SideModal: React.FC<SideModalContentProps> = ({
   className,
   urlFragment,
 }) => {
+  const session = useSession()
   const params = useParams()
   const [mount, setMount] = useState(false)
   const modalRef = useRef<HTMLDivElement>(null)
-
   useToggleBodyOverflow(mount)
 
   useEffect(() => {
-    setMount(window.location.hash === urlFragment)
-  }, [urlFragment, params])
+    const isCurrentFragment = window.location.hash === urlFragment
+    const isAuthFragment = authRoutes.includes(window.location.hash)
+    const isAuthenticated = session.status === 'authenticated'
+
+    if (isAuthFragment && isAuthenticated) return
+
+    setMount(isCurrentFragment)
+  }, [urlFragment, params, session.status])
 
   useEffect(() => {
     modalRef.current?.focus()
@@ -55,7 +63,7 @@ export const SideModal: React.FC<SideModalContentProps> = ({
         <Link
           aria-label='Cerrar'
           className={styles.closeModalLink}
-          href=''
+          href='#'
           scroll={false}
         >
           <CloseIcon />

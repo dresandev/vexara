@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import clsx from 'clsx'
 import styles from './text-field.module.css'
 
-interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string
   hint?: string
   error?: string

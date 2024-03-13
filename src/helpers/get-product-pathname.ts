@@ -1,4 +1,4 @@
-import { simpleSlugify } from '~/lib/utils'
+import { simpleSlugify } from '~/utils'
 
 export const getProductPathName = (id: string, name: string) => {
   return `/product/${simpleSlugify(name)}CT${id}`

@@ -21,5 +21,4 @@
 .processOrderButton {
   inline-size: 100%;
   margin-block-start: 16px;
-  background-color: var(--success-color);
 }

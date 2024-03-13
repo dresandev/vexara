@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import { githubLogin } from '~/actions/login'
 import { SideModal } from '~/components/ui/side-modal'
+import { GitHubLoginButton } from './github-login-button'
 import { LoginForm } from './login-form'
 import styles from './login-modal.module.css'
 
@@ -17,11 +19,19 @@ export const LoginModal = () => {
           Inicia sesión o crea tu cuenta
         </h1>
 
+        <form
+          className={styles.gitHubLoginButtonWrapper}
+          action={githubLogin}
+        >
+          <GitHubLoginButton />
+        </form>
+
         <p className={styles.legalText}>
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
           <Link
             className={styles.legalLink}
             href='#'
+            scroll={false}
           >
             Política de Privacidad
           </Link>

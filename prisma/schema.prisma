@@ -27,9 +27,11 @@ model Account {
 }
 
 model User {
-  id       String    @id @default(cuid())
-  email    String?   @unique
-  password String?
-  name     String?
-  accounts Account[]
+  id            String    @id @default(cuid())
+  image         String?
+  email         String?   @unique
+  password      String?
+  name          String?
+  emailVerified DateTime?
+  accounts      Account[]
 }

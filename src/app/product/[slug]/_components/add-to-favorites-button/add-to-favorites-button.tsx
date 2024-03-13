@@ -13,7 +13,6 @@ export const AddToFavoritesButton: React.FC<AddToFavoritesButtonProps> = ({
     <button
       className={className}
       aria-label='Añadir a la lista de deseos'
-      type='button'
     >
       <HeartIcon />
     </button>

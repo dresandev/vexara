@@ -1,9 +1,8 @@
 'use client'
 
-import clsx from 'clsx'
 import { useCartStore } from '~/store/use-cart-store'
 import { formatPrice } from '~/helpers/format-price'
-import componentStyles from '~/styles/components.module.css'
+import { Button } from '~/components/ui/button'
 import styles from './summary.module.css'
 
 export const Summary = () => {
@@ -27,12 +26,13 @@ export const Summary = () => {
           {formatPrice(total)}
         </span>
       </div>
-      <button className={clsx(
-        componentStyles.button,
-        styles.processOrderButton
-      )}>
+
+      <Button
+        className={styles.processOrderButton}
+        variant='success'
+      >
         Tramitar pedido
-      </button>
+      </Button>
     </div>
   )
 }

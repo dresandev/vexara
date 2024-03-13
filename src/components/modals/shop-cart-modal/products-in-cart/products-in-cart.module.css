@@ -5,7 +5,7 @@
   row-gap: 32px;
   padding-inline: inherit;
   padding-block: 16px;
-  margin-inline: calc(var(--modal-inline-space) * -1);
+  margin-inline: calc(var(--modal-space-inline) * -1);
   scrollbar-width: thin;
   overflow-y: auto;
 }

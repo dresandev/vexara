@@ -4,10 +4,10 @@ import { ShopCartModal } from '~/components/modals/shop-cart-modal'
 
 export const ModalsProvider = () => {
   return (
-    <>
+    <div id='modal-container'>
       <LoginModal />
       <RegisterModal />
       <ShopCartModal />
-    </>
+    </div>
   )
 }

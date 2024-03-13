@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import clsx from 'clsx'
-import componentStyles from '~/styles/components.module.css'
+import { Button } from '~/components/ui/button'
 import styles from './no-products-in-cart.module.css'
 
 export const NoProductsInCart = () => {
@@ -20,16 +19,18 @@ export const NoProductsInCart = () => {
         Aún no tienes ningún artículo en la cesta, descubre todo lo que tenemos para ti
       </p>
 
-      <Link
-        className={clsx(
-          componentStyles.button,
-          styles.exploreButton,
-        )}
-        href='/'
-        scroll={false}
+
+      <Button
+        className={styles.exploreButton}
+        asChild
       >
-        Descrubir
-      </Link>
+        <Link
+          href='#'
+          scroll={false}
+        >
+          Descrubir
+        </Link>
+      </Button>
     </div>
   )
 }

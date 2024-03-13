@@ -5,15 +5,24 @@
   block-size: 48px;
   padding-inline: 16px;
   color: var(--content-color-invert);
-  background-color: var(--bg-color-high);
   border-radius: var(--border-radius);
   font-weight: 700;
   text-transform: uppercase;
   outline-offset: 2px;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.primary {
+  background-color: var(--bg-color-high);
+}
+
+.success {
+  background-color: var(--success-color);
 }
 
 .button:disabled {
+  opacity: 0.75;
   cursor: auto;
 }
 

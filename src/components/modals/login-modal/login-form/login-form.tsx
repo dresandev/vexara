@@ -2,24 +2,19 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import clsx from 'clsx'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
-import { useToastStore } from '~/store/use-toast-store'
 import { login } from '~/actions/login'
 import { TextField } from '~/components/ui/text-field'
+import { PasswordTextField } from '~/components/ui/password-text-field'
 import { Checkbox } from '~/components/ui/checkbox'
 import { RingLoader } from '~/components/loaders/ring-loader'
 import { NotificationCard } from '~/components/ui/notification-card'
-import { CircleCheckIcon } from '~/components/svg'
-import componentStyles from '~/styles/components.module.css'
+import { Button } from '~/components/ui/button'
 import styles from './login-form.module.css'
 
 export const LoginForm = () => {
-  const router = useRouter()
-  const pathname = usePathname()
   const [responseError, setResponseError] = useState('')
   const [isPending, startTransition] = useTransition()
   const form = useForm<LoginSchemaTypes>({
@@ -29,29 +24,18 @@ export const LoginForm = () => {
       password: '',
     }
   })
-  const notifyToast = useToastStore(state => state.notifyToast)
 
   const { control, handleSubmit, formState: { errors } } = form
 
-  const onSubmit = async (values: LoginSchemaTypes) => {
+  const onSubmit = (values: LoginSchemaTypes) => {
     setResponseError('')
 
     startTransition(async () => {
       const data = await login(values)
 
-      if (data.error) {
-        return setResponseError(data.error)
+      if (data?.error) {
+        setResponseError(data.error)
       }
-
-      router.replace(pathname)
-      notifyToast({
-        leadingIcon: (
-          <CircleCheckIcon
-            color='var(--success-color)'
-          />
-        ),
-        title: '¡Hola! Te damos la bienvenida'
-      })
     })
   }
 
@@ -86,11 +70,10 @@ export const LoginForm = () => {
           name='password'
           control={control}
           render={({ field }) => (
-            <TextField
+            <PasswordTextField
               id='login-password'
               label='Contraseña'
               error={errors.password?.message}
-              type='password'
               autoComplete='off'
               spellCheck={false}
               disabled={isPending}
@@ -110,16 +93,13 @@ export const LoginForm = () => {
           </Link>
         </div>
 
-        <button
+        <Button
+          className={styles.loginButton}
           disabled={isPending}
-          className={clsx(
-            componentStyles.button,
-            styles.loginButton,
-          )}
         >
           {isPending ? <RingLoader /> : 'Iniciar Sesión'}
-        </button>
-      </form>
+        </Button>
+      </form >
     </>
   )
 }

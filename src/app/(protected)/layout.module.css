@@ -1,0 +1,39 @@
+.wrapper {
+  --space-block: 48px;
+  display: flex;
+  min-block-size: calc(100dvh - var(--header-block-size));
+  padding-block-start: var(--space-block);
+}
+
+.menu {
+  position: sticky;
+  inset-block-start: calc(var(--header-block-size) + var(--space-block));
+  inline-size: 30%;
+  block-size: max-content;
+  padding-inline-start: 40px;
+}
+
+.greetingTitle,
+.logoutButton {
+  font-weight: 700;
+}
+
+.greetingTitle {
+  font-size: 1.8rem;
+}
+
+.greetingEmail {
+  font-size: 1.4rem;
+}
+
+.logoutButton {
+  margin-block-end: var(--space-block);
+}
+
+.logoutButton:hover {
+  opacity: 0.75;
+}
+
+.content {
+  inline-size: min(100%, 744px);
+}

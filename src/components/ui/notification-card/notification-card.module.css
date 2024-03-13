@@ -1,6 +1,6 @@
 .wrapper {
   position: absolute;
-  inset-inline: var(--modal-inline-space);
+  inset-inline: var(--modal-space-inline);
   inset-block-start: var(--header-block-size);
   z-index: 10;
   display: flex;

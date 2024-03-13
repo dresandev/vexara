@@ -1,0 +1,11 @@
+.wrapper {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 32px;
+  block-size: var(--content-block-size);
+}
+
+.image {
+  block-size: auto;
+}

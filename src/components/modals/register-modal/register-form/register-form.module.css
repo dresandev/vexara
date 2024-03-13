@@ -1,11 +1,19 @@
-.form {
+.form,
+.legalSection,
+.formFooter {
   display: flex;
+}
+
+.form,
+.formFooter {
   flex-direction: column;
+}
+
+.form {
   row-gap: 32px;
 }
 
 .legalSection {
-  display: flex;
   align-items: center;
   column-gap: 4px;
 }
@@ -16,8 +24,6 @@
 }
 
 .formFooter {
-  display: flex;
-  flex-direction: column;
   row-gap: 12px;
 }
 

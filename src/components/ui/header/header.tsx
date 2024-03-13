@@ -1,10 +1,14 @@
 import Link from 'next/link'
-import { ShoppingBagIcon } from '~/components/svg'
+import { auth } from '~/auth'
+import { ShoppingBagIcon, UserIcon } from '~/components/svg'
 import { ProductsQuantity } from '~/components/products-quantity'
-import { UserIcon, VexaraLogo } from '~/components/svg'
+import { VexaraLogo } from '~/components/svg'
 import styles from './header.module.css'
 
-export const Header = () => {
+export const Header = async () => {
+  const session = await auth()
+  const isLoggedIn = !!session
+
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
@@ -27,8 +31,8 @@ export const Header = () => {
 
         <Link
           aria-label='Acceder a tu cuenta'
-          href='#login'
-          scroll={false}
+          href={isLoggedIn ? '/user-orders' : '#login'}
+          scroll={isLoggedIn}
         >
           <UserIcon />
         </Link>

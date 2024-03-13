@@ -1,0 +1,15 @@
+.linkList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-inline-start: 0;
+  padding-block: 48px;
+}
+
+.linkList > li {
+  list-style: none;
+}
+
+.activeLink {
+  font-weight: 700;
+}

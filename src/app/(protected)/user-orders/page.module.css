@@ -1,0 +1,15 @@
+.title {
+  font-size: 2rem;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 118px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+}

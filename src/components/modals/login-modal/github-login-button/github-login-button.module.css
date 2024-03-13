@@ -1,0 +1,18 @@
+.button {
+  inline-size: inherit;
+  margin-block-end: 16px;
+}
+
+.logo {
+  --size: 28px;
+  flex-shrink: 0;
+  inline-size: var(--size);
+  block-size: var(--size);
+}
+
+.text {
+  flex-grow: 1;
+  text-align: center;
+  text-transform: initial;
+  font-size: 1.4rem;
+}

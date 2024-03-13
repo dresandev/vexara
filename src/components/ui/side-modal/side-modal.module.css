@@ -7,7 +7,7 @@
 .modal {
   display: flex;
   flex-direction: column;
-  padding: 16px var(--modal-inline-space);
+  padding: 16px var(--modal-space-inline);
   position: fixed;
   inset-block: 0;
   inset-inline-end: 0;

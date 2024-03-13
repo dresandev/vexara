@@ -7,7 +7,7 @@ import { useCartStore } from '~/store/use-cart-store'
 import { useToastStore } from '~/store/use-toast-store'
 import { SizeSelector } from '~/components/size-selector'
 import { CircleCheckIcon } from '~/components/svg'
-import { AddToCartButton } from '../add-to-cart-button'
+import { Button } from '~/components/ui/button'
 import { AddToFavoritesButton } from '../add-to-favorites-button'
 import styles from './add-to-cart.module.css'
 
@@ -70,12 +70,12 @@ export const AddToCart: React.FC<AddToCartProps> = ({
         </p>
       )}
       <div className={styles.actions}>
-        <AddToCartButton
-          className={styles.addToCartButton}
+        <Button
+          variant='success'
           onClick={handleAddToCart}
         >
           Añadir a la cesta
-        </AddToCartButton>
+        </Button>
         <AddToFavoritesButton />
       </div>
     </>
