@@ -14,8 +14,7 @@
     transform 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.container:focus-within > .label,
-.container:not(:has(:placeholder-shown)) > .label {
+.container:where(:focus-within, :not(:has(:placeholder-shown))) > .label {
   color: currentColor;
   background-color: var(--bg-color);
   transform: translate(10px, -0.5lh) scale(0.9);

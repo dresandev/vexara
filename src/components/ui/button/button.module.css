@@ -20,12 +20,11 @@
 .success {
   background-color: var(--success-color);
 }
+.button:hover {
+  opacity: 0.75;
+}
 
 .button:disabled {
   opacity: 0.75;
-  cursor: auto;
-}
-
-.button:not(:disabled):hover {
-  opacity: 0.75;
+  pointer-events: none;
 }

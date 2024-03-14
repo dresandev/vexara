@@ -6,6 +6,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { RegisterSchema, type RegisterSchemaTypes } from '~/schemas'
 import { register } from '~/actions/register'
+import { login } from '~/actions/login'
 import { TextField } from '~/components/ui/text-field'
 import { PasswordTextField } from '~/components/ui/password-text-field'
 import { Checkbox } from '~/components/ui/checkbox'
@@ -13,7 +14,6 @@ import { NotificationCard } from '~/components/ui/notification-card'
 import { RingLoader } from '~/components/loaders/ring-loader'
 import { Button } from '~/components/ui/button'
 import styles from './register-form.module.css'
-import { login } from '~/actions/login'
 
 export const RegisterForm = () => {
   const [responseError, setResponseError] = useState('')
@@ -119,7 +119,7 @@ export const RegisterForm = () => {
 
             <Link
               className={styles.legalLink}
-              href='/'
+              href=''
             >
               Política de Privacidad
             </Link>

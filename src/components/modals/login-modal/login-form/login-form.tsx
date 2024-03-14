@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
@@ -15,7 +16,12 @@ import { Button } from '~/components/ui/button'
 import styles from './login-form.module.css'
 
 export const LoginForm = () => {
-  const [responseError, setResponseError] = useState('')
+  const searchParams = useSearchParams()
+  const [errorMessage, setErrorMessage] = useState(() => (
+    searchParams.get('error') === 'OAuthAccountNotLinked'
+      ? '¡El correo electrónico ya está en uso con un proveedor diferente!'
+      : ''
+  ))
   const [isPending, startTransition] = useTransition()
   const form = useForm<LoginSchemaTypes>({
     resolver: zodResolver(LoginSchema),
@@ -28,25 +34,23 @@ export const LoginForm = () => {
   const { control, handleSubmit, formState: { errors } } = form
 
   const onSubmit = (values: LoginSchemaTypes) => {
-    setResponseError('')
+    setErrorMessage('')
 
     startTransition(async () => {
       const data = await login(values)
 
       if (data?.error) {
-        setResponseError(data.error)
+        setErrorMessage(data.error)
       }
     })
   }
 
   return (
     <>
-      {responseError && (
-        <NotificationCard
-          variant='error'
-          message={responseError}
-        />
-      )}
+      {errorMessage && <NotificationCard
+        variant='error'
+        message={errorMessage}
+      />}
       <form
         className={styles.form}
         onSubmit={handleSubmit(onSubmit)}

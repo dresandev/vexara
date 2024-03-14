@@ -63,7 +63,7 @@ export const SideModal: React.FC<SideModalContentProps> = ({
         <Link
           aria-label='Cerrar'
           className={styles.closeModalLink}
-          href='#'
+          href=''
           scroll={false}
         >
           <CloseIcon />

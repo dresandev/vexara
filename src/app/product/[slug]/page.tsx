@@ -67,13 +67,13 @@ export default function ProductPage({
           </div>
 
           <div className={styles.productLinks}>
-            <Link href='#' className={styles.productLink}>
+            <Link href='' className={styles.productLink}>
               Composición, cuidados y origen
             </Link>
-            <Link href='#' className={styles.productLink}>
+            <Link href='' className={styles.productLink}>
               Envíos y devoluciones
             </Link>
-            <Link href='#' className={styles.productLink}>
+            <Link href='' className={styles.productLink}>
               Disponibilidad en tienda
             </Link>
           </div>

@@ -26,7 +26,9 @@ export const Navigation = () => {
           links.map(({ href, label }) => (
             <li key={href}>
               <Link
-                className={clsx({ [styles.activeLink]: pathname === href })}
+                className={clsx(
+                  { [styles.activeLink]: pathname === href }
+                )}
                 href={href}
               >
                 {label}

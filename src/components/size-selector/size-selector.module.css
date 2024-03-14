@@ -24,15 +24,15 @@
   border-radius: 2rem;
 }
 
-.sizeButton:not(:disabled):hover {
+.sizeButton:hover {
   border-color: var(--border-color-high);
 }
 
 .sizeButton:disabled {
-  cursor: default;
   color: hsl(0, 0%, 71%);
   background-color: var(--bg-color-low);
   border: none;
+  pointer-events: none;
 }
 
 .isSelected {

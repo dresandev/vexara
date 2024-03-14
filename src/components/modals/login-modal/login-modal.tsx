@@ -30,7 +30,7 @@ export const LoginModal = () => {
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
           <Link
             className={styles.legalLink}
-            href='#'
+            href=''
             scroll={false}
           >
             Política de Privacidad

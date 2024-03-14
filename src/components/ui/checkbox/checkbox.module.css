@@ -10,17 +10,24 @@
   cursor: pointer;
 }
 
-.input:focus-visible ~ .holder,
-.label:hover > .input:not(:disabled) ~ .holder {
+.checkbox:focus-visible ~ .holder,
+.label:hover > .holder {
   border-color: var(--border-color-high);
 }
 
-.input {
+.checkbox {
   position: absolute;
   inline-size: var(--input-size);
   block-size: var(--input-size);
-  opacity: 0;
+  inline-size: 0;
+  block-size: 0;
   cursor: inherit;
+}
+
+.label[aria-disabled],
+.checkbox:disabled {
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .holder {
@@ -34,7 +41,7 @@
   border-radius: 50%;
 }
 
-.input:checked ~ .holder {
+.checkbox:checked ~ .holder {
   background-color: var(--success-color);
   color: var(--content-color-invert);
   border: none;
@@ -44,7 +51,7 @@
   border-color: var(--error-color);
 }
 
-.input:checked ~ .holder > .checkIcon {
+.checkbox:checked ~ .holder > .checkIcon {
   display: block;
 }
 
