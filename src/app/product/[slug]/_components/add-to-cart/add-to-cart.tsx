@@ -8,7 +8,7 @@ import { useToastStore } from '~/store/use-toast-store'
 import { SizeSelector } from '~/components/size-selector'
 import { CircleCheckIcon } from '~/components/svg'
 import { Button } from '~/components/ui/button'
-import { AddToFavoritesButton } from '../add-to-favorites-button'
+import { AddToFavoritesButton } from '~/components/add-to-favorites-button'
 import styles from './add-to-cart.module.css'
 
 interface AddToCartProps {
@@ -21,7 +21,7 @@ export const AddToCart: React.FC<AddToCartProps> = ({
   const [selectedSize, setSelectedSize] = useState<string | null>('')
   const notifyToast = useToastStore(state => state.notifyToast)
   const addProductToCart = useCartStore(state => state.addProductToCart)
-  const { id, name, price, discount, stock, images } = product
+  const { id, name, price, discount, size, images } = product
 
   const handleAddToCart = () => {
     if (!selectedSize) return setSelectedSize(null)
@@ -31,11 +31,11 @@ export const AddToCart: React.FC<AddToCartProps> = ({
       name,
       price,
       discount,
-      stock: {
-        size: selectedSize,
+      size: {
+        name: selectedSize,
         quantity: 1,
       },
-      image: images[2]
+      image: images[2].url
     })
 
     setSelectedSize('')
@@ -51,7 +51,7 @@ export const AddToCart: React.FC<AddToCartProps> = ({
           href='#shop-cart'
           scroll={false}
         >
-          Ir a la cesta {'>'}
+          Ir a la cesta
         </Link>
       ),
     })
@@ -60,7 +60,7 @@ export const AddToCart: React.FC<AddToCartProps> = ({
   return (
     <>
       <SizeSelector
-        stock={stock}
+        size={size}
         selectedSize={selectedSize}
         onChange={setSelectedSize}
       />

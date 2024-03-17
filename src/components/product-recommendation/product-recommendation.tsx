@@ -1,52 +1,42 @@
-'use client'
-
-import { ProductCategory } from '~/types'
-import { useHasMounted } from '~/hooks/use-has-mounted'
-import { getRecommendations } from '~/helpers/get-recommendations'
+import { getProductRecommendations } from '~/helpers/get-recommendations'
 import { Carousel } from '~/components/carousel'
-import { RecommendationProductCard } from '~/components/cards/recommendation-product-card'
+import { ProductRecommendationCard } from '~/components/cards/recommendation-product-card'
 import styles from './product-recommendation.module.css'
 
 interface ProductRecommendationProps {
   quantity?: number
-  category?: ProductCategory | 'all'
+  category: string
 }
 
-export const ProductRecommendation: React.FC<ProductRecommendationProps> = ({
+export const ProductRecommendation: React.FC<ProductRecommendationProps> = async ({
   quantity = 8,
-  category = 'all'
+  category
 }) => {
-  const hasMounted = useHasMounted()
-
-  if (!hasMounted) return
-
-  const recommendations = getRecommendations({ quantity, category })
+  const products = await getProductRecommendations({ quantity, category })
 
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Te puede interesar</h2>
 
       <Carousel>
-        {
-          recommendations.map(({
-            id,
-            images: [image, hoverImage],
-            name,
-            price,
-            discount,
-          }) => (
-            <RecommendationProductCard
-              key={id}
-              id={id}
-              className={styles.productCard}
-              imagePath={image}
-              hoverImagePath={hoverImage}
-              name={name}
-              price={price}
-              discount={discount}
-            />
-          ))
-        }
+        {products.map(({
+          id,
+          images: [image, hoverImage],
+          name,
+          price,
+          discount,
+        }) => (
+          <ProductRecommendationCard
+            key={id}
+            id={id}
+            className={styles.productCard}
+            imageUrl={image.url}
+            hoverImageUrl={hoverImage.url}
+            name={name}
+            price={price.toNumber()}
+            discount={discount}
+          />
+        ))}
       </Carousel>
     </section>
   )

@@ -18,7 +18,7 @@ export const useCartStore = create<CartState>()(
       const { cart } = get()
 
       const productInCart = cart.some(
-        ({ id, stock }) => id === product.id && stock.size === product.stock.size
+        ({ id, size }) => id === product.id && size.name === product.size.name
       )
 
       if (!productInCart) {
@@ -26,12 +26,12 @@ export const useCartStore = create<CartState>()(
       }
 
       const updatedCartProducts = cart.map(item =>
-        item.id === product.id && item.stock.size === product.stock.size
+        item.id === product.id && item.size.name === product.size.name
           ? {
             ...item,
-            stock: {
-              ...item.stock,
-              quantity: item.stock.quantity + product.stock.quantity,
+            size: {
+              ...item.size,
+              quantity: item.size.quantity + product.size.quantity,
             }
           }
           : item
@@ -43,7 +43,7 @@ export const useCartStore = create<CartState>()(
       const { cart } = get()
 
       const updatedCartProducts = cart.filter(
-        ({ id, stock }) => id !== product.id || stock.size !== product.stock.size
+        ({ id, size }) => id !== product.id || size.name !== product.size.name
       )
 
       set({ cart: updatedCartProducts })
@@ -53,7 +53,7 @@ export const useCartStore = create<CartState>()(
 
       const total = cart.reduce(
         (accumulator, product) => {
-          const { price, discount, stock: { quantity } } = product
+          const { price, discount, size: { quantity } } = product
 
           const discountedPrice = discount
             ? price - (price * discount / 100)
@@ -72,8 +72,8 @@ export const useCartStore = create<CartState>()(
       const { cart } = get()
 
       const updatedCartProducts = cart.map(item =>
-        item.id === product.id && item.stock.size === product.stock.size
-          ? { ...item, stock: { ...item.stock, quantity: quantity } }
+        item.id === product.id && item.size.name === product.size.name
+          ? { ...item, size: { ...item.size, quantity: quantity } }
           : item
       )
 
@@ -81,7 +81,7 @@ export const useCartStore = create<CartState>()(
     },
     getTotalProducts: () => {
       const { cart } = get()
-      return cart.reduce((total, item) => total + item.stock.quantity, 0)
+      return cart.reduce((total, item) => total + item.size.quantity, 0)
     },
   }), { name: 'cart' })
 )

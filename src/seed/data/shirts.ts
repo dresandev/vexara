@@ -1,360 +1,358 @@
 import { Product } from '~/types'
-import { getProductImagePaths } from '~/helpers/get-product-image-paths'
+import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getShirtImagePaths = (product: string) => (
   getProductImagePaths(
-    'shirts',
+    't-shirts',
     product
   )
 )
 
 export const shirts: Product[] = [
   {
-    id: 's1',
     name: 'Camiseta manga corta muscle fit bandas',
     price: 99900,
     discount: null,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 100,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 43,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 0,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-manga-corta-muscle-fit-bandas'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's2',
     name: 'Camiseta Dragon Ball manga corta boxy fit',
     price: 129900,
     discount: 53,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 60,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-dragon-ball-manga-corta-boxy-fit'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's3',
     name: 'Camiseta manga corta regular fit',
     price: 59900,
     discount: 23,
-    stock: [
+    size: [
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 50,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-manga-corta-regular-fit'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's4',
     name: 'Camiseta manga corta boxy fit print',
     price: 99900,
     discount: 40,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 80,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 43,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 12,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's5',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print text',
     price: 139900,
     discount: 57,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 20,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 12,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 0,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-text'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's6',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print character',
     price: 139900,
     discount: 57,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 100,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 10,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
       {
-        size: 'XXL',
+        name: 'XXL',
         quantity: 0,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-character'
     ),
-    category: 'shirts',
+    category: 't-shirts',
   },
   {
-    id: 's7',
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print chtx',
     price: 139900,
     discount: 57,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 10,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 0,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-bershka-ft.-bizarrap-boxy-fit-print-chtx'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's8',
     name: 'Camiseta manga corta boxy fit print lr',
     price: 99900,
     discount: 45,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 2,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print-lr'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
   {
-    id: 's9',
     name: 'Camiseta The Notorious B.I.G. manga corta print',
     price: 129900,
     discount: 53,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 10,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-the-notorious-big-manga-corta-print'
     ),
-    category: 'shirts',
+    category: 't-shirts',
   },
   {
-    id: 's10',
     name: 'Camiseta manga corta boxy fit print xsr',
     price: 119900,
     discount: 50,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 10,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
     images: getShirtImagePaths(
       'camiseta-manga-corta-boxy-fit-print-xsr'
     ),
-    category: 'shirts',
+    category: 't-shirts',
+    isFeatured: true
   },
 ]

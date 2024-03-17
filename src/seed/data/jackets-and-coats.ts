@@ -1,5 +1,5 @@
 import { Product } from '~/types'
-import { getProductImagePaths } from '~/helpers/get-product-image-paths'
+import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getJacketsOrCoatsImagePaths = (product: string) => (
   getProductImagePaths(
@@ -10,21 +10,20 @@ const getJacketsOrCoatsImagePaths = (product: string) => (
 
 export const jacketsAndCoats: Product[] = [
   {
-    id: 'jac1',
     name: 'Cazadora denim capucha rayas',
     price: 249000,
     discount: 55,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 100,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 60,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
     ],
@@ -32,23 +31,23 @@ export const jacketsAndCoats: Product[] = [
       'cazadora-denim-capucha-rayas'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
   {
-    id: 'jac2',
     name: 'Cazadora efecto piel bandas laterales',
     price: 329000,
     discount: 66,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 123,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 2,
       },
     ],
@@ -56,23 +55,23 @@ export const jacketsAndCoats: Product[] = [
       'cazadora-efecto-piel-bandas-laterales'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
   {
-    id: 'jac3',
     name: 'Cazadora bomber con nylon efecto lavado',
     price: 359000,
     discount: 69,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 50,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 60,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
     ],
@@ -80,23 +79,23 @@ export const jacketsAndCoats: Product[] = [
       'cazadora-bomber-con-nylon-efecto-lavado'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
   {
-    id: 'jac4',
     name: 'Cazadora biker oversize efecto piel desgastada',
     price: 459000,
     discount: 76,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 80,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 70,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
     ],
@@ -106,21 +105,20 @@ export const jacketsAndCoats: Product[] = [
     category: 'jackets-and-coats',
   },
   {
-    id: 'jac5',
     name: 'Cazadora denim biker',
     price: 329000,
     discount: 66,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 70,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 60,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 39,
       },
     ],
@@ -130,21 +128,20 @@ export const jacketsAndCoats: Product[] = [
     category: 'jackets-and-coats',
   },
   {
-    id: 'jac6',
     name: 'Cazadora capucha oversize con nylon',
     price: 299000,
     discount: null,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 160,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 52,
       },
     ],
@@ -152,23 +149,23 @@ export const jacketsAndCoats: Product[] = [
       'cazadora-capucha-oversize-con-nylon'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
   {
-    id: 'jac7',
     name: 'Cazadora capucha ligera nylon bolsillos',
     price: 299000,
     discount: 63,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 78,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 6,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 2,
       },
     ],
@@ -178,21 +175,20 @@ export const jacketsAndCoats: Product[] = [
     category: 'jackets-and-coats',
   },
   {
-    id: 'jac8',
     name: 'Cazadora capucha ligera nylon',
     price: 199900,
     discount: 60,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 9,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 50,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 12,
       },
     ],
@@ -200,23 +196,23 @@ export const jacketsAndCoats: Product[] = [
       'cazadora-capucha-ligera-nylon'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
   {
-    id: 'jac9',
     name: 'Cazadora reflectante capucha',
     price: 149900,
     discount: 46,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 60,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 20,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 52,
       },
     ],
@@ -226,21 +222,20 @@ export const jacketsAndCoats: Product[] = [
     category: 'jackets-and-coats',
   },
   {
-    id: 'jac10',
     name: 'Chaleco utility',
     price: 249000,
     discount: 55,
-    stock: [
+    size: [
       {
-        size: 'S',
+        name: 'S',
         quantity: 90,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 10,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 52,
       },
     ],
@@ -248,5 +243,6 @@ export const jacketsAndCoats: Product[] = [
       'chaleco-utility'
     ),
     category: 'jackets-and-coats',
+    isFeatured: true
   },
 ]

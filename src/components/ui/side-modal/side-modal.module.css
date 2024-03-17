@@ -5,14 +5,13 @@
 }
 
 .modal {
-  display: flex;
-  flex-direction: column;
-  padding: 16px var(--modal-space-inline);
   position: fixed;
   inset-block: 0;
   inset-inline-end: 0;
-  max-inline-size: 384px;
-  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  inline-size: min(100%, 384px);
+  padding: 16px var(--modal-space-inline);
   background-color: var(--bg-color);
   outline: none;
   scrollbar-width: thin;

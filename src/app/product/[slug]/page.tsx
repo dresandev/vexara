@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { db } from '~/lib/db'
 import { getProductIdFromSlug } from '~/helpers/get-product-id-from-slug'
-import { getProductById } from '~/helpers/get-products'
 import { ProductPrice } from '~/components/product-price'
 import { ProductRecommendation } from '~/components/product-recommendation'
 import { BuildingStoreIcon, TruckDeliveryIcon } from '~/components/svg'
@@ -13,32 +13,38 @@ interface ProductPageProps {
   params: { slug: string }
 }
 
-export default function ProductPage({
-  params
+export default async function ProductPage({
+  params: { slug }
 }: ProductPageProps) {
-  const productId = getProductIdFromSlug(params.slug)
+  const productId = getProductIdFromSlug(slug)
   if (!productId) notFound()
 
-  const product = getProductById(productId)
+  const product = await db.product.findUnique({
+    where: { id: productId },
+    include: {
+      images: true,
+      size: true,
+      category: { select: { name: true } },
+    }
+  })
   if (!product) notFound()
 
-  const { images, name, price, discount, category } = product
+  const { id, images, name, discount, size, category } = product
+  const price = product.price.toNumber()
 
   return (
     <>
       <div className={styles.container}>
         <div className={styles.fixedContainer}>
           <section className={styles.images}>
-            {
-              images.map((image, i) => (
-                <img
-                  key={image}
-                  className={styles.image}
-                  src={image}
-                  alt={`${name}-${i}`}
-                />
-              ))
-            }
+            {images.map(({ id, url }, i) => (
+              <img
+                key={id}
+                className={styles.image}
+                src={url}
+                alt={`${name}-${i + 1}`}
+              />
+            ))}
           </section>
         </div>
 
@@ -52,7 +58,14 @@ export default function ProductPage({
             showDiscount
           />
 
-          <AddToCart product={product} />
+          <AddToCart product={{
+            id,
+            name,
+            price,
+            discount,
+            size,
+            images,
+          }} />
 
           <div className={styles.productInfo}>
             <ProductInfoCard
@@ -82,7 +95,7 @@ export default function ProductPage({
 
       <ProductRecommendation
         quantity={8}
-        category={category}
+        category={category.name}
       />
     </>
   )

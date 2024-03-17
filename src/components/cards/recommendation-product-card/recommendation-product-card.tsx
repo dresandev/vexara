@@ -5,21 +5,21 @@ import { ProductPrice } from '~/components/product-price'
 import { HoverImages } from './hover-images'
 import styles from './recommendation-product-card.module.css'
 
-interface RecommendationProductCardProps {
+interface ProductRecommendationCardProps {
   className?: string
   id: string,
-  imagePath: string
-  hoverImagePath: string
+  imageUrl: string
+  hoverImageUrl: string
   name: string
   price: number
   discount: number | null
 }
 
-export const RecommendationProductCard: React.FC<RecommendationProductCardProps> = ({
+export const ProductRecommendationCard: React.FC<ProductRecommendationCardProps> = ({
   className,
   id,
-  imagePath,
-  hoverImagePath,
+  imageUrl,
+  hoverImageUrl,
   name,
   price,
   discount,
@@ -34,8 +34,8 @@ export const RecommendationProductCard: React.FC<RecommendationProductCardProps>
         className
       )}>
         <HoverImages
-          src={imagePath}
-          hoverSrc={hoverImagePath}
+          src={imageUrl}
+          hoverSrc={hoverImageUrl}
           alt={name}
         />
         <div className={styles.details}>

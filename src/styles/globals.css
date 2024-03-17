@@ -16,8 +16,12 @@
   --border-radius: 4px;
   --modal-space-inline: clamp(20px, 17.09px + 0.777vw, 32px);
   --content-block-size: calc(
-    100dvh - var(--footer-block-size) - var(--header-block-size)
+    100svh - var(--footer-block-size) - var(--header-block-size)
   );
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 body {

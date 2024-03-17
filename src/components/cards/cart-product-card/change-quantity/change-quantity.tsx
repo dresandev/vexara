@@ -13,7 +13,7 @@ export const ChangeQuantity: React.FC<ChangeQuantityProps> = ({
 }) => {
   const updateProductQuantity = useCartStore(state => state.updateProductQuantity)
 
-  const quantity = product.stock.quantity
+  const quantity = product.size.quantity
 
   const handleValueChange = (value: number) => {
     if (quantity + value < 1) return

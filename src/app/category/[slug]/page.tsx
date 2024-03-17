@@ -1,7 +1,5 @@
 import { notFound } from 'next/navigation'
-import { ProductCategory } from '~/types'
-import { productCategoryTitles } from '~/data/products/categories'
-import { getProductsByCategory } from '~/helpers/get-products'
+import { db } from '~/lib/db'
 import { ProductCard } from '~/components/cards/product-card'
 import styles from './page.module.css'
 
@@ -9,39 +7,44 @@ interface CategoryPageProps {
   params: { slug: string }
 }
 
-export default function CategoryPage({
-  params
+export default async function CategoryPage({
+  params: { slug }
 }: CategoryPageProps) {
-  const productCategory = params.slug as ProductCategory
-  const products = getProductsByCategory(productCategory)
+  const category = await db.category.findFirst({
+    where: { slug },
+  })
 
+  if (!category) notFound()
+
+  const products = await db.product.findMany({
+    where: { category },
+    include: { images: true }
+  })
   if (!products) notFound()
-
-  const pageTitle = productCategoryTitles[productCategory]
 
   return (
     <>
-      <h1 className={styles.pageTitle}>{pageTitle}</h1>
+      <h1 className={styles.title}>
+        {category.name}
+      </h1>
 
-      <div className={styles.productContainer}>
-        {
-          products.map(({
-            id,
-            images,
-            name,
-            price,
-            discount,
-          }) => (
-            <ProductCard
-              key={id}
-              id={id}
-              images={images}
-              name={name}
-              price={price}
-              discount={discount}
-            />
-          ))
-        }
+      <div className={styles.container}>
+        {products.map(({
+          id,
+          images,
+          name,
+          price,
+          discount,
+        }) => (
+          <ProductCard
+            key={id}
+            id={id}
+            images={images}
+            name={name}
+            price={price.toNumber()}
+            discount={discount}
+          />
+        ))}
       </div>
     </>
   )

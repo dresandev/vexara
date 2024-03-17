@@ -1,13 +1,10 @@
-export type ProductCategory =
-  'shirts' |
-  'jackets-and-coats' |
-  'shoes' |
-  'sweatshirts-and-sweaters' |
-  'pants-and-jeans'
-
-export interface Stock {
-  size: string
+export interface Size {
+  name: string
   quantity: number
+}
+
+export interface Image {
+  url: string
 }
 
 export interface Product {
@@ -15,9 +12,10 @@ export interface Product {
   name: string
   price: number
   discount: number | null
-  stock: Stock[]
-  images: string[]
-  category: ProductCategory
+  size: Size[]
+  images: Image[]
+  category?: string
+  isFeatured?: boolean
 }
 
 export interface ProductToCart {
@@ -25,6 +23,6 @@ export interface ProductToCart {
   name: string
   price: number
   discount: number | null
-  stock: Stock
+  size: Size
   image: string
 }

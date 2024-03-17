@@ -1,5 +1,5 @@
 import { Product } from '~/types'
-import { getProductImagePaths } from '~/helpers/get-product-image-paths'
+import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getPantsAndJeansImagePaths = (product: string) => (
   getProductImagePaths(
@@ -10,33 +10,32 @@ const getPantsAndJeansImagePaths = (product: string) => (
 
 export const pantsAndJeans: Product[] = [
   {
-    id: 'paj1',
     name: 'Pantalón jogger cargo',
     price: 179900,
     discount: 44,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 100,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -44,39 +43,39 @@ export const pantsAndJeans: Product[] = [
       'pantalon-jogger-cargo'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj2',
     name: 'Jeans super skinny',
     price: 139900,
     discount: null,
-    stock: [
+    size: [
       {
-        size: '34',
+        name: '34',
         quantity: 100,
       },
       {
-        size: '36',
+        name: '36',
         quantity: 60,
       },
       {
-        size: '38',
+        name: '38',
         quantity: 0,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 32,
       },
       {
-        size: '46',
+        name: '46',
         quantity: 32,
       },
     ],
@@ -84,31 +83,31 @@ export const pantsAndJeans: Product[] = [
       'jeans-super-skinny'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj3',
     name: 'Pantalón wide leg cargo felpa',
     price: 159900,
     discount: 37,
-    stock: [
+    size: [
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 0,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -116,35 +115,35 @@ export const pantsAndJeans: Product[] = [
       'pantalon-wide-leg-cargo-felpa'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj4',
     name: 'Jeans skinny rotos',
     price: 189900,
     discount: 47,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 10,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -154,33 +153,32 @@ export const pantsAndJeans: Product[] = [
     category: 'pants-and-jeans',
   },
   {
-    id: 'paj5',
     name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
     price: 35000,
     discount: 72,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 12,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 2,
       },
     ],
@@ -190,37 +188,36 @@ export const pantsAndJeans: Product[] = [
     category: 'pants-and-jeans',
   },
   {
-    id: 'paj6',
     name: 'Pantalón jogger multicargo',
     price: 249000,
     discount: 59,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 100,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
       {
-        size: 'XXL',
+        name: 'XXL',
         quantity: 0,
       },
     ],
@@ -228,35 +225,35 @@ export const pantsAndJeans: Product[] = [
       'pantalon-jogger-multicargo'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj7',
     name: 'Jeans carrot fit rotos',
     price: 189900,
     discount: 47,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 2,
       },
     ],
@@ -264,35 +261,35 @@ export const pantsAndJeans: Product[] = [
       'jeans-carrot-fit-rotos'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj8',
     name: 'Pantalón jogger felpa parche',
     price: 159900,
     discount: 37,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 32,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 0,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -300,35 +297,35 @@ export const pantsAndJeans: Product[] = [
       'pantalon-jogger-felpa-parche'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
   {
-    id: 'paj9',
     name: 'Jeans skinny',
     price: 179900,
     discount: 44,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 60,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -338,33 +335,32 @@ export const pantsAndJeans: Product[] = [
     category: 'pants-and-jeans',
   },
   {
-    id: 'paj10',
     name: 'Jeans baggy',
     price: 249000,
     discount: 59,
-    stock: [
+    size: [
       {
-        size: 'XXS',
+        name: 'XXS',
         quantity: 0,
       },
       {
-        size: 'XS',
+        name: 'XS',
         quantity: 0,
       },
       {
-        size: 'S',
+        name: 'S',
         quantity: 32,
       },
       {
-        size: 'M',
+        name: 'M',
         quantity: 0,
       },
       {
-        size: 'L',
+        name: 'L',
         quantity: 32,
       },
       {
-        size: 'XL',
+        name: 'XL',
         quantity: 32,
       },
     ],
@@ -372,5 +368,6 @@ export const pantsAndJeans: Product[] = [
       'jeans-baggy'
     ),
     category: 'pants-and-jeans',
+    isFeatured: true
   },
 ]

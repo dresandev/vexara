@@ -1,7 +1,7 @@
 .wrapper {
   --space-block: 48px;
   display: flex;
-  min-block-size: calc(100dvh - var(--header-block-size));
+  min-block-size: calc(100svh - var(--header-block-size));
   padding-block-start: var(--space-block);
 }
 

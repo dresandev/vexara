@@ -1,13 +1,14 @@
 import Link from 'next/link'
+import type { Image } from '@prisma/client'
 import { getProductPathName } from '~/helpers/get-product-pathname'
 import { ProductPrice } from '~/components/product-price'
-import { AddToFavoritesButton } from '~/app/product/[slug]/_components/add-to-favorites-button'
+import { AddToFavoritesButton } from '~/components/add-to-favorites-button'
 import { CarouselImage } from './carousel-image'
 import styles from './product-card.module.css'
 
 interface ProductCardProps {
   id: string,
-  images: string[]
+  images: Image[]
   name: string
   price: number
   discount: number | null

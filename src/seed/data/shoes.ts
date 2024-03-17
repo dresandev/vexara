@@ -1,5 +1,5 @@
 import { Product } from '~/types'
-import { getProductImagePaths } from '~/helpers/get-product-image-paths'
+import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getShoesImagePaths = (product: string) => (
   getProductImagePaths(
@@ -10,37 +10,36 @@ const getShoesImagePaths = (product: string) => (
 
 export const shoes: Product[] = [
   {
-    id: 'sh1',
     name: 'Deportivas sin cordones combinadas con rejilla hombre',
     price: 299000,
     discount: 53,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -48,39 +47,39 @@ export const shoes: Product[] = [
       'deportivas-sin-cordones-combinadas-con-rejilla-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh2',
     name: 'Botines acordonados suela track hombre',
     price: 309000,
     discount: 54,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 0,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 0,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -88,39 +87,39 @@ export const shoes: Product[] = [
       'botines-acordonados-suela-track-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh3',
     name: 'Deportivas tejido knit hombre',
     price: 229000,
     discount: null,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 0,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -128,39 +127,39 @@ export const shoes: Product[] = [
       'deportivas-tejido-knit-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh4',
     name: 'Zapatillas combinadas hombre',
     price: 109000,
     discount: 26,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 0,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 10,
       },
     ],
@@ -168,39 +167,39 @@ export const shoes: Product[] = [
       'zapatillas-combinadas-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh5',
     name: 'Zapatillas suela acabado sierra hombre',
     price: 129000,
     discount: null,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 10,
       },
     ],
@@ -208,39 +207,39 @@ export const shoes: Product[] = [
       'zapatillas-suela-acabado-sierra-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh6',
     name: 'Deportivas combinadas con piezas plateadas y rejilla hombre',
     price: 249000,
     discount: 43,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 0,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 13,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -248,39 +247,39 @@ export const shoes: Product[] = [
       'deportivas-combinadas-con-piezas-plateadas-y-rejilla-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh7',
     name: 'Zapatillas abotinadas multicapas hombre',
     price: 249000,
     discount: 39,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 0,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 10,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -288,39 +287,39 @@ export const shoes: Product[] = [
       'zapatillas-abotinadas-multicapas-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh8',
     name: 'Zapatillas llavero hombre',
     price: 189000,
     discount: 63,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 0,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -328,39 +327,39 @@ export const shoes: Product[] = [
       'zapatillas-llavero-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh9',
     name: 'Zapatillas combinadas hombre lr',
     price: 129000,
     discount: 46,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 32,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 32,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -368,39 +367,39 @@ export const shoes: Product[] = [
       'zapatillas-combinadas-hombre-lr'
     ),
     category: 'shoes',
+    isFeatured: true
   },
   {
-    id: 'sh10',
     name: 'Zapatillas multicapas hombre',
     price: 229000,
     discount: 52,
-    stock: [
+    size: [
       {
-        size: '39',
+        name: '39',
         quantity: 100,
       },
       {
-        size: '40',
+        name: '40',
         quantity: 0,
       },
       {
-        size: '41',
+        name: '41',
         quantity: 0,
       },
       {
-        size: '42',
+        name: '42',
         quantity: 0,
       },
       {
-        size: '43',
+        name: '43',
         quantity: 43,
       },
       {
-        size: '44',
+        name: '44',
         quantity: 0,
       },
       {
-        size: '45',
+        name: '45',
         quantity: 0,
       },
     ],
@@ -408,5 +407,6 @@ export const shoes: Product[] = [
       'zapatillas-multicapas-hombre'
     ),
     category: 'shoes',
+    isFeatured: true
   },
 ]

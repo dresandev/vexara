@@ -12,6 +12,7 @@ export default function ErrorPage() {
         src='/images/decoration/error.webp'
         alt='error imagen decorativa'
       />
+      <p>Lo sentimos, ha ocurrido un error.</p>
       <Button asChild>
         <Link href='/'>Regresar al inicio</Link>
       </Button>

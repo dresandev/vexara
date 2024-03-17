@@ -16,26 +16,24 @@ export const ProductsInCart = () => {
   return (
     <>
       <div className={styles.container}>
-        {
-          cart.map(({
-            id,
-            image,
-            price,
-            discount,
-            name,
-            stock,
-          }) => (
-            <CartProductCard
-              key={`${id}-${stock.size}`}
-              id={id}
-              image={image}
-              price={price}
-              discount={discount}
-              name={name}
-              stock={stock}
-            />
-          ))
-        }
+        {cart.map(({
+          id,
+          image,
+          price,
+          discount,
+          name,
+          size,
+        }) => (
+          <CartProductCard
+            key={`${id}-${size.name}`}
+            id={id}
+            image={image}
+            price={price}
+            discount={discount}
+            name={name}
+            size={size}
+          />
+        ))}
       </div>
       <Summary />
     </>

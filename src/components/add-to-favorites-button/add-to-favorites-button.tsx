@@ -1,5 +1,3 @@
-'use client'
-
 import { HeartIcon } from '~/components/svg/heart-icon'
 
 interface AddToFavoritesButtonProps {

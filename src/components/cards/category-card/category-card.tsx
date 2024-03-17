@@ -3,32 +3,32 @@ import styles from './category-card.module.css'
 
 interface CategoryCardProps {
   className?: string
-  imagePath: string
-  category: string
-  pagePath: string
+  imageUrl: string
+  name: string
+  slug: string
 }
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({
   className,
-  category,
-  imagePath,
-  pagePath,
+  name,
+  imageUrl,
+  slug,
 }) => {
   return (
     <Link
       className={styles.linkWrapper}
-      href={`/category/${pagePath}`}
+      href={`/category/${slug}`}
     >
       <figure className={className}>
         <span className={styles.imageContainer}>
           <img
             className={styles.image}
-            src={imagePath}
+            src={imageUrl}
             alt=''
           />
         </span>
         <figcaption className={styles.caption}>
-          {category}
+          {name}
         </figcaption>
       </figure>
     </Link>

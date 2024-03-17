@@ -1,7 +1,7 @@
 .fixedContainer {
   position: sticky;
   inset-block-start: var(--header-block-size);
-  block-size: 80dvh;
+  block-size: 80svh;
 }
 
 .video {

@@ -1,34 +1,34 @@
 'use client'
 
 import clsx from 'clsx'
-import { Stock } from '~/types'
+import { Size } from '~/types'
 import { ClockExclamationIcon } from '~/components/svg'
 import { Tooltip } from '~/components/ui/tooltip'
 import styles from './size-selector.module.css'
 
 interface SizeSelectorProps {
-  stock: Stock[]
+  size: Size[]
   selectedSize: string | null
   onChange: (size: string) => void
 }
 
 export const SizeSelector: React.FC<SizeSelectorProps> = ({
-  stock,
+  size,
   selectedSize,
   onChange,
 }) => {
   return (
     <ul className={styles.sizeList}>
       {
-        stock.map(({ size, quantity }) => {
-          const isSelectedSize = size === selectedSize
+        size.map(({ name, quantity }) => {
+          const isSelectedSize = name === selectedSize
           const hasStock = quantity > 0
           const hasLowStock = quantity > 0 && quantity < 10
           const showTooltip = hasLowStock || !hasStock
 
           return (
             <li
-              key={size}
+              key={name}
               className={clsx(
                 styles.listItem,
                 { [styles.withTooltip]: showTooltip }
@@ -42,7 +42,7 @@ export const SizeSelector: React.FC<SizeSelectorProps> = ({
                   styles.sizeButton,
                   { [styles.isSelected]: isSelectedSize }
                 )}
-                onClick={() => onChange(size)}
+                onClick={() => onChange(name)}
                 disabled={!hasStock}
               >
                 {hasLowStock && (
@@ -50,7 +50,7 @@ export const SizeSelector: React.FC<SizeSelectorProps> = ({
                     className={styles.lowStockIcon}
                   />
                 )}
-                {size}
+                {name}
               </button>
               {showTooltip && (
                 <Tooltip

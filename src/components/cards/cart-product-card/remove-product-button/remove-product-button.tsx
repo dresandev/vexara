@@ -17,7 +17,7 @@ export const RemoveProductButton: React.FC<RemoveProductButtonProps> = ({
   return (
     <button
       aria-label='Remover producto de la cesta'
-      className={styles.removeProductButton}
+      className={styles.button}
       onClick={() => removeProduct(product)}
     >
       <TrashIcon

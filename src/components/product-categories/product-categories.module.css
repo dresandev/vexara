@@ -1,4 +1,4 @@
-.categoriesSection {
+.section {
   padding-block: 24px;
   color: var(--promo-color);
 }
@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 
-.categoriesContainer {
+.container {
   display: flex;
   column-gap: 8px;
   padding-inline: 20px;
@@ -19,21 +19,20 @@
 
 .categoryCard {
   inline-size: clamp(13.4rem, 11.167rem + 5.955vw, 22.6rem);
-  flex-shrink: 0;
 }
 
 @media (hover: hover) {
-  .categoriesContainer {
+  .container {
     scrollbar-width: auto;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .categoriesContainer {
-    justify-content: center;
+  .section {
+    text-align: center;
   }
 
-  .categoriesSection {
-    text-align: center;
+  .container {
+    justify-content: center;
   }
 }

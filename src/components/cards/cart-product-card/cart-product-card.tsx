@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Stock } from '~/types'
+import { Size } from '~/types'
 import { getProductPathName } from '~/helpers/get-product-pathname'
 import { ProductPrice } from '~/components/product-price'
 import { RemoveProductButton } from './remove-product-button'
@@ -12,7 +12,7 @@ interface CartProductCardProps {
   price: number
   discount: number | null
   name: string
-  stock: Stock
+  size: Size
 }
 
 export const CartProductCard: React.FC<CartProductCardProps> = ({
@@ -21,10 +21,10 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
   price,
   discount,
   name,
-  stock,
+  size,
 }) => {
   const productPathname = getProductPathName(id, name)
-  const totalPrice = price * stock.quantity
+  const totalPrice = price * size.quantity
 
   return (
     <div className={styles.card}>
@@ -47,16 +47,14 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
             price={totalPrice}
             discount={discount}
           />
-          <RemoveProductButton
-            product={{
-              id,
-              image,
-              price,
-              discount,
-              name,
-              stock,
-            }}
-          />
+          <RemoveProductButton product={{
+            id,
+            image,
+            price,
+            discount,
+            name,
+            size,
+          }} />
         </div>
 
         <div className={styles.middleArea}>
@@ -64,8 +62,8 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
             {name}
           </Link>
           <div className={styles.orderInfo}>
-            <span>{stock.size}</span>
-            {stock.quantity > 1 && (
+            <span>{size.name}</span>
+            {size.quantity > 1 && (
               <ProductPrice
                 price={price}
                 discount={discount}
@@ -74,16 +72,14 @@ export const CartProductCard: React.FC<CartProductCardProps> = ({
           </div>
         </div>
 
-        <ChangeQuantity
-          product={{
-            id,
-            image,
-            price,
-            discount,
-            name,
-            stock,
-          }}
-        />
+        <ChangeQuantity product={{
+          id,
+          image,
+          price,
+          discount,
+          name,
+          size,
+        }} />
       </div>
     </div >
   )

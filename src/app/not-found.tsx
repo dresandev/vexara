@@ -12,6 +12,7 @@ export default function NotFound() {
         src='/images/decoration/not-found.webp'
         alt='Pagina no encontrada imagen decorativa'
       />
+      <p>¡Oops! no se encontró la página buscada.</p>
       <Button asChild>
         <Link href='/'>Regresar al inicio</Link>
       </Button>

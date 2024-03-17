@@ -1,22 +1,25 @@
-import { ProductCategory } from '~/types'
+import { db } from '~/lib/db'
 import { getRandomNumbers } from '~/helpers/get-random-numbers'
-import { getProductsByCategory } from '~/helpers/get-products'
 
 interface getRecommendationProps {
   quantity: number
-  category: ProductCategory | 'all'
+  category: string
 }
 
-export const getRecommendations = ({
+export const getProductRecommendations = async ({
   quantity,
   category,
 }: getRecommendationProps) => {
-  const products = getProductsByCategory(category)
+  const products = await db.product.findMany({
+    where: { category: { name: category } },
+    include: { images: true },
+  })
+
   const numbersLength = (quantity > products.length)
     ? products.length
     : quantity
-  const randomIndexes = getRandomNumbers(numbersLength, products.length - 1)
-  const recommendations = randomIndexes.map(index => products.at(index)!)
+  const randomIdx = getRandomNumbers(numbersLength, products.length - 1)
+  const productRecommendations = randomIdx.map(idx => products.at(idx)!)
 
-  return recommendations
+  return productRecommendations
 }

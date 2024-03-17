@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import type { Image } from '@prisma/client'
 import { ChevronArrow } from '~/components/svg'
 import styles from './carousel-image.module.css'
 
 interface CarouselImageProps {
-  images: string[]
+  images: Image[]
   alt: string
 }
 
@@ -13,23 +14,23 @@ export const CarouselImage: React.FC<CarouselImageProps> = ({
   images,
   alt,
 }) => {
-  const [index, setIndex] = useState(0)
+  const [idx, setIdx] = useState(0)
 
-  const imagesLastIndex = images.length - 1
+  const imageLastIdx = images.length - 1
 
   const handlePrevButtonClick = () => {
-    setIndex(prevIndex => prevIndex === 0 ? imagesLastIndex : index - 1)
+    setIdx(prevIdx => prevIdx === 0 ? imageLastIdx : idx - 1)
   }
 
   const handleNextButtonClick = () => {
-    setIndex(prevIndex => prevIndex === imagesLastIndex ? 0 : index + 1)
+    setIdx(prevIdx => prevIdx === imageLastIdx ? 0 : idx + 1)
   }
 
   return (
     <div className={styles.imagesWrapper}>
       <img
         className={styles.image}
-        src={images[index]}
+        src={images[idx].url}
         alt={alt}
       />
 
