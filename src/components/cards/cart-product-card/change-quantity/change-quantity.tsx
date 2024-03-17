@@ -1,11 +1,11 @@
 'use client'
 
-import { ProductToCart } from '~/types'
+import { CartProduct } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
 import styles from './change-quantity.module.css'
 
 interface ChangeQuantityProps {
-  product: ProductToCart
+  product: CartProduct
 }
 
 export const ChangeQuantity: React.FC<ChangeQuantityProps> = ({

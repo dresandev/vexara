@@ -1,4 +1,4 @@
-import { Product } from '~/types'
+import { SeedProduct } from '~/types'
 import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getJacketsOrCoatsImagePaths = (product: string) => (
@@ -8,12 +8,12 @@ const getJacketsOrCoatsImagePaths = (product: string) => (
   )
 )
 
-export const jacketsAndCoats: Product[] = [
+export const jacketsAndCoats: SeedProduct[] = [
   {
     name: 'Cazadora denim capucha rayas',
     price: 249000,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 100,
@@ -37,7 +37,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora efecto piel bandas laterales',
     price: 329000,
     discount: 66,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 0,
@@ -61,7 +61,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora bomber con nylon efecto lavado',
     price: 359000,
     discount: 69,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 50,
@@ -82,10 +82,10 @@ export const jacketsAndCoats: Product[] = [
     isFeatured: true
   },
   {
-    name: 'Cazadora biker oversize efecto piel desgastada',
+    name: 'Cazadora biker oversizes efecto piel desgastada',
     price: 459000,
     discount: 76,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 80,
@@ -100,7 +100,7 @@ export const jacketsAndCoats: Product[] = [
       },
     ],
     images: getJacketsOrCoatsImagePaths(
-      'cazadora-biker-oversize-efecto-piel-desgastada'
+      'cazadora-biker-oversizes-efecto-piel-desgastada'
     ),
     category: 'jackets-and-coats',
   },
@@ -108,7 +108,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora denim biker',
     price: 329000,
     discount: 66,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 70,
@@ -128,10 +128,10 @@ export const jacketsAndCoats: Product[] = [
     category: 'jackets-and-coats',
   },
   {
-    name: 'Cazadora capucha oversize con nylon',
+    name: 'Cazadora capucha oversizes con nylon',
     price: 299000,
     discount: null,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 0,
@@ -146,7 +146,7 @@ export const jacketsAndCoats: Product[] = [
       },
     ],
     images: getJacketsOrCoatsImagePaths(
-      'cazadora-capucha-oversize-con-nylon'
+      'cazadora-capucha-oversizes-con-nylon'
     ),
     category: 'jackets-and-coats',
     isFeatured: true
@@ -155,7 +155,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora capucha ligera nylon bolsillos',
     price: 299000,
     discount: 63,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 78,
@@ -178,7 +178,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora capucha ligera nylon',
     price: 199900,
     discount: 60,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 9,
@@ -202,7 +202,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Cazadora reflectante capucha',
     price: 149900,
     discount: 46,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 60,
@@ -225,7 +225,7 @@ export const jacketsAndCoats: Product[] = [
     name: 'Chaleco utility',
     price: 249000,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 90,

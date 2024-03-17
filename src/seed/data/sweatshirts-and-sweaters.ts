@@ -1,4 +1,4 @@
-import { Product } from '~/types'
+import { SeedProduct } from '~/types'
 import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getSweatshirtsAndSweatersImagePaths = (product: string) => (
@@ -8,12 +8,12 @@ const getSweatshirtsAndSweatersImagePaths = (product: string) => (
   )
 )
 
-export const sweatshirtsAndSweaters: Product[] = [
+export const sweatshirtsAndSweaters: SeedProduct[] = [
   {
     name: 'Sudadera cremallera capucha',
     price: 179900,
     discount: null,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -49,7 +49,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera capucha denim boxy fit efecto lavado',
     price: 249000,
     discount: null,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 100,
@@ -73,7 +73,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera BERSHKA ft. BIZARRAP capucha detalle',
     price: 359000,
     discount: 72,
-    size: [
+    sizes: [
       {
         name: 'XS',
         quantity: 0,
@@ -105,7 +105,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Jersey cuello alto cremallera',
     price: 199900,
     discount: 60,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 10,
@@ -141,7 +141,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera capucha racing',
     price: 179900,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -177,7 +177,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera capucha print',
     price: 179900,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -216,7 +216,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera capucha cremallera print',
     price: 189900,
     discount: 57,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -252,7 +252,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera capucha print lr',
     price: 179900,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -288,7 +288,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera cremallera capucha lr',
     price: 179900,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -324,7 +324,7 @@ export const sweatshirtsAndSweaters: Product[] = [
     name: 'Sudadera cremallera capucha sv',
     price: 179900,
     discount: 55,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,

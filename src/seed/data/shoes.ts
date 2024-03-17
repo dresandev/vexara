@@ -1,4 +1,4 @@
-import { Product } from '~/types'
+import { SeedProduct } from '~/types'
 import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getShoesImagePaths = (product: string) => (
@@ -8,12 +8,12 @@ const getShoesImagePaths = (product: string) => (
   )
 )
 
-export const shoes: Product[] = [
+export const shoes: SeedProduct[] = [
   {
     name: 'Deportivas sin cordones combinadas con rejilla hombre',
     price: 299000,
     discount: 53,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -53,7 +53,7 @@ export const shoes: Product[] = [
     name: 'Botines acordonados suela track hombre',
     price: 309000,
     discount: 54,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -93,7 +93,7 @@ export const shoes: Product[] = [
     name: 'Deportivas tejido knit hombre',
     price: 229000,
     discount: null,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 0,
@@ -133,7 +133,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas combinadas hombre',
     price: 109000,
     discount: 26,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -173,7 +173,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas suela acabado sierra hombre',
     price: 129000,
     discount: null,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -213,7 +213,7 @@ export const shoes: Product[] = [
     name: 'Deportivas combinadas con piezas plateadas y rejilla hombre',
     price: 249000,
     discount: 43,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 0,
@@ -253,7 +253,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas abotinadas multicapas hombre',
     price: 249000,
     discount: 39,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -293,7 +293,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas llavero hombre',
     price: 189000,
     discount: 63,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -333,7 +333,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas combinadas hombre lr',
     price: 129000,
     discount: 46,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,
@@ -373,7 +373,7 @@ export const shoes: Product[] = [
     name: 'Zapatillas multicapas hombre',
     price: 229000,
     discount: 52,
-    size: [
+    sizes: [
       {
         name: '39',
         quantity: 100,

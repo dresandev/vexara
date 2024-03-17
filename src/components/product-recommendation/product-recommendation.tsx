@@ -5,7 +5,7 @@ import styles from './product-recommendation.module.css'
 
 interface ProductRecommendationProps {
   quantity?: number
-  category: string
+  category?: string
 }
 
 export const ProductRecommendation: React.FC<ProductRecommendationProps> = async ({

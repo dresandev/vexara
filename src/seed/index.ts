@@ -20,7 +20,7 @@ const main = async () => {
   )
 
   products.forEach(async (product) => {
-    const { category, images, size, name, discount, price } = product
+    const { category, images, sizes, name, discount, price } = product
 
     await db.product.create({
       data: {
@@ -30,8 +30,8 @@ const main = async () => {
         images: {
           createMany: { data: images }
         },
-        size: {
-          createMany: { data: size }
+        sizes: {
+          createMany: { data: sizes }
         },
         categoryId: categoriesMap[category],
       }

@@ -1,4 +1,4 @@
-import { Product } from '~/types'
+import { SeedProduct } from '~/types'
 import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getShirtImagePaths = (product: string) => (
@@ -8,12 +8,12 @@ const getShirtImagePaths = (product: string) => (
   )
 )
 
-export const shirts: Product[] = [
+export const shirts: SeedProduct[] = [
   {
     name: 'Camiseta manga corta muscle fit bandas',
     price: 99900,
     discount: null,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -49,7 +49,7 @@ export const shirts: Product[] = [
     name: 'Camiseta Dragon Ball manga corta boxy fit',
     price: 129900,
     discount: 53,
-    size: [
+    sizes: [
       {
         name: 'S',
         quantity: 0,
@@ -73,7 +73,7 @@ export const shirts: Product[] = [
     name: 'Camiseta manga corta regular fit',
     price: 59900,
     discount: 23,
-    size: [
+    sizes: [
       {
         name: 'XS',
         quantity: 50,
@@ -105,7 +105,7 @@ export const shirts: Product[] = [
     name: 'Camiseta manga corta boxy fit print',
     price: 99900,
     discount: 40,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 80,
@@ -141,7 +141,7 @@ export const shirts: Product[] = [
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print text',
     price: 139900,
     discount: 57,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 20,
@@ -177,7 +177,7 @@ export const shirts: Product[] = [
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print character',
     price: 139900,
     discount: 57,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -216,7 +216,7 @@ export const shirts: Product[] = [
     name: 'Camiseta BERSHKA ft. BIZARRAP boxy fit print chtx',
     price: 139900,
     discount: 57,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -252,7 +252,7 @@ export const shirts: Product[] = [
     name: 'Camiseta manga corta boxy fit print lr',
     price: 99900,
     discount: 45,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -288,7 +288,7 @@ export const shirts: Product[] = [
     name: 'Camiseta The Notorious B.I.G. manga corta print',
     price: 129900,
     discount: 53,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -323,7 +323,7 @@ export const shirts: Product[] = [
     name: 'Camiseta manga corta boxy fit print xsr',
     price: 119900,
     discount: 50,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 10,

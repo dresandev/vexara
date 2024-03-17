@@ -1,12 +1,12 @@
 'use client'
 
-import { ProductToCart } from '~/types'
+import { CartProduct } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
 import { TrashIcon } from '~/components/svg'
 import styles from './remove-product-button.module.css'
 
 interface RemoveProductButtonProps {
-  product: ProductToCart
+  product: CartProduct
 }
 
 export const RemoveProductButton: React.FC<RemoveProductButtonProps> = ({

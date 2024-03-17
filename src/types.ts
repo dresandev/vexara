@@ -12,17 +12,16 @@ export interface Product {
   name: string
   price: number
   discount: number | null
-  size: Size[]
+  sizes: Size[]
   images: Image[]
-  category?: string
+}
+
+export interface SeedProduct extends Omit<Product, 'id'> {
+  category: string
   isFeatured?: boolean
 }
 
-export interface ProductToCart {
-  id: string
-  name: string
-  price: number
-  discount: number | null
-  size: Size
+export interface CartProduct extends Omit<Product, 'images' | 'sizes'> {
   image: string
+  size: Size
 }

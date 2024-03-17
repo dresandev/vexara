@@ -3,7 +3,7 @@ import { getRandomNumbers } from '~/helpers/get-random-numbers'
 
 interface getRecommendationProps {
   quantity: number
-  category: string
+  category?: string
 }
 
 export const getProductRecommendations = async ({

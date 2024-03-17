@@ -21,7 +21,7 @@ export const AddToCart: React.FC<AddToCartProps> = ({
   const [selectedSize, setSelectedSize] = useState<string | null>('')
   const notifyToast = useToastStore(state => state.notifyToast)
   const addProductToCart = useCartStore(state => state.addProductToCart)
-  const { id, name, price, discount, size, images } = product
+  const { id, name, price, discount, sizes, images } = product
 
   const handleAddToCart = () => {
     if (!selectedSize) return setSelectedSize(null)
@@ -60,7 +60,7 @@ export const AddToCart: React.FC<AddToCartProps> = ({
   return (
     <>
       <SizeSelector
-        size={size}
+        sizes={sizes}
         selectedSize={selectedSize}
         onChange={setSelectedSize}
       />

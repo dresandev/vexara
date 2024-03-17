@@ -21,7 +21,7 @@
 .topArea {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   column-gap: 30px;
 }
 

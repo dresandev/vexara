@@ -1,4 +1,4 @@
-import { Product } from '~/types'
+import { SeedProduct } from '~/types'
 import { getProductImagePaths } from '../helpers/get-product-image-paths'
 
 const getPantsAndJeansImagePaths = (product: string) => (
@@ -8,12 +8,12 @@ const getPantsAndJeansImagePaths = (product: string) => (
   )
 )
 
-export const pantsAndJeans: Product[] = [
+export const pantsAndJeans: SeedProduct[] = [
   {
     name: 'Pantalón jogger cargo',
     price: 179900,
     discount: 44,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -49,7 +49,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans super skinny',
     price: 139900,
     discount: null,
-    size: [
+    sizes: [
       {
         name: '34',
         quantity: 100,
@@ -89,7 +89,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Pantalón wide leg cargo felpa',
     price: 159900,
     discount: 37,
-    size: [
+    sizes: [
       {
         name: 'XS',
         quantity: 0,
@@ -121,7 +121,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans skinny rotos',
     price: 189900,
     discount: 47,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 10,
@@ -156,7 +156,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
     price: 35000,
     discount: 72,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -191,7 +191,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Pantalón jogger multicargo',
     price: 249000,
     discount: 59,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 100,
@@ -231,7 +231,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans carrot fit rotos',
     price: 189900,
     discount: 47,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -267,7 +267,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Pantalón jogger felpa parche',
     price: 159900,
     discount: 37,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -303,7 +303,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans skinny',
     price: 179900,
     discount: 44,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,
@@ -338,7 +338,7 @@ export const pantsAndJeans: Product[] = [
     name: 'Jeans baggy',
     price: 249000,
     discount: 59,
-    size: [
+    sizes: [
       {
         name: 'XXS',
         quantity: 0,

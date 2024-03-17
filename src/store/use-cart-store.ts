@@ -1,13 +1,13 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { ProductToCart } from '~/types'
+import { CartProduct } from '~/types'
 
 interface CartState {
-  cart: ProductToCart[]
-  addProductToCart: (product: ProductToCart) => void
-  removeProduct: (product: ProductToCart) => void
+  cart: CartProduct[]
+  addProductToCart: (product: CartProduct) => void
+  removeProduct: (product: CartProduct) => void
   getSummaryInformation: () => { total: number }
-  updateProductQuantity: (product: ProductToCart, quantity: number) => void
+  updateProductQuantity: (product: CartProduct, quantity: number) => void
   getTotalProducts: () => number
 }
 

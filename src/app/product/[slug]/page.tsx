@@ -23,13 +23,13 @@ export default async function ProductPage({
     where: { id: productId },
     include: {
       images: true,
-      size: true,
+      sizes: true,
       category: { select: { name: true } },
     }
   })
   if (!product) notFound()
 
-  const { id, images, name, discount, size, category } = product
+  const { id, images, name, discount, sizes, category } = product
   const price = product.price.toNumber()
 
   return (
@@ -63,7 +63,7 @@ export default async function ProductPage({
             name,
             price,
             discount,
-            size,
+            sizes,
             images,
           }} />
 
