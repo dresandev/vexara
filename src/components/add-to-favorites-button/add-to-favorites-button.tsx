@@ -1,10 +1,10 @@
 import { HeartIcon } from '~/components/svg/heart-icon'
 
-interface AddToFavoritesButtonProps {
+interface Props {
   className?: string
 }
 
-export const AddToFavoritesButton: React.FC<AddToFavoritesButtonProps> = ({
+export const AddToFavoritesButton: React.FC<Props> = ({
   className
 }) => {
   return (

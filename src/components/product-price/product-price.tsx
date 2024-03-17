@@ -2,13 +2,13 @@ import clsx from 'clsx'
 import { formatPrice } from '~/helpers/format-price'
 import styles from './product-price.module.css'
 
-interface PriceProps {
+interface Props {
   price: number
   discount: number | null
   showDiscount?: boolean
 }
 
-export const ProductPrice: React.FC<PriceProps> = ({
+export const ProductPrice: React.FC<Props> = ({
   discount,
   price,
   showDiscount = false,

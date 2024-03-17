@@ -11,11 +11,11 @@ import { Button } from '~/components/ui/button'
 import { AddToFavoritesButton } from '~/components/add-to-favorites-button'
 import styles from './add-to-cart.module.css'
 
-interface AddToCartProps {
+interface Props {
   product: Product
 }
 
-export const AddToCart: React.FC<AddToCartProps> = ({
+export const AddToCart: React.FC<Props> = ({
   product
 }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>('')

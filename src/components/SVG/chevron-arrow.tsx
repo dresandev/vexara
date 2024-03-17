@@ -2,7 +2,7 @@ import { SVGProps } from 'react'
 
 type Direction = 'right' | 'left' | 'down'
 
-interface ChevronArrowProps extends SVGProps<SVGSVGElement> {
+interface Props extends SVGProps<SVGSVGElement> {
   direction?: Direction
 }
 
@@ -15,7 +15,7 @@ const directionsPaths: { [key in Direction]: string } = {
 export const ChevronArrow = ({
   direction = 'down',
   ...props
-}: ChevronArrowProps) => (
+}: Props) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={24}

@@ -7,7 +7,7 @@ import styles from './notification-card.module.css'
 
 type Variant = 'success' | 'error'
 
-interface NotificationCardProps {
+interface Props {
   variant: Variant
   message: string
 }
@@ -21,7 +21,7 @@ const ANIMATION_TOTAL_TIME = 1600
 const VISIBLE_TIME = ANIMATION_TOTAL_TIME + 5000
 const UNMOUNT_TIME = VISIBLE_TIME + 1000
 
-export const NotificationCard: React.FC<NotificationCardProps> = ({
+export const NotificationCard: React.FC<Props> = ({
   variant = 'success',
   message,
 }) => {

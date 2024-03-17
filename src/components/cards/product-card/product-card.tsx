@@ -6,7 +6,7 @@ import { AddToFavoritesButton } from '~/components/add-to-favorites-button'
 import { CarouselImage } from './carousel-image'
 import styles from './product-card.module.css'
 
-interface ProductCardProps {
+interface Props {
   id: string,
   images: Image[]
   name: string
@@ -14,7 +14,7 @@ interface ProductCardProps {
   discount: number | null
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
+export const ProductCard: React.FC<Props> = ({
   id,
   images,
   name,

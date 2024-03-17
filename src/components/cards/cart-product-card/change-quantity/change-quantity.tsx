@@ -4,11 +4,11 @@ import { CartProduct } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
 import styles from './change-quantity.module.css'
 
-interface ChangeQuantityProps {
+interface Props {
   product: CartProduct
 }
 
-export const ChangeQuantity: React.FC<ChangeQuantityProps> = ({
+export const ChangeQuantity: React.FC<Props> = ({
   product,
 }) => {
   const updateProductQuantity = useCartStore(state => state.updateProductQuantity)

@@ -3,12 +3,12 @@ import { Carousel } from '~/components/carousel'
 import { ProductRecommendationCard } from '~/components/cards/recommendation-product-card'
 import styles from './product-recommendation.module.css'
 
-interface ProductRecommendationProps {
+interface Props {
   quantity?: number
   category?: string
 }
 
-export const ProductRecommendation: React.FC<ProductRecommendationProps> = async ({
+export const ProductRecommendation: React.FC<Props> = async ({
   quantity = 8,
   category
 }) => {

@@ -1,12 +1,12 @@
 import styles from './product-info-card.module.css'
 
-interface ProductInfoCardProps {
+interface Props {
   leadingIcon: React.ReactElement
   mainText: string
   secondaryText?: string
 }
 
-export const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
+export const ProductInfoCard: React.FC<Props> = ({
   leadingIcon,
   mainText,
   secondaryText,

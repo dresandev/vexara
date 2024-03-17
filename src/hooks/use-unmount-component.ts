@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-interface useUnmountComponentProps {
+interface Props {
   hideTime: number
   unmountTime: number
 }
@@ -8,7 +8,7 @@ interface useUnmountComponentProps {
 export const useUnmountComponent = ({
   hideTime,
   unmountTime,
-}: useUnmountComponentProps) => {
+}: Props) => {
   const [mount, setMount] = useState(true)
   const [hide, setHide] = useState(false)
 

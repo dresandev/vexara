@@ -9,13 +9,13 @@ import { ProductInfoCard } from './_components/product-info-card'
 import { AddToCart } from './_components/add-to-cart'
 import styles from './page.module.css'
 
-interface ProductPageProps {
+interface Props {
   params: { slug: string }
 }
 
 export default async function ProductPage({
   params: { slug }
-}: ProductPageProps) {
+}: Props) {
   const productId = getProductIdFromSlug(slug)
   if (!productId) notFound()
 

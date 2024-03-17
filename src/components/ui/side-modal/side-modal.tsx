@@ -10,13 +10,13 @@ import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
 import { CloseIcon } from '~/components/svg'
 import styles from './side-modal.module.css'
 
-interface SideModalContentProps {
+interface Props {
   children: React.ReactNode
   className?: string
   urlFragment: string
 }
 
-export const SideModal: React.FC<SideModalContentProps> = ({
+export const SideModal: React.FC<Props> = ({
   children,
   className,
   urlFragment,

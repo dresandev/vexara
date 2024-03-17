@@ -6,13 +6,13 @@ import { ClockExclamationIcon } from '~/components/svg'
 import { Tooltip } from '~/components/ui/tooltip'
 import styles from './size-selector.module.css'
 
-interface SizeSelectorProps {
+interface Props {
   sizes: Size[]
   selectedSize: string | null
   onChange: (size: string) => void
 }
 
-export const SizeSelector: React.FC<SizeSelectorProps> = ({
+export const SizeSelector: React.FC<Props> = ({
   sizes,
   selectedSize,
   onChange,

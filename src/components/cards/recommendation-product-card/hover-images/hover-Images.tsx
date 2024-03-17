@@ -2,13 +2,13 @@
 
 import { useState } from 'react'
 
-interface ImagesProps {
+interface Props {
   src: string
   hoverSrc: string
   alt: string
 }
 
-export const HoverImages: React.FC<ImagesProps> = ({
+export const HoverImages: React.FC<Props> = ({
   src,
   hoverSrc,
   alt,

@@ -3,11 +3,11 @@
 import { useCartStore } from '~/store/use-cart-store'
 import { useHasMounted } from '~/hooks/use-has-mounted'
 
-interface ProductsQuantityProps {
+interface Props {
   className?: string
 }
 
-export const ProductsQuantity: React.FC<ProductsQuantityProps> = ({
+export const ProductsQuantity: React.FC<Props> = ({
   className
 }) => {
   const totalProducts = useCartStore(state => state.getTotalProducts())

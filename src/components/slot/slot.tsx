@@ -5,11 +5,11 @@ export type AsChildProps<DefaultElementProps> =
   | ({ asChild?: false } & DefaultElementProps)
   | { asChild: true; children: React.ReactNode }
 
-interface SlotProps extends React.HTMLAttributes<HTMLElement> {
+interface Props extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode
 }
 
-export const Slot: React.FC<SlotProps> = ({
+export const Slot: React.FC<Props> = ({
   children,
   ...props
 }) => {

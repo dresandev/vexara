@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import styles from './category-card.module.css'
 
-interface CategoryCardProps {
+interface Props {
   className?: string
   imageUrl: string
   name: string
   slug: string
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({
+export const CategoryCard: React.FC<Props> = ({
   className,
   name,
   imageUrl,

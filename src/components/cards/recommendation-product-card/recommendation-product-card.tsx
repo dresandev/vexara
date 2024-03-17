@@ -5,7 +5,7 @@ import { ProductPrice } from '~/components/product-price'
 import { HoverImages } from './hover-images'
 import styles from './recommendation-product-card.module.css'
 
-interface ProductRecommendationCardProps {
+interface Props {
   className?: string
   id: string,
   imageUrl: string
@@ -15,7 +15,7 @@ interface ProductRecommendationCardProps {
   discount: number | null
 }
 
-export const ProductRecommendationCard: React.FC<ProductRecommendationCardProps> = ({
+export const ProductRecommendationCard: React.FC<Props> = ({
   className,
   id,
   imageUrl,

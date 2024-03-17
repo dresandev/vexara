@@ -2,14 +2,14 @@ import clsx from 'clsx'
 import { Slot, type AsChildProps } from '~/components/slot'
 import styles from './button.module.css'
 
-type ButtonProps = AsChildProps<
+type Props = AsChildProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>
 > & {
   className?: string
   variant?: 'primary' | 'success'
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<Props> = ({
   asChild,
   className,
   variant = 'primary',

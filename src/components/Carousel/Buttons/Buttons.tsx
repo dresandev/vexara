@@ -2,14 +2,14 @@ import clsx from 'clsx'
 import { ChevronArrow } from '~/components/svg'
 import styles from './buttons.module.css'
 
-interface ButtonsProps {
+interface Props {
   onClickPrev: () => void
   onClickNext: () => void
   showPrevButton: boolean
   showNextButton: boolean
 }
 
-export const Buttons: React.FC<ButtonsProps> = ({
+export const Buttons: React.FC<Props> = ({
   onClickPrev,
   onClickNext,
   showPrevButton,

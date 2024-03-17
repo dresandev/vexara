@@ -1,7 +1,7 @@
 import { db } from '~/lib/db'
 import { getRandomNumbers } from '~/helpers/get-random-numbers'
 
-interface getRecommendationProps {
+interface Props {
   quantity: number
   category?: string
 }
@@ -9,7 +9,7 @@ interface getRecommendationProps {
 export const getProductRecommendations = async ({
   quantity,
   category,
-}: getRecommendationProps) => {
+}: Props) => {
   const products = await db.product.findMany({
     where: { category: { name: category } },
     include: { images: true },

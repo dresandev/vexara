@@ -6,7 +6,7 @@ import { RemoveProductButton } from './remove-product-button'
 import { ChangeQuantity } from './change-quantity'
 import styles from './cart-product-card.module.css'
 
-interface CartProductCardProps {
+interface Props {
   id: string
   image: string
   price: number
@@ -15,7 +15,7 @@ interface CartProductCardProps {
   size: Size
 }
 
-export const CartProductCard: React.FC<CartProductCardProps> = ({
+export const CartProductCard: React.FC<Props> = ({
   id,
   image,
   price,

@@ -5,7 +5,7 @@ import { useSetRefToChild } from '~/hooks/use-set-ref-to-child'
 import { VolumeOffIcon, VolumeOnIcon } from '~/components/svg'
 import styles from './video-controls.module.css'
 
-interface VideoControlsProps {
+interface Props {
   children: React.ReactElement
   color?: string
 }
@@ -13,7 +13,7 @@ interface VideoControlsProps {
 export const VideoControls = ({
   children,
   color,
-}: VideoControlsProps) => {
+}: Props) => {
   const [turnOnSound, setTurnOnSound] = useState(false)
   const [childWithRef, childRef] = useSetRefToChild<HTMLVideoElement>(children)
 

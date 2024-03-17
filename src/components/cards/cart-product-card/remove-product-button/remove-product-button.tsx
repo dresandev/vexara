@@ -5,11 +5,11 @@ import { useCartStore } from '~/store/use-cart-store'
 import { TrashIcon } from '~/components/svg'
 import styles from './remove-product-button.module.css'
 
-interface RemoveProductButtonProps {
+interface Props {
   product: CartProduct
 }
 
-export const RemoveProductButton: React.FC<RemoveProductButtonProps> = ({
+export const RemoveProductButton: React.FC<Props> = ({
   product
 }) => {
   const removeProduct = useCartStore(state => state.removeProduct)

@@ -3,13 +3,13 @@ import clsx from 'clsx'
 import { CheckIcon } from '~/components/svg'
 import styles from './checkbox.module.css'
 
-interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string
   error?: boolean
   value?: any
 }
 
-export const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxProps>(({
+export const Checkbox = forwardRef<HTMLInputElement, Props>(({
   disabled,
   label,
   error,

@@ -5,12 +5,12 @@ import type { Image } from '@prisma/client'
 import { ChevronArrow } from '~/components/svg'
 import styles from './carousel-image.module.css'
 
-interface CarouselImageProps {
+interface Props {
   images: Image[]
   alt: string
 }
 
-export const CarouselImage: React.FC<CarouselImageProps> = ({
+export const CarouselImage: React.FC<Props> = ({
   images,
   alt,
 }) => {

@@ -1,12 +1,12 @@
 import clsx from 'clsx'
 import styles from './tooltip.module.css'
 
-interface TooltipProps {
+interface Props {
   className?: string
   title: string
 }
 
-export const Tooltip: React.FC<TooltipProps> = ({
+export const Tooltip: React.FC<Props> = ({
   className,
   title,
 }) => {

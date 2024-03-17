@@ -3,13 +3,13 @@ import { db } from '~/lib/db'
 import { ProductCard } from '~/components/cards/product-card'
 import styles from './page.module.css'
 
-interface CategoryPageProps {
+interface Props {
   params: { slug: string }
 }
 
 export default async function CategoryPage({
   params: { slug }
-}: CategoryPageProps) {
+}: Props) {
   const category = await db.category.findFirst({
     where: { slug },
   })

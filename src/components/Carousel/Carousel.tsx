@@ -5,15 +5,15 @@ import { useSnapCarousel } from 'react-snap-carousel'
 import { Buttons } from './buttons'
 import styles from './carousel.module.css'
 
-interface CarouselProps {
+interface Props {
   children: React.ReactNode[]
   itemsGap?: string
 }
 
-export const Carousel: React.FC<CarouselProps> = ({
+export const Carousel: React.FC<Props> = ({
   children,
   itemsGap = '4px',
-}: CarouselProps) => {
+}) => {
   const {
     scrollRef,
     pages,
