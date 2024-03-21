@@ -24,7 +24,7 @@
   cursor: inherit;
 }
 
-.label[aria-disabled],
+.label[aria-disabled='true'],
 .checkbox:disabled {
   opacity: 0.8;
   pointer-events: none;

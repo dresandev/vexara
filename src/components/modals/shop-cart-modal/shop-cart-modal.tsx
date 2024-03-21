@@ -3,6 +3,7 @@ import { SideModal } from '~/components/ui/side-modal'
 import { ProductsQuantity } from '~/components/products-quantity'
 import { HeartIcon } from '~/components/svg'
 import { ProductsInCart } from './products-in-cart'
+import { Summary } from './summary'
 import styles from './shop-cart-modal.module.css'
 
 export const ShopCartModal = () => {
@@ -28,6 +29,7 @@ export const ShopCartModal = () => {
       </div>
 
       <ProductsInCart />
+      <Summary />
     </SideModal>
   )
 }

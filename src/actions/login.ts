@@ -3,8 +3,12 @@
 import { AuthError } from 'next-auth'
 import { signIn } from '~/auth'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
+import { AuthOptions } from '~/types'
 
-export const login = async (values: LoginSchemaTypes) => {
+export const login = async (
+  values: LoginSchemaTypes,
+  options?: AuthOptions,
+) => {
   const validatedFields = LoginSchema.safeParse(values)
 
   if (!validatedFields.success) {
@@ -16,7 +20,7 @@ export const login = async (values: LoginSchemaTypes) => {
   try {
     await signIn(
       'credentials',
-      { email, password }
+      { email, password, ...options }
     )
   } catch (error) {
     if (error instanceof AuthError) {
@@ -32,6 +36,6 @@ export const login = async (values: LoginSchemaTypes) => {
   }
 }
 
-export const githubLogin = async () => {
-  await signIn('github')
+export const githubLogin = async (options?: AuthOptions) => {
+  await signIn('github', options)
 }

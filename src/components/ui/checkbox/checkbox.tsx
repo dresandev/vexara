@@ -22,8 +22,8 @@ export const Checkbox = forwardRef<HTMLInputElement, Props>(({
     >
       <input
         ref={ref}
-        disabled={disabled}
         {...props}
+        disabled={disabled}
         type='checkbox'
         className={styles.checkbox}
       />

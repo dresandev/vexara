@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { auth } from '~/auth'
-import { ShoppingBagIcon, UserIcon } from '~/components/svg'
 import { ProductsQuantity } from '~/components/products-quantity'
-import { VexaraLogo } from '~/components/svg'
+import { ShoppingBagIcon, UserIcon, VexaraLogo } from '~/components/svg'
 import styles from './header.module.css'
 
 export const Header = async () => {
@@ -42,10 +41,8 @@ export const Header = async () => {
           href='#shop-cart'
           scroll={false}
         >
-          <ShoppingBagIcon />
-          <ProductsQuantity
-            className={styles.productsQuantity}
-          />
+          <ShoppingBagIcon className={styles.bagIcon} />
+          <ProductsQuantity className={styles.productsQuantity} />
         </Link>
       </header>
     </div>

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { githubLogin } from '~/actions/login'
 import { SideModal } from '~/components/ui/side-modal'
+import { LoginForm } from '~/components/login-form'
 import { GitHubLoginButton } from './github-login-button'
-import { LoginForm } from './login-form'
 import styles from './login-modal.module.css'
 
 export const LoginModal = () => {
@@ -15,9 +15,9 @@ export const LoginModal = () => {
           width={150}
           height={150}
         />
-        <h1 className={styles.title}>
+        <h2 className={styles.title}>
           Inicia sesión o crea tu cuenta
-        </h1>
+        </h2>
 
         <form
           className={styles.gitHubLoginButtonWrapper}

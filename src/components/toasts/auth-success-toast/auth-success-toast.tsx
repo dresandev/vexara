@@ -5,7 +5,7 @@ import { useToastStore } from '~/store/use-toast-store'
 import { CircleCheckIcon } from '~/components/svg'
 import { useSession } from 'next-auth/react'
 
-export const AuthToast = () => {
+export const AuthSuccessToast = () => {
   const session = useSession()
   const notifyToast = useToastStore(state => state.notifyToast)
 

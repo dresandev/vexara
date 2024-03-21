@@ -25,7 +25,7 @@ export const NoProductsInCart = () => {
         asChild
       >
         <Link
-          href='#'
+          href=''
           scroll={false}
         >
           Descrubir

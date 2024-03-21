@@ -1,11 +1,13 @@
 import { Toast } from '~/components/ui/toast'
-import { AuthToast } from '~/components/toasts/auth-toast'
+import { AuthSuccessToast } from '~/components/toasts/auth-success-toast'
+import { PurchaseSuccessToast } from '~/components/toasts/purchase-success-toast'
 
 export const ToastsProvider = () => {
   return (
     <div id='toast-container'>
       <Toast />
-      <AuthToast />
+      <AuthSuccessToast />
+      <PurchaseSuccessToast />
     </div>
   )
 }

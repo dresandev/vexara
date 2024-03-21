@@ -1,14 +1,21 @@
 'use client'
 
+import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { useCartStore } from '~/store/use-cart-store'
 import { formatPrice } from '~/helpers/format-price'
 import { Button } from '~/components/ui/button'
 import styles from './summary.module.css'
 
 export const Summary = () => {
-  const getSummaryInformation = useCartStore(state => state.getSummaryInformation)
+  const cart = useCartStore(state => state.cart)
+  const getSummaryInfo = useCartStore(state => state.getSummaryInfo)
+  const session = useSession()
 
-  const { total } = getSummaryInformation()
+  if (!cart.length) return
+
+  const isAuthenticated = session.status === 'authenticated'
+  const { total } = getSummaryInfo()
 
   return (
     <div className={styles.summary}>
@@ -22,17 +29,26 @@ export const Summary = () => {
           </span>
         </div>
 
-        <span className={styles.price}>
+        <span className={styles.totalPrice}>
           {formatPrice(total)}
         </span>
       </div>
-
       <Button
         className={styles.processOrderButton}
         variant='success'
+        asChild
       >
-        Tramitar pedido
+        <Link
+          href={
+            isAuthenticated
+              ? '/new-checkout'
+              : '#checkout-auth'
+          }
+          scroll={!isAuthenticated}
+        >
+          Tramitar pedido
+        </Link>
       </Button>
-    </div>
+    </div >
   )
 }

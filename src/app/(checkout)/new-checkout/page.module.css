@@ -1,0 +1,45 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 384px;
+  min-block-size: calc(100svh - var(--header-block-size));
+}
+
+.formContainer {
+  max-inline-size: 600px;
+  inline-size: 100%;
+  margin-inline: auto;
+  padding-block: 34px;
+}
+
+.title {
+  font-size: 2.4rem;
+  padding-block-end: 32px;
+}
+
+.form fieldset {
+  padding: 0;
+  padding-block-end: 30px;
+  border: none;
+}
+
+.receptorFieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+}
+
+.addressFieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.formTitle {
+  padding-block-end: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.summaryCard {
+  background-color: hsl(0, 0%, 98%);
+}

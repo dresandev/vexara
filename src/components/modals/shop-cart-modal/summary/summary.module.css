@@ -13,7 +13,7 @@
   color: hsl(0, 0%, 39%);
 }
 
-.price,
+.totalPrice,
 .totalText {
   font-weight: 700;
 }

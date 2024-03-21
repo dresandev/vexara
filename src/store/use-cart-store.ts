@@ -6,9 +6,8 @@ interface CartState {
   cart: CartProduct[]
   addProductToCart: (product: CartProduct) => void
   removeProduct: (product: CartProduct) => void
-  getSummaryInformation: () => { total: number }
+  getSummaryInfo: () => { total: number }
   updateProductQuantity: (product: CartProduct, quantity: number) => void
-  getTotalProducts: () => number
 }
 
 export const useCartStore = create<CartState>()(
@@ -48,7 +47,7 @@ export const useCartStore = create<CartState>()(
 
       set({ cart: updatedCartProducts })
     },
-    getSummaryInformation: () => {
+    getSummaryInfo: () => {
       const { cart } = get()
 
       const total = cart.reduce(
@@ -62,8 +61,7 @@ export const useCartStore = create<CartState>()(
           const productTotal = quantity * discountedPrice
 
           return accumulator + productTotal
-        },
-        0
+        }, 0
       )
 
       return { total }
@@ -78,10 +76,6 @@ export const useCartStore = create<CartState>()(
       )
 
       set({ cart: updatedCartProducts })
-    },
-    getTotalProducts: () => {
-      const { cart } = get()
-      return cart.reduce((total, item) => total + item.size.quantity, 0)
     },
   }), { name: 'cart' })
 )

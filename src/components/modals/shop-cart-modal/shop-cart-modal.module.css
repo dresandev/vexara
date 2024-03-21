@@ -13,9 +13,11 @@
 .productsQuantity {
   font-size: 1.6rem;
 }
+
 .productsQuantity::before {
   content: '(';
 }
+
 .productsQuantity::after {
   content: ')';
 }
@@ -28,4 +30,8 @@
   font-size: 1.3rem;
   border: 1px solid var(--border-color-high);
   border-radius: 20px;
+}
+
+.processOrderButton {
+  flex-shrink: 0;
 }

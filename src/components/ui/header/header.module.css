@@ -19,18 +19,26 @@
 }
 
 .shopCartLink {
-  position: relative;
+  display: grid;
+  grid-template-areas: content;
+}
+.productsQuantity,
+.bagIcon {
+  grid-area: content;
 }
 
 .productsQuantity {
-  position: absolute;
-  inset: 0;
-  inset-block-start: 4px;
-  inset-inline-end: 3px;
-  display: grid;
-  place-items: center;
+  place-self: center;
+  position: relative;
+  inset-block-start: 0.2em;
+  inset-inline-end: 0.1em;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.homeLink {
+  margin-inline: auto;
+  inline-size: clamp(112px, 100.35px + 3.107vw, 160px);
 }
 
 @media (hover: hover) {
@@ -52,9 +60,4 @@
     transform-origin: left;
     transform: scaleX(1);
   }
-}
-
-.homeLink {
-  margin-inline: auto;
-  inline-size: clamp(112px, 100.35px + 3.107vw, 160px);
 }

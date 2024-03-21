@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
+import { AuthOptions } from '~/types'
 import { login } from '~/actions/login'
 import { TextField } from '~/components/ui/text-field'
 import { PasswordTextField } from '~/components/ui/password-text-field'
@@ -15,7 +16,11 @@ import { NotificationCard } from '~/components/ui/notification-card'
 import { Button } from '~/components/ui/button'
 import styles from './login-form.module.css'
 
-export const LoginForm = () => {
+interface Props {
+  authOptions?: AuthOptions
+}
+
+export const LoginForm = ({ authOptions }: Props) => {
   const searchParams = useSearchParams()
   const [errorMessage, setErrorMessage] = useState(() => (
     searchParams.get('error') === 'OAuthAccountNotLinked'
@@ -37,7 +42,7 @@ export const LoginForm = () => {
     setErrorMessage('')
 
     startTransition(async () => {
-      const data = await login(values)
+      const data = await login(values, authOptions)
 
       if (data?.error) {
         setErrorMessage(data.error)
