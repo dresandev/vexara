@@ -10,13 +10,14 @@ export interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputEleme
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({
   id,
+  className,
   label,
   hint,
   error,
   ...props
 }, ref) => {
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, className)}>
       <label
         htmlFor={id}
         className={styles.label}

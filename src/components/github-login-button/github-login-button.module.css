@@ -1,5 +1,5 @@
 .button {
-  inline-size: inherit;
+  inline-size: 100%;
   margin-block-end: 16px;
 }
 

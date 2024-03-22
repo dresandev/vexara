@@ -15,7 +15,9 @@ export default function RootLayout({
           <VexaraLogo />
         </Link>
       </header>
-      {children}
+      <main>
+        {children}
+      </main>
     </>
   )
 }

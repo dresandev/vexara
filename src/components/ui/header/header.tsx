@@ -9,42 +9,40 @@ export const Header = async () => {
   const isLoggedIn = !!session
 
   return (
-    <div className={styles.wrapper}>
-      <header className={styles.header}>
-        <nav>
-          <Link
-            className={styles.link}
-            href='/'
-          >
-            Hombre
-          </Link>
-        </nav>
-
+    <header className={styles.header}>
+      <nav>
         <Link
-          aria-label='Volver a la página de inicio'
-          className={styles.homeLink}
+          className={styles.link}
           href='/'
         >
-          <VexaraLogo />
+          Hombre
         </Link>
+      </nav>
 
-        <Link
-          aria-label='Acceder a tu cuenta'
-          href={isLoggedIn ? '/user-orders' : '#login'}
-          scroll={isLoggedIn}
-        >
-          <UserIcon />
-        </Link>
-        <Link
-          className={styles.shopCartLink}
-          aria-label='Ver cesta'
-          href='#shop-cart'
-          scroll={false}
-        >
-          <ShoppingBagIcon className={styles.bagIcon} />
-          <ProductsQuantity className={styles.productsQuantity} />
-        </Link>
-      </header>
-    </div>
+      <Link
+        aria-label='Volver a la página de inicio'
+        className={styles.homeLink}
+        href='/'
+      >
+        <VexaraLogo />
+      </Link>
+
+      <Link
+        aria-label='Acceder a tu cuenta'
+        href={isLoggedIn ? '/user-orders' : '#login'}
+        scroll={isLoggedIn}
+      >
+        <UserIcon />
+      </Link>
+      <Link
+        className={styles.shopCartLink}
+        aria-label='Ver cesta'
+        href='#shop-cart'
+        scroll={false}
+      >
+        <ShoppingBagIcon className={styles.bagIcon} />
+        <ProductsQuantity className={styles.productsQuantity} />
+      </Link>
+    </header>
   )
 }

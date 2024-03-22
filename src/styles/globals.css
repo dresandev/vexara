@@ -20,7 +20,7 @@
   );
 }
 
-html {
+html:has(.hideOverflow) {
   scrollbar-gutter: stable;
 }
 

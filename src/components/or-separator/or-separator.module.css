@@ -1,0 +1,18 @@
+.separator {
+  position: relative;
+  block-size: 1px;
+  inline-size: 100%;
+  margin-block: 32px;
+  background-color: hsl(0, 0%, 91%);
+}
+
+.text {
+  position: absolute;
+  inset-block-start: -0.5lh;
+  inset-inline: 0;
+  inline-size: max-content;
+  padding-inline: 0.8rem;
+  margin-inline: auto;
+  color: hsl(0, 0%, 55%);
+  background-color: var(--bg-color);
+}

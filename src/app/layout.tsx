@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { SessionProvider } from 'next-auth/react'
 import { auth } from '~/auth'
 import { inter } from '~/config/fonts'
-import { Footer } from '~/components/ui/footer'
 import { ToastsProvider } from '~/providers/toasts-provider'
 import { ModalsProvider } from '~/providers/modals-provider'
 import '~/styles/reset.css'
@@ -23,10 +22,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <SessionProvider session={session}>
           <div className='__next'>
-            <main>
-              {children}
-            </main>
-            <Footer />
+            {children}
           </div>
           <ToastsProvider />
           <ModalsProvider />

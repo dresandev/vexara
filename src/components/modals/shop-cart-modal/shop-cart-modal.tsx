@@ -14,6 +14,7 @@ export const ShopCartModal = () => {
           Cesta{' '}
           <ProductsQuantity
             className={styles.productsQuantity}
+            inBrackets
           />
         </span>
         <Link

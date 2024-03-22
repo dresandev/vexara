@@ -1,0 +1,27 @@
+.form fieldset {
+  padding: 0;
+  padding-block-end: 30px;
+  border: none;
+}
+
+.receptorFieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+}
+
+.textField {
+  flex: 1 1 250px;
+}
+
+.addressFieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.formTitle {
+  padding-block-end: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+}

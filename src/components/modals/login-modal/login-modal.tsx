@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { githubLogin } from '~/actions/login'
 import { SideModal } from '~/components/ui/side-modal'
 import { LoginForm } from '~/components/login-form'
-import { GitHubLoginButton } from './github-login-button'
+import { GitHubLoginButton } from '~/components/github-login-button'
+import { OrSeparator } from '~/components/or-separator'
 import styles from './login-modal.module.css'
 
 export const LoginModal = () => {
@@ -19,12 +19,7 @@ export const LoginModal = () => {
           Inicia sesión o crea tu cuenta
         </h2>
 
-        <form
-          className={styles.gitHubLoginButtonWrapper}
-          action={githubLogin}
-        >
-          <GitHubLoginButton />
-        </form>
+        <GitHubLoginButton />
 
         <p className={styles.legalText}>
           Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
@@ -37,9 +32,7 @@ export const LoginModal = () => {
           </Link>
         </p>
 
-        <div className={styles.separator}>
-          <span className={styles.separatorText}>o</span>
-        </div>
+        <OrSeparator />
 
         <LoginForm />
 

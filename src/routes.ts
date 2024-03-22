@@ -1,7 +1,6 @@
 export const privateRoutes = [
   '/user-orders',
   '/user-account',
-  '/new-checkout',
 ]
 
 export const authRoutes = [

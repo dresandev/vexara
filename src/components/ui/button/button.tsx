@@ -6,7 +6,7 @@ type Props = AsChildProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>
 > & {
   className?: string
-  variant?: 'primary' | 'success'
+  variant?: 'primary' | 'success' | 'outlined' | 'text'
 }
 
 export const Button: React.FC<Props> = ({

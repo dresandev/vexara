@@ -9,6 +9,7 @@ import { authRoutes } from '~/routes'
 import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
 import { CloseIcon } from '~/components/svg'
 import styles from './side-modal.module.css'
+import { useHasMounted } from '~/hooks/use-is-mounted'
 
 interface Props {
   children: React.ReactNode
@@ -21,27 +22,29 @@ export const SideModal: React.FC<Props> = ({
   className,
   urlFragment,
 }) => {
-  const session = useSession()
-  const params = useParams()
   const [mount, setMount] = useState(false)
   const modalRef = useRef<HTMLDivElement>(null)
+  const params = useParams()
+  const session = useSession()
+  const hasMounted = useHasMounted()
   useToggleBodyOverflow(mount)
 
   useEffect(() => {
-    const isCurrentFragment = window.location.hash === urlFragment
-    const isAuthFragment = authRoutes.includes(window.location.hash)
-    const isAuthenticated = session.status === 'authenticated'
-
-    if (isAuthFragment && isAuthenticated) return
-
-    setMount(isCurrentFragment)
-  }, [urlFragment, params, session.status])
+    setMount(window.location.hash === urlFragment)
+  }, [urlFragment, params])
 
   useEffect(() => {
     modalRef.current?.focus()
   }, [])
 
-  if (!mount) return
+  if (
+    !hasMounted ||
+    !mount ||
+    (
+      authRoutes.includes(window.location.hash) &&
+      session.status === 'authenticated'
+    )
+  ) return
 
   return (
     <>

@@ -1,0 +1,81 @@
+'use client'
+
+import { useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
+import { logout } from '~/actions/logout'
+import { useCurrentUser } from '~/hooks/use-current-user'
+import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
+import { CloseIcon, MenuIcon } from '~/components/svg'
+import styles from './menu.module.css'
+
+const links = [
+  {
+    href: '/user-orders',
+    label: 'Mis compras',
+  },
+  {
+    href: '/user-account',
+    label: 'Datos personales y direcciones',
+  }
+]
+
+export const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+  useToggleBodyOverflow(isOpen)
+  const user = useCurrentUser()
+  const greetingName = user?.name?.split(' ')[0]
+
+  const handleOpenMenu = () => {
+    setIsOpen(prevValue => !prevValue)
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <button
+        className={styles.menuButton}
+        onClick={handleOpenMenu}
+      >
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
+      </button>
+      <div className={clsx(
+        styles.menu,
+        { [styles.open]: isOpen })
+      }>
+        <div>
+          <p className={styles.greetingTitle}>
+            Hola {greetingName}
+          </p>
+          <p className={styles.greetingEmail}>
+            {user?.email}
+          </p>
+        </div>
+
+        <nav>
+          <ul className={styles.linkList}>
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  className={clsx(
+                    { [styles.activeLink]: pathname === href }
+                  )}
+                  href={href}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <form action={logout}>
+          <button className={styles.logoutButton}>
+            Cerrar sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}

@@ -18,7 +18,7 @@ export const Summary = () => {
   const { total } = getSummaryInfo()
 
   return (
-    <div className={styles.summary}>
+    <>
       <div className={styles.total}>
         <div>
           <span className={styles.totalText}>
@@ -39,16 +39,12 @@ export const Summary = () => {
         asChild
       >
         <Link
-          href={
-            isAuthenticated
-              ? '/new-checkout'
-              : '#checkout-auth'
-          }
+          href={isAuthenticated ? '/new-checkout' : '#checkout-auth'}
           scroll={!isAuthenticated}
         >
           Tramitar pedido
         </Link>
       </Button>
-    </div >
+    </>
   )
 }

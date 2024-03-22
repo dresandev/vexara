@@ -20,6 +20,18 @@
 .success {
   background-color: var(--success-color);
 }
+
+.outlined {
+  background-color: transparent;
+  color: var(--content-color);
+  border: 1px solid currentColor;
+}
+
+.text {
+  color: var(--content-color);
+  font-weight: 400;
+}
+
 .button:hover {
   opacity: 0.75;
 }

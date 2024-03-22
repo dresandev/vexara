@@ -1,13 +1,10 @@
-.wrapper {
-  block-size: 48px;
-}
-
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 10;
-  inset-inline: 0;
+  inset-block-start: 0;
   display: flex;
   align-items: center;
+  block-size: 48px;
   padding: 4px clamp(16px, 12.12px + 1.036vw, 32px);
   background-color: var(--bg-color);
 }
