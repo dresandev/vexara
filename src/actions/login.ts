@@ -1,6 +1,8 @@
 'use server'
 
 import { AuthError } from 'next-auth'
+import type { BuiltInProviderType } from 'next-auth/providers'
+import type { LiteralUnion } from 'next-auth/react'
 import { signIn } from '~/auth'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
 import { AuthOptions } from '~/types'
@@ -36,6 +38,9 @@ export const login = async (
   }
 }
 
-export const githubLogin = async (options?: AuthOptions) => {
-  await signIn('github', options)
+export const socialLogin = async (
+  provider?: LiteralUnion<BuiltInProviderType>,
+  options?: AuthOptions,
+) => {
+  await signIn(provider, options)
 }

@@ -82,7 +82,7 @@ export const jacketsAndCoats: SeedProduct[] = [
     isFeatured: true
   },
   {
-    name: 'Cazadora biker oversizes efecto piel desgastada',
+    name: 'Cazadora biker oversize efecto piel desgastada',
     price: 459000,
     discount: 76,
     sizes: [
@@ -100,7 +100,7 @@ export const jacketsAndCoats: SeedProduct[] = [
       },
     ],
     images: getJacketsOrCoatsImagePaths(
-      'cazadora-biker-oversizes-efecto-piel-desgastada'
+      'cazadora-biker-oversize-efecto-piel-desgastada'
     ),
     category: 'jackets-and-coats',
   },
@@ -128,7 +128,7 @@ export const jacketsAndCoats: SeedProduct[] = [
     category: 'jackets-and-coats',
   },
   {
-    name: 'Cazadora capucha oversizes con nylon',
+    name: 'Cazadora capucha oversize con nylon',
     price: 299000,
     discount: null,
     sizes: [
@@ -146,7 +146,7 @@ export const jacketsAndCoats: SeedProduct[] = [
       },
     ],
     images: getJacketsOrCoatsImagePaths(
-      'cazadora-capucha-oversizes-con-nylon'
+      'cazadora-capucha-oversize-con-nylon'
     ),
     category: 'jackets-and-coats',
     isFeatured: true

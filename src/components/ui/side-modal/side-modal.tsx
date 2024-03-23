@@ -1,15 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { useState, useEffect, useRef } from 'react'
 import { useParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import clsx from 'clsx'
 import { authRoutes } from '~/routes'
+import { useUiStore } from '~/store/use-ui-store'
+import { useHasMounted } from '~/hooks/use-is-mounted'
 import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
+import { useOnClickOutside } from '~/hooks/use-on-click-outside'
 import { CloseIcon } from '~/components/svg'
 import styles from './side-modal.module.css'
-import { useHasMounted } from '~/hooks/use-is-mounted'
 
 interface Props {
   children: React.ReactNode
@@ -22,58 +23,60 @@ export const SideModal: React.FC<Props> = ({
   className,
   urlFragment,
 }) => {
-  const [mount, setMount] = useState(false)
+  const [open, setOpen] = useState(false)
   const modalRef = useRef<HTMLDivElement>(null)
   const params = useParams()
   const session = useSession()
+  const setShowBackdrop = useUiStore(state => state.setShowBackdrop)
   const hasMounted = useHasMounted()
-  useToggleBodyOverflow(mount)
+  useToggleBodyOverflow(open)
+  useOnClickOutside(modalRef, handleCloseModal)
 
   useEffect(() => {
-    setMount(window.location.hash === urlFragment)
-  }, [urlFragment, params])
+    const isCurrentFragment = window.location.hash === urlFragment
 
-  useEffect(() => {
-    modalRef.current?.focus()
-  }, [])
+    setOpen(isCurrentFragment)
 
-  if (
-    !hasMounted ||
-    !mount ||
-    (
-      authRoutes.includes(window.location.hash) &&
-      session.status === 'authenticated'
-    )
-  ) return
+    if (isCurrentFragment) {
+      setShowBackdrop(true)
+      modalRef.current?.focus()
+    }
+  }, [params, setShowBackdrop, urlFragment])
+
+  if (!hasMounted) return
+
+  const isAuthFragment = authRoutes.includes(window.location.hash)
+  const isAuthenticated = session.status === 'authenticated'
+
+  if (isAuthFragment && isAuthenticated) return
+
+  function handleCloseModal() {
+    const isCurrentFragment = window.location.hash === urlFragment
+
+    if (!isCurrentFragment) return
+
+    setOpen(false)
+    setShowBackdrop(false)
+  }
 
   return (
-    <>
-      <Link
-        aria-hidden
-        className={styles.backdrop}
-        href=''
-        scroll={false}
-        draggable={false}
-      />
-      <div
-        ref={modalRef}
-        tabIndex={0}
-        className={clsx(
-          styles.modal,
-          className,
-        )}
+    <div
+      ref={modalRef}
+      tabIndex={0}
+      className={clsx(
+        styles.modal,
+        { [styles.open]: open },
+        className,
+      )}
+    >
+      <button
+        aria-label='Cerrar'
+        className={styles.closeModal}
+        onClick={handleCloseModal}
       >
-        <Link
-          aria-label='Cerrar'
-          className={styles.closeModalLink}
-          href=''
-          scroll={false}
-        >
-          <CloseIcon />
-        </Link>
-
-        {children}
-      </div>
-    </>
+        <CloseIcon />
+      </button>
+      {children}
+    </div>
   )
 }

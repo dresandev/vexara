@@ -6,30 +6,20 @@
   margin-block: auto;
 }
 
-.title {
-  font-size: 1.6rem;
-  margin-block: 24px;
-}
-
-.legalText {
-  color: hsl(0, 0%, 39%);
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-  text-align: center;
-}
-
-.registerLink {
-  margin-block-start: 24px;
-}
-
 .legalText,
 .registerLink {
   font-size: 1.2rem;
 }
 
 .title,
-.registerLinkText,
-.legalLink {
+.registerLinkText {
   font-weight: 700;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.registerLink {
+  margin-block-start: 24px;
 }

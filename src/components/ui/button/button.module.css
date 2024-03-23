@@ -7,10 +7,20 @@
   color: var(--content-color-invert);
   border-radius: var(--border-radius);
   font-weight: 700;
+  font-size: 1.4rem;
   text-transform: uppercase;
   outline-offset: 2px;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.button:disabled {
+  opacity: 0.75;
+  pointer-events: none;
 }
 
 .primary {
@@ -30,13 +40,4 @@
 .text {
   color: var(--content-color);
   font-weight: 400;
-}
-
-.button:hover {
-  opacity: 0.75;
-}
-
-.button:disabled {
-  opacity: 0.75;
-  pointer-events: none;
 }

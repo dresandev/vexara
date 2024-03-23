@@ -18,9 +18,13 @@ import styles from './login-form.module.css'
 
 interface Props {
   authOptions?: AuthOptions
+  textFieldIdSuffix?: string
 }
 
-export const LoginForm = ({ authOptions }: Props) => {
+export const LoginForm = ({
+  authOptions,
+  textFieldIdSuffix,
+}: Props) => {
   const searchParams = useSearchParams()
   const [errorMessage, setErrorMessage] = useState(() => (
     searchParams.get('error') === 'OAuthAccountNotLinked'
@@ -65,7 +69,7 @@ export const LoginForm = ({ authOptions }: Props) => {
           control={control}
           render={({ field }) => (
             <TextField
-              id='login-email'
+              id={`login-email-${textFieldIdSuffix}`}
               label='E-mail'
               error={errors.email?.message}
               autoComplete='off'
@@ -80,7 +84,7 @@ export const LoginForm = ({ authOptions }: Props) => {
           control={control}
           render={({ field }) => (
             <PasswordTextField
-              id='login-password'
+              id={`login-passwor-${textFieldIdSuffix}`}
               label='Contraseña'
               error={errors.password?.message}
               autoComplete='off'
@@ -96,7 +100,7 @@ export const LoginForm = ({ authOptions }: Props) => {
 
           <Link
             className={styles.forgotPasswordLink}
-            href='#'
+            href=''
           >
             ¿Has olvidado tu contraseña?
           </Link>
@@ -108,7 +112,7 @@ export const LoginForm = ({ authOptions }: Props) => {
         >
           {isPending ? <RingLoader /> : 'Iniciar Sesión'}
         </Button>
-      </form >
+      </form>
     </>
   )
 }

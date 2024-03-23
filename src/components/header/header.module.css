@@ -19,6 +19,7 @@
   display: grid;
   grid-template-areas: content;
 }
+
 .productsQuantity,
 .bagIcon {
   grid-area: content;
@@ -27,10 +28,10 @@
 .productsQuantity {
   place-self: center;
   position: relative;
-  inset-block-start: 0.2em;
+  inset-block-start: 0.18em;
   inset-inline-end: 0.1em;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .homeLink {

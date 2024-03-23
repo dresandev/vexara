@@ -3,6 +3,7 @@ import { auth } from '~/auth'
 import { ProductsQuantity } from '~/components/products-quantity'
 import { ShoppingBagIcon, UserIcon, VexaraLogo } from '~/components/svg'
 import styles from './header.module.css'
+import { ShopCartModal } from '~/components/modals/shop-cart-modal'
 
 export const Header = async () => {
   const session = await auth()
@@ -41,7 +42,10 @@ export const Header = async () => {
         scroll={false}
       >
         <ShoppingBagIcon className={styles.bagIcon} />
-        <ProductsQuantity className={styles.productsQuantity} />
+        <ProductsQuantity
+          className={styles.productsQuantity}
+          collapse
+        />
       </Link>
     </header>
   )

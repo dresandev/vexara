@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { SideModal } from '~/components/ui/side-modal'
 import { ProductsQuantity } from '~/components/products-quantity'

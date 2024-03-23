@@ -1,9 +1,3 @@
-.backdrop {
-  position: fixed;
-  inset: 0;
-  animation: showBackdrop 300ms forwards;
-}
-
 .modal {
   position: fixed;
   inset-block: 0;
@@ -16,25 +10,14 @@
   outline: none;
   scrollbar-width: thin;
   overflow-y: auto;
-  animation: enterModal 300ms;
+  transform: translateX(100%);
+  transition: transform 300ms;
 }
 
-.closeModalLink {
+.modal.open {
+  transform: translateX(0);
+}
+
+.closeModal {
   margin-inline-start: auto;
-}
-
-@keyframes showBackdrop {
-  to {
-    background-color: hsla(0, 0%, 0%, 0.35);
-  }
-}
-
-@keyframes enterModal {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
 }

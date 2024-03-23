@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { SideModal } from '~/components/ui/side-modal'
 import { LoginForm } from '~/components/login-form'
-import { GitHubLoginButton } from '~/components/github-login-button'
+import { SocialAuthButtons } from '~/components/social-auth-buttons'
 import { OrSeparator } from '~/components/or-separator'
 import { Button } from '~/components/ui/button'
 import styles from './checkout-auth-modal.module.css'
@@ -10,25 +10,28 @@ export const CheckoutAuthModal = () => {
   return (
     <SideModal urlFragment='#checkout-auth'>
       <h2 className={styles.title}>Accede o crea tu cuenta</h2>
-      <LoginForm authOptions={{ redirectTo: '/new-checkout' }} />
-      <GitHubLoginButton options={{ redirectTo: '/new-checkout' }} />
-      <p>
-        Al iniciar sesión con mi login social, acepto vincular mi cuenta conforme a la{' '}
-        <Link href=''>
-          Política de Privacidad
-        </Link>
-      </p>
+      <LoginForm
+        textFieldIdSuffix='checkout'
+        authOptions={{ redirectTo: '/new-checkout' }}
+      />
+      <SocialAuthButtons options={{ redirectTo: '/new-checkout' }} />
       <OrSeparator />
-      <p>No tengo cuenta</p>
-
+      <p className={styles.noAccountText}>
+        No tengo cuenta
+      </p>
       <Button variant='outlined' asChild>
-        <Link href='#register'>
+        <Link
+          className={styles.noAccountLink}
+          href='#register'
+        >
           Crear una cuenta
         </Link>
       </Button>
-
       <Button variant='text' asChild>
-        <Link href='/new-checkout'>
+        <Link
+          className={styles.noAccountLink}
+          href='/new-checkout'
+        >
           Continuar como invitado
         </Link>
       </Button>
