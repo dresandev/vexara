@@ -15,12 +15,13 @@
   --footer-block-size: 153px;
   --border-radius: 4px;
   --modal-space-inline: clamp(20px, 17.09px + 0.777vw, 32px);
+  --no-header-block-size: calc(100svh - var(--header-block-size));
   --content-block-size: calc(
     100svh - var(--footer-block-size) - var(--header-block-size)
   );
 }
 
-html:has(.hideOverflow) {
+html:has(.hide-overflow-y) {
   scrollbar-gutter: stable;
 }
 
@@ -28,10 +29,10 @@ body {
   font-size: clamp(1.3rem, 1.227rem + 0.194vw, 1.6rem);
 }
 
-.hideOverflow {
-  overflow-y: hidden;
-}
-
 .__next {
   isolation: isolate;
+}
+
+.hide-overflow-y {
+  overflow-y: hidden;
 }

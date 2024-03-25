@@ -1,3 +1,4 @@
+import { ModalsProvider } from '~/providers/modals-provider'
 import { Header } from '~/components/header'
 import { Footer } from '~/components/footer'
 
@@ -6,11 +7,14 @@ export default function RootLayout({
 }: { children: React.ReactNode }) {
   return (
     <>
-      <Header />
-      <main>
-        {children}
-      </main>
-      <Footer />
+      <div className='__next'>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </div>
+      <ModalsProvider />
     </>
   )
 }

@@ -1,12 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { toast } from 'sonner'
 import { Product } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
-import { useToastStore } from '~/store/use-toast-store'
 import { SizeSelector } from '~/components/size-selector'
-import { CircleCheckIcon } from '~/components/svg'
 import { Button } from '~/components/ui/button'
 import { AddToFavoritesButton } from '~/components/add-to-favorites-button'
 import styles from './add-to-cart.module.css'
@@ -18,8 +17,8 @@ interface Props {
 export const AddToCart: React.FC<Props> = ({
   product
 }) => {
+  const router = useRouter()
   const [selectedSize, setSelectedSize] = useState<string | null>('')
-  const notifyToast = useToastStore(state => state.notifyToast)
   const addProductToCart = useCartStore(state => state.addProductToCart)
   const { id, name, price, discount, sizes, images } = product
 
@@ -40,20 +39,11 @@ export const AddToCart: React.FC<Props> = ({
 
     setSelectedSize('')
 
-    notifyToast({
-      leadingIcon: <CircleCheckIcon
-        color='var(--success-color)'
-      />,
-      title: 'Producto añadido a la cesta',
-      action: (
-        <Link
-          className={styles.goToCartLink}
-          href='#shop-cart'
-          scroll={false}
-        >
-          Ir a la cesta
-        </Link>
-      ),
+    toast.success('Producto añadido a la cesta', {
+      action: {
+        label: 'Ir a la cesta',
+        onClick: () => router.push('#shop-cart')
+      },
     })
   }
 

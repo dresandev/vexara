@@ -38,7 +38,7 @@ export const SideModal: React.FC<Props> = ({
 
     if (!open) return
 
-    document.body.classList.toggle('hideOverflow', isCurrentFragment)
+    document.body.classList.toggle('hide-overflow-y', isCurrentFragment)
     setShowBackdrop(isCurrentFragment)
     modalRef.current?.focus()
   }, [params, fragment, setShowBackdrop, open, unmount])
@@ -57,7 +57,7 @@ export const SideModal: React.FC<Props> = ({
     >
       <Link
         aria-label='Cerrar'
-        className={styles.closeModal}
+        className={styles.closeLink}
         href='?'
         scroll={false}
         draggable={false}

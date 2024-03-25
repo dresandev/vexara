@@ -11,21 +11,18 @@ export const NoProductsInCart = () => {
         width={200}
         height={200}
       />
-
       <span className={styles.emptyText}>
         Cesta vacía
       </span>
       <p className={styles.descriptionText}>
         Aún no tienes ningún artículo en la cesta, descubre todo lo que tenemos para ti
       </p>
-
-
       <Button
         className={styles.exploreButton}
         asChild
       >
         <Link
-          href=''
+          href='/'
           scroll={false}
         >
           Descrubir

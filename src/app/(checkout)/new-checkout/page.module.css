@@ -1,7 +1,15 @@
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: var(--no-header-block-size);
+  padding-inline: 16px;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 384px;
-  min-block-size: calc(100svh - var(--header-block-size));
+  min-block-size: var(--no-header-block-size);
 }
 
 .formWrapper {

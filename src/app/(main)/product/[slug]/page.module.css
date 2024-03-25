@@ -105,7 +105,7 @@
     inset-block-start: var(--header-block-size);
     display: flex;
     flex-direction: column;
-    block-size: calc(100vh - var(--header-block-size));
+    block-size: var(--no-header-block-size);
     padding: 28px 32px 32px clamp(4.8rem, -11.2rem + 10vw, 8rem);
   }
 

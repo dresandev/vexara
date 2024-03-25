@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  max-block-size: calc(100svh - var(--header-block-size));
+  max-block-size: var(--no-header-block-size);
   padding: 32px;
   background-color: hsl(0, 0%, 98%);
 }

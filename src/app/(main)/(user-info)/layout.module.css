@@ -1,5 +1,5 @@
 .wrapper {
-  min-block-size: calc(100svh - var(--header-block-size));
+  min-block-size: var(--no-header-block-size);
 }
 
 .content {

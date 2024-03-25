@@ -2,7 +2,7 @@
 
 import { useCartStore } from '~/store/use-cart-store'
 import { CartProductCard } from '~/components/cards/cart-product-card'
-import { NoProductsInCart } from '../no-products-in-cart'
+import { NoProductsInCart } from '~/components/no-products-in-cart'
 import styles from './products-in-cart.module.css'
 
 export const ProductsInCart = () => {

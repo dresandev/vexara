@@ -4,10 +4,10 @@ export const useToggleBodyOverflow = (isMenuOpen: boolean = true) => {
   useEffect(() => {
     const body = document.body
 
-    body.classList.toggle('hideOverflow', isMenuOpen)
+    body.classList.toggle('hide-overflow-y', isMenuOpen)
 
     return () => {
-      body.classList.remove('hideOverflow')
+      body.classList.remove('hide-overflow-y')
     }
   }, [isMenuOpen])
 }
