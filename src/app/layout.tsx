@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { SessionProvider } from 'next-auth/react'
 import { auth } from '~/auth'
 import { inter } from '~/config/fonts'
-import { ToastsProvider } from '~/providers/toasts-provider'
 import '~/styles/reset.css'
 import '~/styles/globals.css'
 
@@ -20,7 +19,6 @@ export default async function RootLayout({
     <html lang='es'>
       <body className={inter.className}>
         <SessionProvider session={session}>
-          <ToastsProvider />
           {children}
         </SessionProvider>
       </body>

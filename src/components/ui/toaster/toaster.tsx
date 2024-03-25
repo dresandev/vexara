@@ -10,12 +10,10 @@ export const Toaster = ({ ...props }: Props) => {
   return (
     <Sonner
       theme='light'
-      duration={100000}
       toastOptions={{
         className: inter.className,
         classNames: {
-          icon: styles.icon,
-          actionButton: styles.actionButton
+          icon: styles.icon
         },
       }}
       {...props}

@@ -8,3 +8,14 @@
   color: var(--error-color);
   font-size: 1.4rem;
 }
+
+.goToCartLink {
+  padding: 6px 10px;
+  margin-inline-start: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.goToCartLink:hover {
+  background-color: hsla(240 4.8% 95.9%);
+}

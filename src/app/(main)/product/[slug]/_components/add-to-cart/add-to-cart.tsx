@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { toast } from 'sonner'
 import { Product } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
@@ -17,7 +17,6 @@ interface Props {
 export const AddToCart: React.FC<Props> = ({
   product
 }) => {
-  const router = useRouter()
   const [selectedSize, setSelectedSize] = useState<string | null>('')
   const addProductToCart = useCartStore(state => state.addProductToCart)
   const { id, name, price, discount, sizes, images } = product
@@ -40,10 +39,15 @@ export const AddToCart: React.FC<Props> = ({
     setSelectedSize('')
 
     toast.success('Producto añadido a la cesta', {
-      action: {
-        label: 'Ir a la cesta',
-        onClick: () => router.push('#shop-cart')
-      },
+      action: (
+        <Link
+          className={styles.goToCartLink}
+          href='#shop-cart'
+          scroll={false}
+        >
+          Ir a la cesta
+        </Link>
+      ),
     })
   }
 

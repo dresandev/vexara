@@ -6,12 +6,12 @@ import { CheckoutAuthModal } from '~/components/modals/checkout-auth-modal'
 
 export const ModalsProvider = () => {
   return (
-    <>
+    <div className='modals-container'>
       <Backdrop />
       <LoginModal />
       <RegisterModal />
       <ShopCartModal />
       <CheckoutAuthModal />
-    </>
+    </div>
   )
 }

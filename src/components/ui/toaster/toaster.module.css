@@ -7,16 +7,3 @@
 .icon {
   color: var(--success-color);
 }
-
-.actionButton {
-  all: unset;
-  padding: 6px 10px;
-  font-weight: 500;
-  background-color: var(--bg-color) !important;
-  color: var(--content-color) !important;
-  border: 1px solid var(--border-color) !important;
-}
-
-.actionButton:hover {
-  background-color: hsla(240 4.8% 95.9%) !important;
-}
