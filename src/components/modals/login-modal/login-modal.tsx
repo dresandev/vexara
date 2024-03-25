@@ -7,7 +7,7 @@ import styles from './login-modal.module.css'
 
 export const LoginModal = () => {
   return (
-    <SideModal urlFragment='#login'>
+    <SideModal fragment='#login'>
       <div className={styles.content}>
         <img
           src='/images/decoration/monster.webp'

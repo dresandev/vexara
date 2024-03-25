@@ -10,7 +10,7 @@ import styles from './shop-cart-modal.module.css'
 
 export const ShopCartModal = () => {
   return (
-    <SideModal urlFragment='#shop-cart'>
+    <SideModal fragment='#shop-cart'>
       <div className={styles.header}>
         <span className={styles.title}>
           Cesta{' '}

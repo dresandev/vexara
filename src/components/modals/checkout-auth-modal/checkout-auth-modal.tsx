@@ -8,13 +8,10 @@ import styles from './checkout-auth-modal.module.css'
 
 export const CheckoutAuthModal = () => {
   return (
-    <SideModal urlFragment='#checkout-auth'>
+    <SideModal fragment='#checkout-auth'>
       <h2 className={styles.title}>Accede o crea tu cuenta</h2>
-      <LoginForm
-        textFieldIdSuffix='checkout'
-        authOptions={{ redirectTo: '/new-checkout' }}
-      />
-      <SocialAuthButtons options={{ redirectTo: '/new-checkout' }} />
+      <LoginForm textFieldIdSuffix='checkout' />
+      <SocialAuthButtons />
       <OrSeparator />
       <p className={styles.noAccountText}>
         No tengo cuenta
@@ -23,6 +20,7 @@ export const CheckoutAuthModal = () => {
         <Link
           className={styles.noAccountLink}
           href='#register'
+          scroll={false}
         >
           Crear una cuenta
         </Link>

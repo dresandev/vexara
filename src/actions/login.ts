@@ -5,7 +5,11 @@ import type { BuiltInProviderType } from 'next-auth/providers'
 import type { LiteralUnion } from 'next-auth/react'
 import { signIn } from '~/auth'
 import { LoginSchema, type LoginSchemaTypes } from '~/schemas'
-import { AuthOptions } from '~/types'
+
+interface AuthOptions {
+  redirectTo?: string
+  redirect?: true
+}
 
 export const login = async (
   values: LoginSchemaTypes,

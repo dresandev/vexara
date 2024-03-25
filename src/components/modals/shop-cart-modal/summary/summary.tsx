@@ -39,8 +39,12 @@ export const Summary = () => {
         asChild
       >
         <Link
-          href={isAuthenticated ? '/new-checkout' : '#checkout-auth'}
-          scroll={!isAuthenticated}
+          href={
+            isAuthenticated
+              ? '/new-checkout'
+              : '?checkout=1#checkout-auth'
+          }
+          scroll={isAuthenticated}
         >
           Tramitar pedido
         </Link>

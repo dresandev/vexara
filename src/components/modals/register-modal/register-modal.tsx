@@ -4,11 +4,10 @@ import styles from './register-modal.module.css'
 
 export const RegisterModal = () => {
   return (
-    <SideModal urlFragment='#register'>
+    <SideModal fragment='#register'>
       <span className={styles.title}>
         Crear cuenta
       </span>
-
       <RegisterForm />
     </SideModal >
   )

@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState, useTransition } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { RegisterSchema, type RegisterSchemaTypes } from '~/schemas'
@@ -16,6 +17,7 @@ import { Button } from '~/components/ui/button'
 import styles from './register-form.module.css'
 
 export const RegisterForm = () => {
+  const searchParams = useSearchParams()
   const [responseError, setResponseError] = useState('')
   const [isPending, startTransition] = useTransition()
   const form = useForm<RegisterSchemaTypes>({
@@ -30,6 +32,9 @@ export const RegisterForm = () => {
   const { control, handleSubmit, formState: { errors } } = form
 
   const onSubmit = async (values: RegisterSchemaTypes) => {
+    const redirectTo = Boolean(Number(searchParams.get('checkout')))
+      ? '/new-checkout'
+      : undefined
     setResponseError('')
 
     startTransition(async () => {
@@ -41,10 +46,7 @@ export const RegisterForm = () => {
         return setResponseError(data.error)
       }
 
-      data = await login({
-        email: values.email,
-        password: values.password
-      })
+      data = await login(values, { redirectTo })
 
       if (data?.error) {
         setResponseError(data.error)

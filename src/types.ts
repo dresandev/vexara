@@ -25,8 +25,3 @@ export interface CartProduct extends Omit<Product, 'images' | 'sizes'> {
   image: string
   size: Size
 }
-
-export interface AuthOptions {
-  redirectTo?: string | undefined
-  redirect?: true | undefined;
-}

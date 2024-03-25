@@ -57,14 +57,12 @@ export const Toast = () => {
       <span className={styles.leadingIcon}>
         {leadingIcon}
       </span>
-
       <div>
         <div className={styles.title}>
           {title}
         </div>
         <p>{description}</p>
       </div>
-
       {action}
     </div>
   )
