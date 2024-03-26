@@ -2,17 +2,29 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { CartProduct } from '~/types'
 
-interface CartState {
+type State = {
   cart: CartProduct[]
+}
+
+type Actions = {
+  setCart: (products: CartProduct[]) => void
   addProductToCart: (product: CartProduct) => void
   removeProduct: (product: CartProduct) => void
   getSummaryInfo: () => { total: number }
   updateProductQuantity: (product: CartProduct, quantity: number) => void
+  resetCart: () => void
 }
 
-export const useCartStore = create<CartState>()(
+const initState: State = {
+  cart: []
+}
+
+export const useCartStore = create<State & Actions>()(
   persist((set, get) => ({
-    cart: [],
+    ...initState,
+    setCart: (products) => {
+      set({ cart: products })
+    },
     addProductToCart: (product) => {
       const { cart } = get()
 
@@ -77,5 +89,8 @@ export const useCartStore = create<CartState>()(
 
       set({ cart: updatedCartProducts })
     },
+    resetCart: () => {
+      set(initState)
+    }
   }), { name: 'cart' })
 )

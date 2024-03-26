@@ -17,8 +17,6 @@ export default async function ProductPage({
   params: { slug }
 }: Props) {
   const productId = getProductIdFromSlug(slug)
-  if (!productId) notFound()
-
   const product = await db.product.findUnique({
     where: { id: productId },
     include: {
@@ -27,6 +25,7 @@ export default async function ProductPage({
       category: { select: { name: true } },
     }
   })
+
   if (!product) notFound()
 
   const { id, images, name, discount, sizes, category } = product

@@ -1,9 +1,11 @@
 export interface Size {
+  id?: string
   name: string
   quantity: number
 }
 
 export interface Image {
+  id?: string
   url: string
 }
 

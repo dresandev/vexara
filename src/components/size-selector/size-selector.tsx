@@ -8,8 +8,8 @@ import styles from './size-selector.module.css'
 
 interface Props {
   sizes: Size[]
-  selectedSize: string | null
-  onChange: (size: string) => void
+  selectedSize? : Size | null
+  onChange: (size: Size) => void
 }
 
 export const SizeSelector: React.FC<Props> = ({
@@ -19,8 +19,8 @@ export const SizeSelector: React.FC<Props> = ({
 }) => {
   return (
     <ul className={styles.sizeList}>
-      {sizes.map(({ name, quantity }) => {
-        const isSelectedSize = name === selectedSize
+      {sizes.map(({ id, name, quantity }) => {
+        const isSelectedSize = name === selectedSize?.name
         const hasStock = quantity > 0
         const hasLowStock = quantity > 0 && quantity < 10
         const showTooltip = hasLowStock || !hasStock
@@ -41,7 +41,7 @@ export const SizeSelector: React.FC<Props> = ({
                 styles.sizeButton,
                 { [styles.isSelected]: isSelectedSize }
               )}
-              onClick={() => onChange(name)}
+              onClick={() => onChange({ id, name, quantity })}
               disabled={!hasStock}
             >
               {hasLowStock && (

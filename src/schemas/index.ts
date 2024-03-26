@@ -27,3 +27,10 @@ export const RegisterSchema = z.object({
 })
 
 export type RegisterSchemaTypes = z.infer<typeof RegisterSchema>
+
+export const CartItemSchema = z.object({
+  quantity: z.number(),
+  productId: z.string(),
+  imageId: z.string(),
+  sizeId: z.string(),
+})

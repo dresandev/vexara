@@ -1,17 +1,14 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { mercadopagoRedirect } from '~/actions/mercadopago-redirect'
 import { TextField } from '~/components/ui/text-field'
 import { Button } from '~/components/ui/button'
 import styles from './checkout-form.module.css'
 
 export const CheckoutForm = () => {
-  const pathname = usePathname()
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    mercadopagoRedirect(pathname)
+    mercadopagoRedirect()
   }
 
   return (

@@ -7,6 +7,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Order {
+  id         String      @id @default(cuid())
+  userId     String
+  user       User        @relation(fields: [userId], references: [id])
+  orderItems OrderItem[]
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  sizeId    String
+  size      Size    @relation(fields: [sizeId], references: [id])
+  quantity  Int
+}
+
+model CartItem {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  sizeId    String
+  size      Size    @relation(fields: [sizeId], references: [id])
+  imageId   String
+  image     Image   @relation(fields: [imageId], references: [id])
+  quantity  Int
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -27,13 +60,15 @@ model Account {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String     @id @default(cuid())
   image         String?
-  email         String?   @unique
+  email         String?    @unique
   password      String?
   name          String?
   emailVerified DateTime?
   accounts      Account[]
+  cart          CartItem[]
+  order         Order[]
 }
 
 model Category {
@@ -48,30 +83,35 @@ model Category {
 }
 
 model Size {
-  id        String  @id @default(cuid())
+  id        String      @id @default(cuid())
   productId String
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product   Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
   name      String
   quantity  Int
+  cartItem  CartItem[]
+  OrderItem OrderItem[]
 }
 
 model Image {
-  id        String  @id @default(cuid())
+  id        String     @id @default(cuid())
   productId String
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product   Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
   url       String
+  cartItem  CartItem[]
 }
 
 model Product {
-  id         String   @id @default(cuid())
+  id         String      @id @default(cuid())
   categoryId String
-  category   Category @relation("CategoryToProduct", fields: [categoryId], references: [id])
+  category   Category    @relation("CategoryToProduct", fields: [categoryId], references: [id])
   name       String
   price      Decimal
   discount   Int?
-  isFeatured Boolean  @default(false)
+  isFeatured Boolean     @default(false)
   sizes      Size[]
   images     Image[]
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  cartItem   CartItem[]
+  orderItem  OrderItem[]
 }

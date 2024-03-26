@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
+import { useSession } from 'next-auth/react'
 import { toast } from 'sonner'
-import { Product } from '~/types'
+import type { Product, Size } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
 import { SizeSelector } from '~/components/size-selector'
 import { Button } from '~/components/ui/button'
@@ -17,37 +18,51 @@ interface Props {
 export const AddToCart: React.FC<Props> = ({
   product
 }) => {
-  const [selectedSize, setSelectedSize] = useState<string | null>('')
+  const [selectedSize, setSelectedSize] = useState<Size | null | undefined>()
+  const [isPending, startTransition] = useTransition()
+  const session = useSession()
   const addProductToCart = useCartStore(state => state.addProductToCart)
-  const { id, name, price, discount, sizes, images } = product
+  const { sizes, images } = product
 
   const handleAddToCart = () => {
-    if (!selectedSize) return setSelectedSize(null)
+    startTransition(async () => {
+      if (!selectedSize) return setSelectedSize(null)
 
-    addProductToCart({
-      id,
-      name,
-      price,
-      discount,
-      size: {
-        name: selectedSize,
-        quantity: 1,
-      },
-      image: images[2].url
-    })
+      const imageToCart = images[2]
+      const quantityToCart = 1
 
-    setSelectedSize('')
+      if (session.status === 'authenticated') {
+        await fetch('/api/cart', {
+          method: 'POST',
+          body: JSON.stringify({
+            quantity: quantityToCart,
+            productId: product.id,
+            imageId: imageToCart.id,
+            sizeId: selectedSize.id,
+          })
+        })
+      }
 
-    toast.success('Producto añadido a la cesta', {
-      action: (
-        <Link
-          className={styles.goToCartLink}
-          href='#shop-cart'
-          scroll={false}
-        >
-          Ir a la cesta
-        </Link>
-      ),
+      addProductToCart({
+        ...product,
+        size: {
+          ...selectedSize,
+          quantity: quantityToCart,
+        },
+        image: imageToCart.url
+      })
+      setSelectedSize(undefined)
+      toast.success('Producto añadido a la cesta', {
+        action: (
+          <Link
+            className={styles.goToCartLink}
+            href='#shop-cart'
+            scroll={false}
+          >
+            Ir a la cesta
+          </Link>
+        ),
+      })
     })
   }
 
@@ -66,6 +81,7 @@ export const AddToCart: React.FC<Props> = ({
       <div className={styles.actions}>
         <Button
           variant='success'
+          disabled={isPending}
           onClick={handleAddToCart}
         >
           Añadir a la cesta

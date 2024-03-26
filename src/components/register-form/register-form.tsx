@@ -32,12 +32,11 @@ export const RegisterForm = () => {
   const { control, handleSubmit, formState: { errors } } = form
 
   const onSubmit = async (values: RegisterSchemaTypes) => {
-    const redirectTo = Boolean(Number(searchParams.get('checkout')))
-      ? '/new-checkout'
-      : undefined
-    setResponseError('')
-
     startTransition(async () => {
+      setResponseError('')
+      const redirectTo = Boolean(Number(searchParams.get('checkout')))
+        ? '/new-checkout'
+        : undefined
       let data
 
       data = await register(values)

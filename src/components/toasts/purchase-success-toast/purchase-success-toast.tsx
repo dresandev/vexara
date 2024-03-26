@@ -1,23 +1,20 @@
 'use client'
 
-import { useEffect } from 'react'
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import { useEffect, useRef } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { toast } from 'sonner'
 
 export const PurchaseSuccessToast = () => {
   const router = useRouter()
-  const pathname = usePathname()
   const searchParams = useSearchParams()
+  const wasShown = useRef(false)
 
   useEffect(() => {
-    const status = searchParams.get('status')
-
-    if (status !== 'approved') return
-
-    router.replace(pathname)
-
+    if (wasShown.current || searchParams.get('status') !== 'approved') return
+    router.replace('?')
     toast.success('Pago realizado con éxito.')
-  }, [pathname, router, searchParams])
+    wasShown.current = true
+  }, [router, searchParams])
 
   return null
 }

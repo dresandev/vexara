@@ -5,7 +5,3 @@ export const simpleSlugify = (str: string) => {
     .join('-')
     .replace('/', '-')
 }
-
-export function absoluteUrl(path: string) {
-  return `${process.env.APP_URL}${path}`
-}

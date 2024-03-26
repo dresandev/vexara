@@ -9,6 +9,7 @@ import { useCurrentUser } from '~/hooks/use-current-user'
 import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
 import { CloseIcon, MenuIcon } from '~/components/svg'
 import styles from './menu.module.css'
+import { useCartStore } from '~/store/use-cart-store'
 
 const links = [
   {
@@ -24,6 +25,7 @@ const links = [
 export const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const resetCart = useCartStore(state => state.resetCart)
   useToggleBodyOverflow(isOpen)
   const user = useCurrentUser()
   const greetingName = user?.name?.split(' ')[0]
@@ -71,7 +73,10 @@ export const Menu = () => {
         </nav>
 
         <form action={logout}>
-          <button className={styles.logoutButton}>
+          <button
+            onClick={resetCart}
+            className={styles.logoutButton}
+          >
             Cerrar sesión
           </button>
         </form>

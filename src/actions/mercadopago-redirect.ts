@@ -3,12 +3,11 @@
 import { redirect } from 'next/navigation'
 import { Preference } from 'mercadopago'
 import { client } from '~/lib/mercadopago'
-import { absoluteUrl } from '~/utils'
 
-export const mercadopagoRedirect = async (pathname: string) => {
+export const mercadopagoRedirect = async () => {
   const preference = new Preference(client)
 
-  const url = absoluteUrl(pathname)
+  const url = process.env.APP_URL
 
   const { sandbox_init_point } = await preference.create({
     body: {
