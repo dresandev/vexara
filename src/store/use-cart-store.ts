@@ -29,7 +29,7 @@ export const useCartStore = create<State & Actions>()(
       const { cart } = get()
 
       const productInCart = cart.some(
-        ({ id, size }) => id === product.id && size.name === product.size.name
+        ({ id, size }) => id === product.id && size.id === product.size.id
       )
 
       if (!productInCart) {

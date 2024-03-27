@@ -38,12 +38,12 @@ export const LoginForm = ({ textFieldIdSuffix }: Props) => {
   const { control, handleSubmit, formState: { errors } } = form
 
   const onSubmit = (values: LoginSchemaTypes) => {
-    const redirectTo = Boolean(Number(searchParams.get('checkout')))
-      ? '/new-checkout'
-      : undefined
-    setErrorMessage('')
-
     startTransition(async () => {
+      setErrorMessage('')
+      const redirectTo = Boolean(Number(searchParams.get('checkout')))
+        ? '/new-checkout'
+        : undefined
+
       const data = await login(values, { redirectTo })
 
       if (data?.error) {
@@ -82,7 +82,7 @@ export const LoginForm = ({ textFieldIdSuffix }: Props) => {
           control={control}
           render={({ field }) => (
             <PasswordTextField
-              id={`login-passwor-${textFieldIdSuffix}`}
+              id={`login-password-${textFieldIdSuffix}`}
               label='Contraseña'
               error={errors.password?.message}
               autoComplete='off'

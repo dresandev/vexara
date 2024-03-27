@@ -2,7 +2,6 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
 import { toast } from 'sonner'
 import type { Product, Size } from '~/types'
 import { useCartStore } from '~/store/use-cart-store'
@@ -20,7 +19,6 @@ export const AddToCart: React.FC<Props> = ({
 }) => {
   const [selectedSize, setSelectedSize] = useState<Size | null | undefined>()
   const [isPending, startTransition] = useTransition()
-  const session = useSession()
   const addProductToCart = useCartStore(state => state.addProductToCart)
   const { sizes, images } = product
 
@@ -28,28 +26,13 @@ export const AddToCart: React.FC<Props> = ({
     startTransition(async () => {
       if (!selectedSize) return setSelectedSize(null)
 
-      const imageToCart = images[2]
-      const quantityToCart = 1
-
-      if (session.status === 'authenticated') {
-        await fetch('/api/cart', {
-          method: 'POST',
-          body: JSON.stringify({
-            quantity: quantityToCart,
-            productId: product.id,
-            imageId: imageToCart.id,
-            sizeId: selectedSize.id,
-          })
-        })
-      }
-
       addProductToCart({
         ...product,
         size: {
           ...selectedSize,
-          quantity: quantityToCart,
+          quantity: 1,
         },
-        image: imageToCart.url
+        image: images[2]
       })
       setSelectedSize(undefined)
       toast.success('Producto añadido a la cesta', {

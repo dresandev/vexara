@@ -24,6 +24,6 @@ export interface SeedProduct extends Omit<Product, 'id'> {
 }
 
 export interface CartProduct extends Omit<Product, 'images' | 'sizes'> {
-  image: string
+  image: Image
   size: Size
 }

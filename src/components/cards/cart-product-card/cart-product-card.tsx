@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Size } from '~/types'
+import { CartProduct, Image, Size } from '~/types'
 import { getProductPathName } from '~/helpers/get-product-pathname'
 import { ProductPrice } from '~/components/product-price'
 import { RemoveProductButton } from './remove-product-button'
@@ -7,24 +7,14 @@ import { ChangeQuantity } from './change-quantity'
 import styles from './cart-product-card.module.css'
 
 interface Props {
-  id: string
-  image: string
-  price: number
-  discount: number | null
-  name: string
-  size: Size
+  product: CartProduct
 }
 
 export const CartProductCard: React.FC<Props> = ({
-  id,
-  image,
-  price,
-  discount,
-  name,
-  size,
+  product
 }) => {
-  const productPathname = getProductPathName(id, name)
-  const totalPrice = price * size.quantity
+  const productPathname = getProductPathName(product.id, product.name)
+  const totalPrice = product.price * product.size.quantity
 
   return (
     <div className={styles.card}>
@@ -34,7 +24,7 @@ export const CartProductCard: React.FC<Props> = ({
       >
         <img
           className={styles.image}
-          src={image}
+          src={product.image.url}
           alt=''
           width={110}
           height={140}
@@ -45,41 +35,27 @@ export const CartProductCard: React.FC<Props> = ({
         <div className={styles.topArea}>
           <ProductPrice
             price={totalPrice}
-            discount={discount}
+            discount={product.discount}
           />
-          <RemoveProductButton product={{
-            id,
-            image,
-            price,
-            discount,
-            name,
-            size,
-          }} />
+          <RemoveProductButton product={product} />
         </div>
 
         <div className={styles.middleArea}>
           <Link href={productPathname}>
-            {name}
+            {product.name}
           </Link>
           <div className={styles.orderInfo}>
-            <span>{size.name}</span>
-            {size.quantity > 1 && (
+            <span>{product.size.name}</span>
+            {product.size.quantity > 1 && (
               <ProductPrice
-                price={price}
-                discount={discount}
+                price={product.price}
+                discount={product.discount}
               />
             )}
           </div>
         </div>
 
-        <ChangeQuantity product={{
-          id,
-          image,
-          price,
-          discount,
-          name,
-          size,
-        }} />
+        <ChangeQuantity product={product} />
       </div>
     </div >
   )

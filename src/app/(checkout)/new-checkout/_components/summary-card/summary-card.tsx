@@ -31,11 +31,10 @@ export const SummaryCard: React.FC<Props> = ({
         />
       </h2>
       <div className={styles.productsContainer}>
-        {cart.map(({ id, size, ...product }) => (
+        {cart.map((product) => (
           <SummaryProductCard
-            key={`${id}-${size.name}`}
-            size={size}
-            {...product}
+            key={`${product.id}-${product.size.name}`}
+            product={product}
           />
         ))}
       </div>

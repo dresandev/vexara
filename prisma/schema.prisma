@@ -27,19 +27,6 @@ model OrderItem {
   quantity  Int
 }
 
-model CartItem {
-  id        String  @id @default(cuid())
-  userId    String
-  user      User    @relation(fields: [userId], references: [id])
-  productId String
-  product   Product @relation(fields: [productId], references: [id])
-  sizeId    String
-  size      Size    @relation(fields: [sizeId], references: [id])
-  imageId   String
-  image     Image   @relation(fields: [imageId], references: [id])
-  quantity  Int
-}
-
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -67,7 +54,6 @@ model User {
   name          String?
   emailVerified DateTime?
   accounts      Account[]
-  cart          CartItem[]
   order         Order[]
 }
 
@@ -88,7 +74,6 @@ model Size {
   product   Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
   name      String
   quantity  Int
-  cartItem  CartItem[]
   OrderItem OrderItem[]
 }
 
@@ -97,7 +82,6 @@ model Image {
   productId String
   product   Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
   url       String
-  cartItem  CartItem[]
 }
 
 model Product {
@@ -112,6 +96,5 @@ model Product {
   images     Image[]
   createdAt  DateTime    @default(now())
   updatedAt  DateTime    @updatedAt
-  cartItem   CartItem[]
   orderItem  OrderItem[]
 }

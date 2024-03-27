@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { logout } from '~/actions/logout'
+import { useCartStore } from '~/store/use-cart-store'
 import { useCurrentUser } from '~/hooks/use-current-user'
 import { useToggleBodyOverflow } from '~/hooks/use-toggle-body-overflow'
 import { CloseIcon, MenuIcon } from '~/components/svg'
 import styles from './menu.module.css'
-import { useCartStore } from '~/store/use-cart-store'
 
 const links = [
   {
@@ -32,6 +32,11 @@ export const Menu = () => {
 
   const handleOpenMenu = () => {
     setIsOpen(prevValue => !prevValue)
+  }
+
+  const handleLogout = async () => {
+    await logout()
+    resetCart()
   }
 
   return (
@@ -72,14 +77,12 @@ export const Menu = () => {
           </ul>
         </nav>
 
-        <form action={logout}>
-          <button
-            onClick={resetCart}
-            className={styles.logoutButton}
-          >
-            Cerrar sesión
-          </button>
-        </form>
+        <button
+          className={styles.logoutButton}
+          onClick={handleLogout}
+        >
+          Cerrar sesión
+        </button>
       </div>
     </div>
   )
