@@ -1,0 +1,19 @@
+.imagesWrapper {
+  position: relative;
+}
+
+.image {
+  inline-size: 100%;
+}
+
+.nextPrevButton {
+  position: absolute;
+  inset-block: 0;
+  z-index: 12;
+  display: none;
+  margin-block: auto;
+}
+
+.nextPrevButton:nth-of-type(2) {
+  inset-inline-end: 0;
+}

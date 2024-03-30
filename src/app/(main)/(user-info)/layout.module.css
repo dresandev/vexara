@@ -1,0 +1,19 @@
+.wrapper {
+  min-block-size: var(--no-header-block-size);
+}
+
+.content {
+  padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    padding-block-start: 48px;
+  }
+
+  .content {
+    max-inline-size: 850px;
+  }
+}

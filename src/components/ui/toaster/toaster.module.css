@@ -1,0 +1,9 @@
+.icon,
+.icon svg {
+  block-size: 24px;
+  inline-size: 24px;
+}
+
+.icon {
+  color: var(--success-color);
+}

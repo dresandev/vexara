@@ -1,0 +1,77 @@
+.wrapper {
+  position: sticky;
+  inset-block-start: calc(var(--header-block-size) + 48px);
+  block-size: max-content;
+  padding-inline-start: 40px;
+}
+
+.menuButton {
+  display: none;
+}
+
+.activeLink,
+.greetingTitle,
+.logoutButton {
+  font-weight: 700;
+}
+
+.greetingTitle {
+  font-size: 1.8rem;
+}
+
+.greetingEmail {
+  font-size: 1.4rem;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-inline-start: 0;
+  padding-block: 48px;
+}
+
+.linkList > li {
+  list-style: none;
+}
+
+.logoutButton {
+  margin-block-end: 48px;
+}
+
+.logoutButton:hover {
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    position: static;
+    inset-block-start: unset;
+    inline-size: unset;
+    block-size: unset;
+    padding-inline-start: unset;
+    padding: 10px 16px;
+    padding-block-start: 0;
+    border-block-end: 1px solid var(--border-color);
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    inset-inline: 0;
+    padding: 16px;
+    background-color: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity;
+    transition-duration: 250ms;
+  }
+
+  .menu.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}

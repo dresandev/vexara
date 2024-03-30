@@ -1,0 +1,25 @@
+.carousel {
+  display: flex;
+  padding-inline-start: 0;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.item {
+  list-style: none;
+  transition: opacity 200ms;
+}
+
+@media (hover: hover) {
+  .carouselWrapper {
+    position: relative;
+  }
+
+  .fadeItem {
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+  }
+}

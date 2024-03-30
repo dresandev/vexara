@@ -1,0 +1,7 @@
+.inBrackets::before {
+  content: '(';
+}
+
+.inBrackets::after {
+  content: ')';
+}

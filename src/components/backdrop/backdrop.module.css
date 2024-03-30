@@ -1,0 +1,12 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  visibility: hidden;
+  transition: visibility, background-color;
+  transition-duration: 300ms;
+}
+
+.backdrop.show {
+  visibility: visible;
+  background-color: hsla(0, 0%, 0%, 0.35);
+}

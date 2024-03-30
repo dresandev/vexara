@@ -1,0 +1,22 @@
+.total {
+  padding-block-start: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.legalText {
+  padding-inline-start: 8px;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 39%);
+}
+
+.totalPrice,
+.totalText {
+  font-weight: 700;
+}
+
+.processOrderButton {
+  flex-shrink: 0;
+  inline-size: 100%;
+  margin-block: 16px;
+}

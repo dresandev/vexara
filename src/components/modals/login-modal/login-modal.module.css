@@ -1,0 +1,25 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 20px;
+  margin-block: auto;
+}
+
+.legalText,
+.registerLink {
+  font-size: 1.2rem;
+}
+
+.title,
+.registerLinkText {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.registerLink {
+  margin-block-start: 24px;
+}

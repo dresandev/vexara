@@ -1,0 +1,35 @@
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: var(--no-header-block-size);
+  padding-inline: 16px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 384px;
+  min-block-size: var(--no-header-block-size);
+}
+
+.formWrapper {
+  max-inline-size: 600px;
+  inline-size: 100%;
+  margin-inline: auto;
+  padding: 34px 16px;
+}
+
+.title {
+  font-size: 2.4rem;
+  padding-block-end: 32px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryCard {
+    display: none;
+  }
+}

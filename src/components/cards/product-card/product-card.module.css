@@ -1,0 +1,33 @@
+.card {
+  position: relative;
+  font-size: clamp(1.2rem, 1.151rem + 0.129vw, 1.4rem);
+}
+
+.card:hover button {
+  display: block;
+}
+
+.linkWrapper {
+  position: absolute;
+  inset: 0;
+  font-size: 0;
+}
+
+.name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr auto;
+  padding-inline: 6px;
+  padding-block-start: 12px;
+}
+
+.addToFavorites {
+  position: relative;
+}

@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.productsQuantity {
+  font-size: 1.6rem;
+}
+
+.favoritesLink {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  padding: 3px 12px;
+  font-size: 1.3rem;
+  border: 1px solid var(--border-color-high);
+  border-radius: 20px;
+}

@@ -1,0 +1,67 @@
+.label {
+  --input-size: 2.2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  inline-size: fit-content;
+  font-size: 1.2rem;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox:focus-visible ~ .holder,
+.label:hover > .holder {
+  border-color: var(--border-color-high);
+}
+
+.checkbox {
+  position: absolute;
+  inline-size: var(--input-size);
+  block-size: var(--input-size);
+  inline-size: 0;
+  block-size: 0;
+  cursor: inherit;
+}
+
+.label[aria-disabled='true'],
+.checkbox:disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.holder {
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  block-size: var(--input-size);
+  inline-size: var(--input-size);
+  border: 1px solid var(--inactive-color);
+  border-radius: 50%;
+}
+
+.checkbox:checked ~ .holder {
+  background-color: var(--success-color);
+  color: var(--content-color-invert);
+  border: none;
+}
+
+.holder.error {
+  border-color: var(--error-color);
+}
+
+.checkbox:checked ~ .holder > .checkIcon {
+  display: block;
+}
+
+.checkIcon {
+  --input-size: 16px;
+  display: none;
+  block-size: var(--input-size);
+  inline-size: var(--input-size);
+}
+
+.labelText {
+  padding-inline-start: 12px;
+}

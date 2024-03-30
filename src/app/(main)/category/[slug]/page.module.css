@@ -1,0 +1,30 @@
+.title {
+  padding-block-start: 20px;
+  padding-inline-start: clamp(16px, 12.12px + 1.036vw, 32px);
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.container {
+  --grid-container-columns: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-container-columns), minmax(0, 1fr));
+  gap: 28px 4px;
+  padding: 32px 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    --grid-container-columns: 3;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    --grid-container-columns: 4;
+  }
+}

@@ -1,0 +1,32 @@
+.form,
+.legalSection,
+.formFooter {
+  display: flex;
+}
+
+.form,
+.formFooter {
+  flex-direction: column;
+}
+
+.form {
+  row-gap: 32px;
+}
+
+.legalSection {
+  align-items: center;
+  column-gap: 4px;
+}
+
+.legalLink {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.formFooter {
+  row-gap: 12px;
+}
+
+.registerButton {
+  margin-block-start: 16px;
+}

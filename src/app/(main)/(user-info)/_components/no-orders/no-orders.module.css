@@ -1,0 +1,11 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 118px;
+}
+
+.title {
+  font-size: 1.8rem;
+}

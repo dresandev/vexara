@@ -1,0 +1,23 @@
+.section {
+  padding-block: 24px;
+}
+
+.title {
+  font-weight: 400;
+  padding-block-end: 16px;
+  padding-inline-start: 16px;
+}
+
+.productCard {
+  inline-size: clamp(220px, 176.31px + 11.65vw, 400px);
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 80px;
+  }
+  .title {
+    text-align: center;
+    padding-block-end: 32px;
+  }
+}

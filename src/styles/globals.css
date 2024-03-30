@@ -1,0 +1,38 @@
+:root {
+  --promo-color: hsl(339 100% 43%);
+  --bg-color: hsl(0 0% 100%);
+  --bg-color-high: hsl(0 0% 0%);
+  --bg-color-low: hsl(0, 0%, 96%);
+  --content-color: hsl(0 0% 0%);
+  --content-color-invert: hsl(0 0% 100%);
+  --border-color: hsl(0 0% 90%);
+  --border-color-high: hsl(0 0% 0%);
+  --inactive-color: hsl(0 0% 71%);
+  --success-color: hsl(162 100% 40%);
+  --error-color: hsl(352 86% 62%);
+
+  --header-block-size: 48px;
+  --footer-block-size: 153px;
+  --border-radius: 4px;
+  --modal-space-inline: clamp(20px, 17.09px + 0.777vw, 32px);
+  --no-header-block-size: calc(100svh - var(--header-block-size));
+  --content-block-size: calc(
+    100svh - var(--footer-block-size) - var(--header-block-size)
+  );
+}
+
+html:has(.hide-overflow-y) {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-size: clamp(1.3rem, 1.227rem + 0.194vw, 1.6rem);
+}
+
+.__next {
+  isolation: isolate;
+}
+
+.hide-overflow-y {
+  overflow-y: hidden;
+}

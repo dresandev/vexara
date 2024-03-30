@@ -1,0 +1,115 @@
+.fixedContainer {
+  position: sticky;
+  inset-block-start: var(--header-block-size);
+  block-size: 75dvh;
+}
+
+.images {
+  block-size: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.details {
+  position: relative;
+  padding: 32px 16px;
+  background-color: var(--bg-color);
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 16px;
+  margin-inline: auto;
+  display: block;
+  inline-size: 32px;
+  block-size: 4px;
+  background: hsl(0, 0%, 83%);
+  border-radius: 25px;
+}
+
+.title {
+  font-size: 24px;
+  padding-block-end: 12px;
+}
+
+.productInfo {
+  max-inline-size: 472px;
+  margin-block-start: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.productLinks {
+  display: flex;
+  column-gap: 1px;
+  inline-size: fit-content;
+  margin-block-start: 62px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--border-color);
+}
+
+.productLink {
+  padding-inline: 16px;
+  text-align: start;
+  background-color: var(--bg-color);
+}
+
+.productLink:first-child {
+  padding-inline-start: 0;
+}
+
+.productLink:last-child {
+  padding-inline-end: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: flex;
+  }
+
+  .fixedContainer,
+  .details {
+    inline-size: 50%;
+  }
+
+  .fixedContainer {
+    position: static;
+    inset-block-start: unset;
+    block-size: auto;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  .productLinks {
+    margin-block-start: auto;
+  }
+
+  .details {
+    position: sticky;
+    inset-block-start: var(--header-block-size);
+    display: flex;
+    flex-direction: column;
+    block-size: var(--no-header-block-size);
+    padding: 28px 32px 32px clamp(4.8rem, -11.2rem + 10vw, 8rem);
+  }
+
+  .details::before {
+    content: none;
+  }
+}

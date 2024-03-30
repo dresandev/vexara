@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Order {
+  id         String      @id @default(cuid())
+  userId     String
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orderItems OrderItem[]
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  sizeId    String
+  size      Size    @relation(fields: [sizeId], references: [id])
+  quantity  Int
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model User {
+  id            String    @id @default(cuid())
+  image         String?
+  email         String?   @unique
+  password      String?
+  name          String?
+  emailVerified DateTime?
+  accounts      Account[]
+  order         Order[]
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String
+  slug      String
+  isTop     Boolean   @default(false)
+  imageUrl  String?
+  products  Product[] @relation("CategoryToProduct")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Size {
+  id        String      @id @default(cuid())
+  productId String
+  product   Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name      String
+  quantity  Int
+  OrderItem OrderItem[]
+}
+
+model Image {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+}
+
+model Product {
+  id         String      @id @default(cuid())
+  categoryId String
+  category   Category    @relation("CategoryToProduct", fields: [categoryId], references: [id])
+  name       String
+  price      Decimal
+  discount   Int?
+  isFeatured Boolean     @default(false)
+  sizes      Size[]
+  images     Image[]
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  orderItem  OrderItem[]
+}

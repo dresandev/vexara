@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-block-size: var(--no-header-block-size);
+  padding: 32px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.productsContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-block: 28px;
+  padding-inline: inherit;
+  margin-inline: calc(var(--modal-space-inline) * -1);
+  scrollbar-width: thin;
+  overflow-y: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 32px;
+}
+
+.legalText {
+  padding-inline-start: 8px;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 39%);
+}
+
+.totalPrice {
+  font-weight: 500;
+}

@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-inline-size: 430px;
+  margin-block: auto;
+  padding-block: 20px;
+}
+
+.emptyText {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-block: 16px 8px;
+}
+
+.descriptionText {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.exploreButton {
+  margin-block-start: 40px;
+}

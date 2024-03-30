@@ -1,0 +1,23 @@
+.modal {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  display: flex;
+  flex-direction: column;
+  inline-size: min(100%, 384px);
+  padding: 16px var(--modal-space-inline);
+  background-color: var(--bg-color);
+  outline: none;
+  scrollbar-width: thin;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 300ms;
+}
+
+.modal.open {
+  transform: translateX(0);
+}
+
+.closeLink {
+  margin-inline-start: auto;
+}

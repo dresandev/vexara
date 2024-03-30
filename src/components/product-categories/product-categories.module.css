@@ -1,0 +1,38 @@
+.section {
+  padding-block: 24px;
+  color: var(--promo-color);
+}
+
+.title {
+  padding-block-end: 16px;
+  padding-inline-start: 20px;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  column-gap: 8px;
+  padding-inline: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.categoryCard {
+  inline-size: clamp(13.4rem, 11.167rem + 5.955vw, 22.6rem);
+}
+
+@media (hover: hover) {
+  .container {
+    scrollbar-width: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .section {
+    text-align: center;
+  }
+
+  .container {
+    justify-content: center;
+  }
+}

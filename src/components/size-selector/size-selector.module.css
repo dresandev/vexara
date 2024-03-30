@@ -1,0 +1,68 @@
+.sizeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-inline-start: 0;
+  padding-block: 28px;
+}
+
+.listItem {
+  list-style: none;
+}
+
+.withTooltip {
+  position: relative;
+}
+
+.sizeButton {
+  --size: 4rem;
+  min-inline-size: var(--size);
+  min-block-size: var(--size);
+  padding-inline: 10px;
+  font-size: 1.4rem;
+  border: 1px solid hsl(0, 0%, 71%);
+  border-radius: 2rem;
+}
+
+.sizeButton:hover {
+  border-color: var(--border-color-high);
+}
+
+.sizeButton:disabled {
+  color: hsl(0, 0%, 71%);
+  background-color: var(--bg-color-low);
+  border: none;
+  pointer-events: none;
+}
+
+.isSelected {
+  border-color: var(--bg-color-high);
+  background-color: var(--bg-color-high);
+  color: var(--content-color-invert);
+}
+
+.lowStockIcon {
+  --size: 20px;
+  display: inline;
+  block-size: var(--size);
+  inline-size: var(--size);
+  margin-inline-end: 0.8rem;
+  color: hsl(37, 91%, 55%);
+  vertical-align: middle;
+}
+
+.isSelected > .lowStockIcon {
+  color: var(--content-color-invert);
+}
+
+.tooltip {
+  display: none;
+}
+
+.tooltip.alert {
+  color: hsl(37, 91%, 55%);
+}
+
+.listItem:hover > .tooltip {
+  display: block;
+}

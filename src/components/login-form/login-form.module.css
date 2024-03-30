@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  inline-size: 100%;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.forgotPasswordLink {
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.loginButton {
+  margin-block-start: 40px;
+}

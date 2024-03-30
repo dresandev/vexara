@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 20px;
+}
+
+.backLink {
+  flex-shrink: 0;
+}
+
+.title {
+  inline-size: 90%;
+  font-size: 2rem;
+}
+
+.productCard {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.productLink {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.size {
+  padding-block-start: 4px;
+  display: block;
+}
+
+.textNoWrap {
+  text-wrap: nowrap;
+}

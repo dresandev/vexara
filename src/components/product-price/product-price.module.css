@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4px;
+}
+
+.flexDirectionColumn {
+  flex-direction: column;
+}
+
+.price,
+.priceWithDiscount {
+  font-weight: 500;
+}
+
+.priceWithDiscount,
+.discount {
+  color: var(--promo-color);
+}
+
+.discount {
+  margin-inline-start: 4px;
+  font-size: 1.2rem;
+}
+
+.oldPrice {
+  font-weight: 300;
+}

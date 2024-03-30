@@ -1,0 +1,9 @@
+.spinnerIcon {
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}

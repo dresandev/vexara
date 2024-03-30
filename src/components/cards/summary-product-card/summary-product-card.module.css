@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  column-gap: 16px;
+  font-size: 1.4rem;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  padding-block: 4px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.orderInfo {
+  display: flex;
+  column-gap: 8px;
+  flex-wrap: wrap;
+  color: hsl(0, 0%, 39%);
+  font-size: 1.2rem;
+}

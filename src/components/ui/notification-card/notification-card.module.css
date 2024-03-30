@@ -1,0 +1,59 @@
+.wrapper {
+  position: absolute;
+  inset-inline: var(--modal-space-inline);
+  inset-block-start: var(--header-block-size);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 11px 0 hsla(0, 0%, 0%, 0.09);
+  animation: cardIn 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wrapper.hide {
+  animation-name: cardOut;
+  animation-fill-mode: forwards;
+}
+
+.wrapper.success {
+  color: var(--success-color);
+  background-color: var(--bg-color);
+}
+
+.wrapper.error {
+  color: var(--error-color);
+  background-color: hsl(0, 100%, 96%);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.message {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.message.success {
+  color: initial;
+}
+
+.message.error {
+  color: var(--error-color);
+}
+
+@keyframes cardIn {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}
+
+@keyframes cardOut {
+  to {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}

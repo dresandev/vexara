@@ -1,0 +1,12 @@
+.title {
+  font-size: 2rem;
+  padding-block-end: 20px;
+}
+
+.orderDetailsLink:hover {
+  text-decoration: underline;
+}
+
+.textNoWrap {
+  text-wrap: nowrap;
+}

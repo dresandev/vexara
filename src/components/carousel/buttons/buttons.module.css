@@ -1,0 +1,34 @@
+.btn {
+  display: none;
+}
+
+@media (hover: hover) {
+  .btn {
+    --size: 40px;
+    position: absolute;
+    inset-block: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: var(--size);
+    block-size: var(--size);
+    margin: auto 10px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+  }
+
+  .btn:nth-of-type(2) {
+    inset-inline-end: 0;
+  }
+
+  .hideBtn {
+    display: none;
+  }
+
+  .btnArrowIcon {
+    --size: 16px;
+    inline-size: var(--size);
+    block-size: var(--size);
+  }
+}

@@ -1,0 +1,18 @@
+.linkWrapper {
+  outline-offset: -1px;
+}
+
+.card {
+  font-size: clamp(1.2rem, 1.151rem + 0.129vw, 1.4rem);
+}
+
+.name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.details {
+  padding: 12px 8px 0 12px;
+}

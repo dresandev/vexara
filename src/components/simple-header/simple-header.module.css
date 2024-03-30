@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  block-size: 48px;
+}
+
+.homeLink {
+  margin-inline: auto;
+  inline-size: clamp(112px, 100.35px + 3.107vw, 160px);
+}
