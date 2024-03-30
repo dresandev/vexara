@@ -9,9 +9,10 @@ export const {
   signIn,
   signOut,
 } = NextAuth({
-  pages: {
-    signIn: '/auth/login',
-  },
+  // pages: {
+  //   signIn: '/auth/login',
+  // },
+  // error persist
   adapter: PrismaAdapter(db),
   session: { strategy: 'jwt' },
   events: {
