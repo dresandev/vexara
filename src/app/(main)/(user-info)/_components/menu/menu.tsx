@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
@@ -23,6 +23,7 @@ const links = [
 ]
 
 export const Menu = () => {
+  const [isPending, startTransition] = useTransition()
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
   const resetCart = useCartStore(state => state.resetCart)
@@ -35,8 +36,10 @@ export const Menu = () => {
   }
 
   const handleLogout = async () => {
-    await logout()
-    resetCart()
+    startTransition(async () => {
+      await logout()
+      resetCart()
+    })
   }
 
   return (
@@ -80,6 +83,7 @@ export const Menu = () => {
         <button
           className={styles.logoutButton}
           onClick={handleLogout}
+          disabled={isPending}
         >
           Cerrar sesión
         </button>
