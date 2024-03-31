@@ -19,6 +19,7 @@ export const CartProductCard: React.FC<Props> = ({
   return (
     <div className={styles.card}>
       <Link
+        aria-label={product.name}
         className={styles.imageLink}
         href={productPathname}
       >

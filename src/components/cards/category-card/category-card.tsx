@@ -25,6 +25,8 @@ export const CategoryCard: React.FC<Props> = ({
             className={styles.image}
             src={imageUrl}
             alt=''
+            width={223}
+            height={286}
           />
         </span>
         <figcaption className={styles.caption}>

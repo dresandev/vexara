@@ -31,16 +31,20 @@ export const CarouselImage: React.FC<Props> = ({
       <img
         className={styles.image}
         src={images[idx].url}
+        width={460}
+        height={690}
         alt={alt}
       />
 
       <button
+        aria-label='Imagen anterior'
         className={styles.nextPrevButton}
         onClick={handlePrevButtonClick}
       >
         <ChevronArrow direction='left' />
       </button>
       <button
+        aria-label='Siguiente imagen'
         className={styles.nextPrevButton}
         onClick={handleNextButtonClick}
       >

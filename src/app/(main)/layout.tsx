@@ -4,6 +4,7 @@ import { Header } from '~/components/header'
 import { Footer } from '~/components/footer'
 import { OnAuthSuccess } from '~/components/on-auth-success'
 import { PurchaseSuccessToast } from '~/components/on-purchase-success'
+import { PaymentCredentialsLink } from '~/components/payment-credentials-link'
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <PaymentCredentialsLink />
         <Toaster />
         <OnAuthSuccess />
         <PurchaseSuccessToast />

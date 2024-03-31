@@ -8,7 +8,7 @@
   --border-color: hsl(0 0% 90%);
   --border-color-high: hsl(0 0% 0%);
   --inactive-color: hsl(0 0% 71%);
-  --success-color: hsl(162 100% 40%);
+  --success-color: hsl(162, 99%, 34%);
   --error-color: hsl(352 86% 62%);
 
   --header-block-size: 48px;

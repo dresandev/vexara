@@ -4,6 +4,7 @@
 
 .image {
   inline-size: 100%;
+  block-size: auto;
 }
 
 .nextPrevButton {

@@ -19,6 +19,9 @@ export const HoverImages: React.FC<Props> = ({
     <img
       src={imageSrc}
       alt={alt}
+      width={400}
+      height={592}
+      style={{ blockSize: 'auto' }}
       onMouseOver={() => setImageSrc(hoverSrc)}
       onMouseLeave={() => setImageSrc(src)}
     />

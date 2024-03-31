@@ -42,6 +42,8 @@ export default async function ProductPage({
                 className={styles.image}
                 src={url}
                 alt={`${name}-${i + 1}`}
+                width={930}
+                height={1400}
               />
             ))}
           </section>

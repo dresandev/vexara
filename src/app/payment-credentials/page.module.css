@@ -1,0 +1,16 @@
+.wrapper {
+  max-inline-size: 500px;
+  padding: 20px;
+  margin-inline: auto;
+}
+
+.title {
+  font-size: 2.8rem;
+  padding-block-end: 20px;
+}
+
+.link {
+  display: inline-block;
+  padding-block-start: 20px;
+  text-decoration: underline;
+}

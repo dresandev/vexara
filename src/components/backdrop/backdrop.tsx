@@ -10,6 +10,7 @@ export const Backdrop = () => {
 
   return (
     <Link
+      aria-label='Cerrar modal'
       className={clsx(
         styles.backdrop,
         { [styles.show]: showBackdrop },
