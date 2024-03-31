@@ -1,0 +1,41 @@
+.image {
+  inline-size: 100%;
+  block-size: 75dvh;
+}
+
+.details {
+  margin-inline: 16px;
+}
+
+.title {
+  margin-block: 32px 16px;
+  max-inline-size: 384px;
+  block-size: 50px;
+}
+
+.price {
+  block-size: 50px;
+  inline-size: 180px;
+  margin-block-end: 32px;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: flex;
+    block-size: 100svh;
+  }
+
+  .image,
+  .details {
+    inline-size: 50%;
+  }
+
+  .image {
+    block-size: 100dvh;
+  }
+
+  .details {
+    margin-inline: 0;
+    padding-inline-start: clamp(4.8rem, -11.2rem + 10vw, 8rem);
+  }
+}
