@@ -154,7 +154,7 @@ export const pantsAndJeans: SeedProduct[] = [
   },
   {
     name: 'Jeans BERSHKA ft. BIZARRAP wide leg',
-    price: 35000,
+    price: 350000,
     discount: 72,
     sizes: [
       {
