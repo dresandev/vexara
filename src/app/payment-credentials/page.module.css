@@ -9,6 +9,11 @@
   padding-block-end: 20px;
 }
 
+.description {
+  font-weight: 500;
+  margin-block-end: 20px;
+}
+
 .link {
   display: inline-block;
   padding-block-start: 20px;
