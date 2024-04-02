@@ -19,6 +19,7 @@
 .modal.open {
   visibility: visible;
   transform: translateX(0);
+  transition-property: transform;
 }
 
 .closeLink {
