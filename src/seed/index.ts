@@ -3,9 +3,12 @@ import { categories } from './data/categories'
 import { products } from './data/products'
 
 const main = async () => {
-  await Promise.allSettled([
+  await Promise.all([
+    db.order.deleteMany(),
     db.product.deleteMany(),
     db.category.deleteMany(),
+    db.size.deleteMany(),
+    db.image.deleteMany(),
   ])
 
   await db.category.createMany({ data: categories })
