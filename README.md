@@ -5,6 +5,8 @@ So far there is only one problem that I do not have much control over because th
 
 ## Preview
 
+![vexara-preview](https://github.com/dresandev/vexara/assets/79766563/5db1dbb3-080e-4110-bbbe-b338574d1ec6)
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env.* file.
