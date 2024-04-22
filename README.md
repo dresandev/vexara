@@ -1,7 +1,6 @@
 # Vexara: Bershka ecommerce clone
 
-Bershka clone implementing the main functionalities such as authentication flow using auth.js, product payment flow using mercadopago, implementing code that can work for production but in the end everything is in development mode despite being deployed in production.
-So far there is only one problem that I do not have much control over because the problem occurs in auth.js, I hope it will be solved soon.
+Clone of Bershka's ecommerce implementing the main functionalities such as the authentication flow using auth.js, the product payment flow using the Mercadopago payment gateway, laying out the design as similar as possible and adding the responsive without using js (which is like they handle it originally), deploying 100% functional code into production.
 
 ## Preview
 
