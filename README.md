@@ -2,6 +2,10 @@
 
 Clone of Bershka's ecommerce implementing the main functionalities such as the authentication flow using auth.js, the product payment flow using the Mercadopago payment gateway, laying out the app as similar as possible, adding the responsive without using js (which is like is done originally), deploying 100% functional code to production.
 
+## Screenshots
+
+![vexara](https://github.com/dresandev/vexara/assets/79766563/c3568aec-6d75-44f9-b6e8-a1a33833dfa2)
+
 ## Preview
 
 ![vexara-preview](https://github.com/dresandev/vexara/assets/79766563/5db1dbb3-080e-4110-bbbe-b338574d1ec6)
