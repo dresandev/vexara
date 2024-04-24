@@ -7,7 +7,7 @@ export const Footer = () => {
         Desarrollado por&nbsp;
         <a
           className={styles.dresanWebLink}
-          href='https://www.dresan.is-a.dev/'
+          href='https://dresan.is-a.dev/'
           target='_blank'
         >
           Dresan
